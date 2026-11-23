@@ -208,7 +208,7 @@ def detectar_anomalias(gastos: pd.DataFrame, mes: str) -> pd.DataFrame:
                 texto = f"El pago a {f.proveedor} es {str(round(razon, 1)).replace('.', ',')} veces su promedio mensual de {millones(h.valor.mean())}."
                 hallazgos.append((f, "Monto atípico", "Media", texto, f.valor - h.valor.mean()))
     for _, f in hoy.iterrows():
-        dia = pd.Timestamp(f.fecha).dayofweek
+        dia = pd.Timestamp(f.fecha).day_of_week
         if dia >= 5:
             nombre = "domingo" if dia == 6 else "sábado"
             hallazgos.append((f, "Registro en fin de semana", "Baja", f"El pago a {f.proveedor} se registró un {nombre} ({f.fecha}), fuera del calendario habitual.", f.valor))
