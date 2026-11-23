@@ -69,10 +69,7 @@ bitacora_id,fecha,periodo,paso,resultado,accion,responsable,fuente,cargado_en
 68,2026-09-05T07:00:00-05:00,2026-08,aprobacion,Aprobado,Cierre revisado y aprobado (historia simulada),Analista de cierre (simulado),src/procesamiento.py,2026-09-05T07:00:00-05:00
 69,2026-10-05T07:00:00-05:00,2026-09,validacion,Correcto,0 alertas (0 altas) y 0 anomalías de gasto,Agente de procesamiento,src/procesamiento.py,2026-10-05T07:00:00-05:00
 70,2026-10-05T07:00:00-05:00,2026-09,aprobacion,Aprobado,Cierre revisado y aprobado (historia simulada),Analista de cierre (simulado),src/procesamiento.py,2026-10-05T07:00:00-05:00
-71,2026-11-05T07:00:00-05:00,2026-10,validacion,Requiere revisión,8 alertas (3 altas) y 4 anomalías de gasto,Agente de procesamiento,src/procesamiento.py,2026-11-05T07:00:00-05:00
-73,2026-11-05T07:00:00-05:00,2026-10,aprobacion,Pendiente,Esperando revisión humana de las alertas altas,Analista de cierre (simulado),src/procesamiento.py,2026-11-05T07:00:00-05:00
-74,2026-11-23T11:37:51-05:00,2026-10,pronostico,Correcto,"Cierre 2026 Andino: $148,5 mil millones a $148,8 mil millones",Agente predictivo,src/pronostico.py,2026-11-23T11:37:51-05:00
-75,2026-11-23T11:38:54-05:00,2026-10,pronostico,Correcto,"Cierre 2026 Andino: $149,0 mil millones a $149,3 mil millones",Agente predictivo,src/pronostico.py,2026-11-23T11:38:54-05:00
-76,2026-11-23T11:39:29-05:00,2026-10,pronostico,Correcto,"Cierre 2026 Andino: $145,2 mil millones a $151,8 mil millones",Agente predictivo,src/pronostico.py,2026-11-23T11:39:29-05:00
-77,2026-11-23T11:43:43-05:00,2026-10,reporte,Borrador,Generó 4 reportes y sus guiones,Agente de reporting,src/reporte.py,2026-11-23T11:43:43-05:00
-78,2026-11-23T11:45:31-05:00,2026-10,reporte,Borrador,Generó 4 reportes y sus guiones,Agente de reporting,src/reporte.py,2026-11-23T11:45:31-05:00
+74,2026-11-23T12:02:54-05:00,2026-10,validacion,Requiere revisión,8 alertas (3 altas) y 4 anomalías de gasto,Agente de procesamiento,src/procesamiento.py,2026-11-23T12:02:54-05:00
+75,2026-11-23T12:02:54-05:00,2026-10,aprobacion,Pendiente,Esperando revisión humana de las alertas altas,Supervisión humana,run_cierre.py,2026-11-23T12:02:54-05:00
+76,2026-11-23T12:02:54-05:00,2026-10,pronostico,Correcto,"Cierre 2026 Andino: $145,2 mil millones a $151,8 mil millones",Agente predictivo,src/pronostico.py,2026-11-23T12:02:54-05:00
+77,2026-11-23T12:03:05-05:00,2026-10,reporte,Borrador,Generó 4 reportes y sus guiones,Agente de reporting,src/reporte.py,2026-11-23T12:03:05-05:00
