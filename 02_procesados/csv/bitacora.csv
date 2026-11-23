@@ -74,3 +74,5 @@ bitacora_id,fecha,periodo,paso,resultado,accion,responsable,fuente,cargado_en
 74,2026-11-23T11:37:51-05:00,2026-10,pronostico,Correcto,"Cierre 2026 Andino: $148,5 mil millones a $148,8 mil millones",Agente predictivo,src/pronostico.py,2026-11-23T11:37:51-05:00
 75,2026-11-23T11:38:54-05:00,2026-10,pronostico,Correcto,"Cierre 2026 Andino: $149,0 mil millones a $149,3 mil millones",Agente predictivo,src/pronostico.py,2026-11-23T11:38:54-05:00
 76,2026-11-23T11:39:29-05:00,2026-10,pronostico,Correcto,"Cierre 2026 Andino: $145,2 mil millones a $151,8 mil millones",Agente predictivo,src/pronostico.py,2026-11-23T11:39:29-05:00
+77,2026-11-23T11:43:43-05:00,2026-10,reporte,Borrador,Generó 4 reportes y sus guiones,Agente de reporting,src/reporte.py,2026-11-23T11:43:43-05:00
+78,2026-11-23T11:45:31-05:00,2026-10,reporte,Borrador,Generó 4 reportes y sus guiones,Agente de reporting,src/reporte.py,2026-11-23T11:45:31-05:00
