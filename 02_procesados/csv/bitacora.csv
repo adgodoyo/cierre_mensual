@@ -22,4 +22,52 @@ bitacora_id,fecha,periodo,paso,resultado,accion,responsable,fuente,cargado_en
 21,2026-08-05T07:00:00-05:00,2026-07,ingesta,Correcto,Cargó 36 archivos y 2129 filas,Agente de procesamiento,src/ingesta.py,2026-08-05T07:00:00-05:00
 22,2026-09-05T07:00:00-05:00,2026-08,ingesta,Correcto,Cargó 36 archivos y 2137 filas,Agente de procesamiento,src/ingesta.py,2026-09-05T07:00:00-05:00
 23,2026-10-05T07:00:00-05:00,2026-09,ingesta,Correcto,Cargó 36 archivos y 2083 filas,Agente de procesamiento,src/ingesta.py,2026-10-05T07:00:00-05:00
-24,2026-11-05T07:00:00-05:00,2026-10,ingesta,Correcto,Cargó 36 archivos y 2145 filas,Agente de procesamiento,src/ingesta.py,2026-11-05T07:00:00-05:00
+24,2026-11-05T07:00:00-05:00,2026-10,ingesta,Correcto,Cargó 36 archivos y 2155 filas,Agente de procesamiento,src/ingesta.py,2026-11-05T07:00:00-05:00
+25,2024-12-05T07:00:00-05:00,2024-11,validacion,Correcto,0 alertas (0 altas) y 0 anomalías de gasto,Agente de procesamiento,src/procesamiento.py,2024-12-05T07:00:00-05:00
+26,2024-12-05T07:00:00-05:00,2024-11,aprobacion,Aprobado,Cierre revisado y aprobado (historia simulada),Analista de cierre (simulado),src/procesamiento.py,2024-12-05T07:00:00-05:00
+27,2025-01-05T07:00:00-05:00,2024-12,validacion,Correcto,2 alertas (0 altas) y 0 anomalías de gasto,Agente de procesamiento,src/procesamiento.py,2025-01-05T07:00:00-05:00
+28,2025-01-05T07:00:00-05:00,2024-12,aprobacion,Aprobado,Cierre revisado y aprobado (historia simulada),Analista de cierre (simulado),src/procesamiento.py,2025-01-05T07:00:00-05:00
+29,2025-02-05T07:00:00-05:00,2025-01,validacion,Correcto,1 alertas (0 altas) y 0 anomalías de gasto,Agente de procesamiento,src/procesamiento.py,2025-02-05T07:00:00-05:00
+30,2025-02-05T07:00:00-05:00,2025-01,aprobacion,Aprobado,Cierre revisado y aprobado (historia simulada),Analista de cierre (simulado),src/procesamiento.py,2025-02-05T07:00:00-05:00
+31,2025-03-05T07:00:00-05:00,2025-02,validacion,Correcto,1 alertas (0 altas) y 0 anomalías de gasto,Agente de procesamiento,src/procesamiento.py,2025-03-05T07:00:00-05:00
+32,2025-03-05T07:00:00-05:00,2025-02,aprobacion,Aprobado,Cierre revisado y aprobado (historia simulada),Analista de cierre (simulado),src/procesamiento.py,2025-03-05T07:00:00-05:00
+33,2025-04-05T07:00:00-05:00,2025-03,validacion,Correcto,0 alertas (0 altas) y 0 anomalías de gasto,Agente de procesamiento,src/procesamiento.py,2025-04-05T07:00:00-05:00
+34,2025-04-05T07:00:00-05:00,2025-03,aprobacion,Aprobado,Cierre revisado y aprobado (historia simulada),Analista de cierre (simulado),src/procesamiento.py,2025-04-05T07:00:00-05:00
+35,2025-05-05T07:00:00-05:00,2025-04,validacion,Correcto,1 alertas (0 altas) y 0 anomalías de gasto,Agente de procesamiento,src/procesamiento.py,2025-05-05T07:00:00-05:00
+36,2025-05-05T07:00:00-05:00,2025-04,aprobacion,Aprobado,Cierre revisado y aprobado (historia simulada),Analista de cierre (simulado),src/procesamiento.py,2025-05-05T07:00:00-05:00
+37,2025-06-05T07:00:00-05:00,2025-05,validacion,Correcto,1 alertas (0 altas) y 0 anomalías de gasto,Agente de procesamiento,src/procesamiento.py,2025-06-05T07:00:00-05:00
+38,2025-06-05T07:00:00-05:00,2025-05,aprobacion,Aprobado,Cierre revisado y aprobado (historia simulada),Analista de cierre (simulado),src/procesamiento.py,2025-06-05T07:00:00-05:00
+39,2025-07-05T07:00:00-05:00,2025-06,validacion,Correcto,0 alertas (0 altas) y 0 anomalías de gasto,Agente de procesamiento,src/procesamiento.py,2025-07-05T07:00:00-05:00
+40,2025-07-05T07:00:00-05:00,2025-06,aprobacion,Aprobado,Cierre revisado y aprobado (historia simulada),Analista de cierre (simulado),src/procesamiento.py,2025-07-05T07:00:00-05:00
+41,2025-08-05T07:00:00-05:00,2025-07,validacion,Correcto,0 alertas (0 altas) y 0 anomalías de gasto,Agente de procesamiento,src/procesamiento.py,2025-08-05T07:00:00-05:00
+42,2025-08-05T07:00:00-05:00,2025-07,aprobacion,Aprobado,Cierre revisado y aprobado (historia simulada),Analista de cierre (simulado),src/procesamiento.py,2025-08-05T07:00:00-05:00
+43,2025-09-05T07:00:00-05:00,2025-08,validacion,Correcto,1 alertas (0 altas) y 0 anomalías de gasto,Agente de procesamiento,src/procesamiento.py,2025-09-05T07:00:00-05:00
+44,2025-09-05T07:00:00-05:00,2025-08,aprobacion,Aprobado,Cierre revisado y aprobado (historia simulada),Analista de cierre (simulado),src/procesamiento.py,2025-09-05T07:00:00-05:00
+45,2025-10-05T07:00:00-05:00,2025-09,validacion,Correcto,0 alertas (0 altas) y 0 anomalías de gasto,Agente de procesamiento,src/procesamiento.py,2025-10-05T07:00:00-05:00
+46,2025-10-05T07:00:00-05:00,2025-09,aprobacion,Aprobado,Cierre revisado y aprobado (historia simulada),Analista de cierre (simulado),src/procesamiento.py,2025-10-05T07:00:00-05:00
+47,2025-11-05T07:00:00-05:00,2025-10,validacion,Correcto,0 alertas (0 altas) y 0 anomalías de gasto,Agente de procesamiento,src/procesamiento.py,2025-11-05T07:00:00-05:00
+48,2025-11-05T07:00:00-05:00,2025-10,aprobacion,Aprobado,Cierre revisado y aprobado (historia simulada),Analista de cierre (simulado),src/procesamiento.py,2025-11-05T07:00:00-05:00
+49,2025-12-05T07:00:00-05:00,2025-11,validacion,Correcto,0 alertas (0 altas) y 0 anomalías de gasto,Agente de procesamiento,src/procesamiento.py,2025-12-05T07:00:00-05:00
+50,2025-12-05T07:00:00-05:00,2025-11,aprobacion,Aprobado,Cierre revisado y aprobado (historia simulada),Analista de cierre (simulado),src/procesamiento.py,2025-12-05T07:00:00-05:00
+51,2026-01-05T07:00:00-05:00,2025-12,validacion,Correcto,3 alertas (0 altas) y 0 anomalías de gasto,Agente de procesamiento,src/procesamiento.py,2026-01-05T07:00:00-05:00
+52,2026-01-05T07:00:00-05:00,2025-12,aprobacion,Aprobado,Cierre revisado y aprobado (historia simulada),Analista de cierre (simulado),src/procesamiento.py,2026-01-05T07:00:00-05:00
+53,2026-02-05T07:00:00-05:00,2026-01,validacion,Correcto,0 alertas (0 altas) y 0 anomalías de gasto,Agente de procesamiento,src/procesamiento.py,2026-02-05T07:00:00-05:00
+54,2026-02-05T07:00:00-05:00,2026-01,aprobacion,Aprobado,Cierre revisado y aprobado (historia simulada),Analista de cierre (simulado),src/procesamiento.py,2026-02-05T07:00:00-05:00
+55,2026-03-05T07:00:00-05:00,2026-02,validacion,Correcto,0 alertas (0 altas) y 0 anomalías de gasto,Agente de procesamiento,src/procesamiento.py,2026-03-05T07:00:00-05:00
+56,2026-03-05T07:00:00-05:00,2026-02,aprobacion,Aprobado,Cierre revisado y aprobado (historia simulada),Analista de cierre (simulado),src/procesamiento.py,2026-03-05T07:00:00-05:00
+57,2026-04-05T07:00:00-05:00,2026-03,validacion,Correcto,0 alertas (0 altas) y 0 anomalías de gasto,Agente de procesamiento,src/procesamiento.py,2026-04-05T07:00:00-05:00
+58,2026-04-05T07:00:00-05:00,2026-03,aprobacion,Aprobado,Cierre revisado y aprobado (historia simulada),Analista de cierre (simulado),src/procesamiento.py,2026-04-05T07:00:00-05:00
+59,2026-05-05T07:00:00-05:00,2026-04,validacion,Correcto,0 alertas (0 altas) y 0 anomalías de gasto,Agente de procesamiento,src/procesamiento.py,2026-05-05T07:00:00-05:00
+60,2026-05-05T07:00:00-05:00,2026-04,aprobacion,Aprobado,Cierre revisado y aprobado (historia simulada),Analista de cierre (simulado),src/procesamiento.py,2026-05-05T07:00:00-05:00
+61,2026-06-05T07:00:00-05:00,2026-05,validacion,Correcto,0 alertas (0 altas) y 0 anomalías de gasto,Agente de procesamiento,src/procesamiento.py,2026-06-05T07:00:00-05:00
+62,2026-06-05T07:00:00-05:00,2026-05,aprobacion,Aprobado,Cierre revisado y aprobado (historia simulada),Analista de cierre (simulado),src/procesamiento.py,2026-06-05T07:00:00-05:00
+63,2026-07-05T07:00:00-05:00,2026-06,validacion,Correcto,0 alertas (0 altas) y 0 anomalías de gasto,Agente de procesamiento,src/procesamiento.py,2026-07-05T07:00:00-05:00
+64,2026-07-05T07:00:00-05:00,2026-06,aprobacion,Aprobado,Cierre revisado y aprobado (historia simulada),Analista de cierre (simulado),src/procesamiento.py,2026-07-05T07:00:00-05:00
+65,2026-08-05T07:00:00-05:00,2026-07,validacion,Correcto,0 alertas (0 altas) y 0 anomalías de gasto,Agente de procesamiento,src/procesamiento.py,2026-08-05T07:00:00-05:00
+66,2026-08-05T07:00:00-05:00,2026-07,aprobacion,Aprobado,Cierre revisado y aprobado (historia simulada),Analista de cierre (simulado),src/procesamiento.py,2026-08-05T07:00:00-05:00
+67,2026-09-05T07:00:00-05:00,2026-08,validacion,Correcto,0 alertas (0 altas) y 0 anomalías de gasto,Agente de procesamiento,src/procesamiento.py,2026-09-05T07:00:00-05:00
+68,2026-09-05T07:00:00-05:00,2026-08,aprobacion,Aprobado,Cierre revisado y aprobado (historia simulada),Analista de cierre (simulado),src/procesamiento.py,2026-09-05T07:00:00-05:00
+69,2026-10-05T07:00:00-05:00,2026-09,validacion,Correcto,0 alertas (0 altas) y 0 anomalías de gasto,Agente de procesamiento,src/procesamiento.py,2026-10-05T07:00:00-05:00
+70,2026-10-05T07:00:00-05:00,2026-09,aprobacion,Aprobado,Cierre revisado y aprobado (historia simulada),Analista de cierre (simulado),src/procesamiento.py,2026-10-05T07:00:00-05:00
+71,2026-11-05T07:00:00-05:00,2026-10,validacion,Requiere revisión,8 alertas (3 altas) y 4 anomalías de gasto,Agente de procesamiento,src/procesamiento.py,2026-11-05T07:00:00-05:00
+73,2026-11-05T07:00:00-05:00,2026-10,aprobacion,Pendiente,Esperando revisión humana de las alertas altas,Analista de cierre (simulado),src/procesamiento.py,2026-11-05T07:00:00-05:00

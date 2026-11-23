@@ -1,34 +1,34 @@
 fecha,sede,cuenta,proveedor,concepto,valor
-2026-10-01,TUL,5135,Energía Cordillera,Servicios públicos,5082601
-2026-10-02,CAL,5205,Comisiones Red Aliada,Comisiones externas,21716402
-2026-10-02,CAL,5120,Inmuebles del Parque,Arrendamiento,39726088
-2026-10-02,CAL,5135,Vigilancia Centinela,Vigilancia,19316453
-2026-10-02,PAL,5205,Comisiones Red Aliada,Comisiones externas,10785842
-2026-10-02,PAL,5120,Seguros Horizonte,Seguros de sede,7672055
-2026-10-02,TUL,5205,Alistamiento Exprés,Alistamiento,9828542
-2026-10-02,TUL,5205,Fletes La Sabana,Transporte de vehículos,12398711
-2026-10-06,CAL,5135,Conecta Datos,Internet y software,10351501
-2026-10-06,PAL,5205,Alistamiento Exprés,Alistamiento,14537614
-2026-10-06,PAL,5135,Conecta Datos,Internet y software,4981244
-2026-10-07,PAL,5120,Inmuebles del Parque,Arrendamiento,19514785
-2026-10-09,CAL,5135,Aseo Integral,Aseo y cafetería,6357920
-2026-10-09,TUL,5135,Conecta Datos,Internet y software,3336634
-2026-10-12,CAL,5205,Alistamiento Exprés,Alistamiento,29722655
-2026-10-12,PAL,5205,Fletes La Sabana,Transporte de vehículos,18667036
-2026-10-13,CAL,5135,Energía Cordillera,Servicios públicos,15604587
-2026-10-14,CAL,5205,Publicidad Mirador,Pauta comercial,46152877
-2026-10-19,PAL,5205,Publicidad Mirador,Pauta comercial,22405747
-2026-10-19,TUL,5120,Seguros Horizonte,Seguros de sede,5060904
-2026-10-19,TUL,5135,Vigilancia Centinela,Vigilancia,6316420
-2026-10-20,CAL,5205,Fletes La Sabana,Transporte de vehículos,37659665
-2026-10-20,PAL,5135,Aseo Integral,Aseo y cafetería,3168762
-2026-10-21,PAL,5135,Vigilancia Centinela,Vigilancia,9542669
-2026-10-22,TUL,5205,Publicidad Mirador,Pauta comercial,14973454
-2026-10-23,CAL,5135,Mantenimientos Roble,Mantenimiento,12806869
-2026-10-26,TUL,5135,Aseo Integral,Aseo y cafetería,2093797
-2026-10-27,TUL,5120,Inmuebles del Parque,Arrendamiento,13063655
-2026-10-28,PAL,5135,Energía Cordillera,Servicios públicos,7649123
-2026-10-29,CAL,5120,Seguros Horizonte,Seguros de sede,15654512
-2026-10-29,PAL,5135,Mantenimientos Roble,Mantenimiento,6283858
-2026-10-29,TUL,5205,Comisiones Red Aliada,Comisiones externas,7063452
-2026-10-30,TUL,5135,Mantenimientos Roble,Mantenimiento,4170771
+2026-10-01,PAL,5135,Conecta Datos,Internet y software,5130043
+2026-10-02,CAL,5135,Aseo Integral,Aseo y cafetería,6515894
+2026-10-02,TUL,5205,Comisiones Red Aliada,Comisiones externas,7116590
+2026-10-05,CAL,5205,Comisiones Red Aliada,Comisiones externas,21611202
+2026-10-05,CAL,5135,Conecta Datos,Internet y software,10330989
+2026-10-05,PAL,5135,Energía Cordillera,Servicios públicos,7607021
+2026-10-05,PAL,5120,Seguros Horizonte,Seguros de sede,7640060
+2026-10-06,CAL,5205,Alistamiento Exprés,Alistamiento,30020319
+2026-10-06,CAL,5135,Vigilancia Centinela,Vigilancia,19201754
+2026-10-07,PAL,5205,Fletes La Sabana,Transporte de vehículos,18874880
+2026-10-09,PAL,5135,Vigilancia Centinela,Vigilancia,9538454
+2026-10-09,TUL,5120,Seguros Horizonte,Seguros de sede,5088157
+2026-10-12,PAL,5120,Inmuebles del Parque,Arrendamiento,19546780
+2026-10-13,PAL,5135,Mantenimientos Roble,Mantenimiento,6502242
+2026-10-13,TUL,5135,Mantenimientos Roble,Mantenimiento,4316978
+2026-10-14,CAL,5120,Seguros Horizonte,Seguros de sede,15732138
+2026-10-14,PAL,5205,Comisiones Red Aliada,Comisiones externas,10770273
+2026-10-14,TUL,5205,Fletes La Sabana,Transporte de vehículos,12395007
+2026-10-14,TUL,5120,Inmuebles del Parque,Arrendamiento,13036402
+2026-10-15,CAL,5120,Inmuebles del Parque,Arrendamiento,39648462
+2026-10-15,TUL,5135,Energía Cordillera,Servicios públicos,5179658
+2026-10-16,TUL,5135,Conecta Datos,Internet y software,3392482
+2026-10-19,CAL,5135,Mantenimientos Roble,Mantenimiento,12674104
+2026-10-19,TUL,5135,Vigilancia Centinela,Vigilancia,6318311
+2026-10-20,PAL,5135,Aseo Integral,Aseo y cafetería,3229220
+2026-10-20,TUL,5205,Publicidad Mirador,Pauta comercial,15108454
+2026-10-21,TUL,5205,Alistamiento Exprés,Alistamiento,9838780
+2026-10-22,CAL,5205,Fletes La Sabana,Transporte de vehículos,38213295
+2026-10-26,CAL,5205,Publicidad Mirador,Pauta comercial,46001613
+2026-10-26,PAL,5205,Publicidad Mirador,Pauta comercial,22365105
+2026-10-29,CAL,5135,Energía Cordillera,Servicios públicos,15355784
+2026-10-30,PAL,5205,Alistamiento Exprés,Alistamiento,14677989
+2026-10-30,TUL,5135,Aseo Integral,Aseo y cafetería,2113850

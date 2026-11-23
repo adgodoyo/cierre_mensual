@@ -163,6 +163,8 @@ def generar_inventario(rng, cod, conf, mes, t, ingreso, atascados):
             costos = repartir(valor, rng.uniform(.82, 1.18, n))
             for c in costos:
                 d = int(rng.integers(*rangos[b]) if rangos[b][0] != rangos[b][1] else rangos[b][0])
+                if cod == "AND" and mes == MES_CIERRE and depto == "USA" and b == 2:
+                    d = int(rng.integers(93, 151))  # Ingresaron antes de agosto: solo las 6 sembradas son de agosto.
                 modelo = MODELOS[depto][int(rng.integers(len(MODELOS[depto])))][0]
                 filas.append({"vin": vin(rng), "sede": sedes[int(rng.choice(len(sedes), p=pesos))], "linea": DEPARTAMENTOS[depto], "modelo": modelo,
                               "dias": d, "costo": c, "ingreso": (fin - timedelta(days=d)).isoformat()})
