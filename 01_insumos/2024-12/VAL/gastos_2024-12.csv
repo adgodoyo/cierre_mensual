@@ -1,0 +1,34 @@
+fecha,sede,cuenta,proveedor,concepto,valor
+2024-12-02,TUL,5205,Fletes La Sabana,Transporte de vehículos,12986055
+2024-12-02,TUL,5120,Seguros Horizonte,Seguros de sede,5089792
+2024-12-04,CAL,5135,Energía Cordillera,Servicios públicos,15454864
+2024-12-04,PAL,5205,Alistamiento Exprés,Alistamiento,15267486
+2024-12-04,TUL,5135,Mantenimientos Roble,Mantenimiento,4237475
+2024-12-05,CAL,5205,Fletes La Sabana,Transporte de vehículos,39947372
+2024-12-05,PAL,5135,Conecta Datos,Internet y software,5130515
+2024-12-06,PAL,5205,Comisiones Red Aliada,Comisiones externas,11136787
+2024-12-06,PAL,5120,Seguros Horizonte,Seguros de sede,7582199
+2024-12-09,CAL,5135,Aseo Integral,Aseo y cafetería,6489282
+2024-12-09,CAL,5120,Inmuebles del Parque,Arrendamiento,39609502
+2024-12-09,PAL,5135,Aseo Integral,Aseo y cafetería,3168586
+2024-12-09,TUL,5205,Publicidad Mirador,Pauta comercial,15716023
+2024-12-10,CAL,5205,Publicidad Mirador,Pauta comercial,48095946
+2024-12-10,PAL,5135,Energía Cordillera,Servicios públicos,7663587
+2024-12-10,PAL,5135,Mantenimientos Roble,Mantenimiento,6406180
+2024-12-11,TUL,5135,Vigilancia Centinela,Vigilancia,6404027
+2024-12-12,CAL,5135,Conecta Datos,Internet y software,10258195
+2024-12-12,CAL,5135,Vigilancia Centinela,Vigilancia,18983649
+2024-12-13,CAL,5135,Mantenimientos Roble,Mantenimiento,12713424
+2024-12-17,PAL,5135,Vigilancia Centinela,Vigilancia,9365887
+2024-12-18,CAL,5205,Alistamiento Exprés,Alistamiento,30729646
+2024-12-20,CAL,5205,Comisiones Red Aliada,Comisiones externas,22427435
+2024-12-20,TUL,5135,Aseo Integral,Aseo y cafetería,2119081
+2024-12-20,TUL,5135,Conecta Datos,Internet y software,3455147
+2024-12-23,CAL,5120,Seguros Horizonte,Seguros de sede,15771098
+2024-12-23,PAL,5120,Inmuebles del Parque,Arrendamiento,19604641
+2024-12-23,PAL,5205,Publicidad Mirador,Pauta comercial,23447534
+2024-12-23,TUL,5120,Inmuebles del Parque,Arrendamiento,13034767
+2024-12-24,TUL,5205,Comisiones Red Aliada,Comisiones externas,7275540
+2024-12-27,PAL,5205,Fletes La Sabana,Transporte de vehículos,19464752
+2024-12-27,TUL,5205,Alistamiento Exprés,Alistamiento,10233421
+2024-12-31,TUL,5135,Energía Cordillera,Servicios públicos,5128457

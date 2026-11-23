@@ -1,0 +1,10 @@
+sede,entidad,tipo,saldo,tasa_mensual,interes_mes
+NOR,Banco Cordillera,Wholesale,1769799202,0.01158,20494275
+NOR,Financiera Altiplano,Wholesale,1061879521,0.01208,12827505
+NOR,Crédito Rutas,Wholesale,707919681,0.01308,9259589
+CEN,Banco Cordillera,Wholesale,1879487403,0.01158,21764464
+CEN,Financiera Altiplano,Wholesale,1127692441,0.01208,13622525
+CEN,Crédito Rutas,Wholesale,751794961,0.01308,9833478
+SUR,Banco Cordillera,Wholesale,989776889,0.01158,11461616
+SUR,Financiera Altiplano,Wholesale,593866133,0.01208,7173903
+SUR,Crédito Rutas,Wholesale,395910756,0.01308,5178513

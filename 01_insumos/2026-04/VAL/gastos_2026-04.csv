@@ -1,0 +1,34 @@
+fecha,sede,cuenta,proveedor,concepto,valor
+2026-04-01,CAL,5205,Publicidad Mirador,Pauta comercial,42093029
+2026-04-02,CAL,5135,Mantenimientos Roble,Mantenimiento,12827836
+2026-04-02,TUL,5205,Publicidad Mirador,Pauta comercial,13776724
+2026-04-03,CAL,5120,Seguros Horizonte,Seguros de sede,15468164
+2026-04-03,CAL,5135,Vigilancia Centinela,Vigilancia,18995517
+2026-04-03,PAL,5135,Conecta Datos,Internet y software,5207038
+2026-04-03,TUL,5205,Alistamiento Exprés,Alistamiento,8991833
+2026-04-06,TUL,5135,Energía Cordillera,Servicios públicos,5112782
+2026-04-07,CAL,5205,Comisiones Red Aliada,Comisiones externas,19734747
+2026-04-07,PAL,5135,Vigilancia Centinela,Vigilancia,9509680
+2026-04-08,CAL,5135,Energía Cordillera,Servicios públicos,15338199
+2026-04-08,PAL,5205,Alistamiento Exprés,Alistamiento,13394211
+2026-04-08,TUL,5135,Aseo Integral,Aseo y cafetería,2108627
+2026-04-09,CAL,5205,Fletes La Sabana,Transporte de vehículos,35046944
+2026-04-09,CAL,5120,Inmuebles del Parque,Arrendamiento,39912436
+2026-04-09,PAL,5135,Energía Cordillera,Servicios públicos,7803941
+2026-04-10,PAL,5205,Publicidad Mirador,Pauta comercial,20735144
+2026-04-13,PAL,5205,Comisiones Red Aliada,Comisiones externas,9645540
+2026-04-14,CAL,5205,Alistamiento Exprés,Alistamiento,26952797
+2026-04-14,PAL,5120,Seguros Horizonte,Seguros de sede,7562966
+2026-04-14,TUL,5205,Comisiones Red Aliada,Comisiones externas,6441665
+2026-04-15,TUL,5205,Fletes La Sabana,Transporte de vehículos,11315147
+2026-04-17,CAL,5135,Aseo Integral,Aseo y cafetería,6396655
+2026-04-20,PAL,5205,Fletes La Sabana,Transporte de vehículos,17013159
+2026-04-20,TUL,5135,Mantenimientos Roble,Mantenimiento,4287781
+2026-04-23,CAL,5135,Conecta Datos,Internet y software,10252083
+2026-04-24,PAL,5120,Inmuebles del Parque,Arrendamiento,19623874
+2026-04-27,PAL,5135,Mantenimientos Roble,Mantenimiento,6433051
+2026-04-28,TUL,5120,Seguros Horizonte,Seguros de sede,5058742
+2026-04-28,TUL,5135,Vigilancia Centinela,Vigilancia,6377133
+2026-04-29,TUL,5135,Conecta Datos,Internet y software,3400857
+2026-04-30,PAL,5135,Aseo Integral,Aseo y cafetería,3182689
+2026-04-30,TUL,5120,Inmuebles del Parque,Arrendamiento,13065817

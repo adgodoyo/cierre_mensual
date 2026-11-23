@@ -1,0 +1,34 @@
+fecha,sede,cuenta,proveedor,concepto,valor
+2026-09-02,ACA,5135,Vigilancia Centinela,Vigilancia,2260568
+2026-09-02,YOP,5135,Aseo Integral,Aseo y cafetería,1672237
+2026-09-02,YOP,5135,Mantenimientos Roble,Mantenimiento,3366921
+2026-09-03,ACA,5135,Mantenimientos Roble,Mantenimiento,1521519
+2026-09-03,VIL,5135,Conecta Datos,Internet y software,6304845
+2026-09-03,VIL,5205,Publicidad Mirador,Pauta comercial,25925248
+2026-09-04,ACA,5205,Comisiones Red Aliada,Comisiones externas,2368444
+2026-09-04,ACA,5120,Inmuebles del Parque,Arrendamiento,4710825
+2026-09-04,VIL,5135,Mantenimientos Roble,Mantenimiento,7821681
+2026-09-09,ACA,5205,Alistamiento Exprés,Alistamiento,3197804
+2026-09-11,YOP,5120,Seguros Horizonte,Seguros de sede,3944319
+2026-09-11,YOP,5135,Vigilancia Centinela,Vigilancia,5005016
+2026-09-15,VIL,5205,Comisiones Red Aliada,Comisiones externas,12118325
+2026-09-16,VIL,5120,Inmuebles del Parque,Arrendamiento,24311559
+2026-09-16,VIL,5120,Seguros Horizonte,Seguros de sede,9504171
+2026-09-16,YOP,5135,Energía Cordillera,Servicios públicos,4020948
+2026-09-17,VIL,5135,Energía Cordillera,Servicios públicos,9295340
+2026-09-17,YOP,5205,Comisiones Red Aliada,Comisiones externas,5176395
+2026-09-22,ACA,5135,Aseo Integral,Aseo y cafetería,760008
+2026-09-22,VIL,5135,Vigilancia Centinela,Vigilancia,11856668
+2026-09-22,YOP,5205,Alistamiento Exprés,Alistamiento,6993250
+2026-09-22,YOP,5205,Fletes La Sabana,Transporte de vehículos,8882917
+2026-09-23,ACA,5135,Conecta Datos,Internet y software,1213938
+2026-09-23,ACA,5205,Fletes La Sabana,Transporte de vehículos,4164251
+2026-09-23,YOP,5135,Conecta Datos,Internet y software,2705569
+2026-09-24,ACA,5135,Energía Cordillera,Servicios públicos,1802602
+2026-09-24,VIL,5205,Alistamiento Exprés,Alistamiento,16885692
+2026-09-24,VIL,5205,Fletes La Sabana,Transporte de vehículos,21038654
+2026-09-25,ACA,5120,Seguros Horizonte,Seguros de sede,1834155
+2026-09-28,VIL,5135,Aseo Integral,Aseo y cafetería,3921474
+2026-09-28,YOP,5120,Inmuebles del Parque,Arrendamiento,10236471
+2026-09-30,ACA,5205,Publicidad Mirador,Pauta comercial,4972969
+2026-09-30,YOP,5205,Publicidad Mirador,Pauta comercial,10804952

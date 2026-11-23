@@ -1,0 +1,34 @@
+fecha,sede,cuenta,proveedor,concepto,valor
+2025-10-01,ACA,5135,Aseo Integral,Aseo y cafetería,755423
+2025-10-01,YOP,5135,Vigilancia Centinela,Vigilancia,5045521
+2025-10-06,ACA,5120,Seguros Horizonte,Seguros de sede,1858969
+2025-10-06,VIL,5205,Fletes La Sabana,Transporte de vehículos,20575520
+2025-10-09,VIL,5205,Publicidad Mirador,Pauta comercial,24600676
+2025-10-09,YOP,5205,Alistamiento Exprés,Alistamiento,6736410
+2025-10-10,VIL,5205,Comisiones Red Aliada,Comisiones externas,11627748
+2025-10-10,VIL,5135,Energía Cordillera,Servicios públicos,9387679
+2025-10-10,VIL,5120,Inmuebles del Parque,Arrendamiento,24282149
+2025-10-13,ACA,5120,Inmuebles del Parque,Arrendamiento,4686011
+2025-10-14,ACA,5205,Alistamiento Exprés,Alistamiento,3093733
+2025-10-17,ACA,5135,Mantenimientos Roble,Mantenimiento,1512753
+2025-10-17,VIL,5135,Vigilancia Centinela,Vigilancia,11649859
+2025-10-17,YOP,5120,Inmuebles del Parque,Arrendamiento,10212238
+2025-10-20,ACA,5135,Conecta Datos,Internet y software,1198532
+2025-10-20,ACA,5205,Publicidad Mirador,Pauta comercial,4858999
+2025-10-20,YOP,5205,Fletes La Sabana,Transporte de vehículos,8447673
+2025-10-21,ACA,5205,Comisiones Red Aliada,Comisiones externas,2235084
+2025-10-21,VIL,5135,Aseo Integral,Aseo y cafetería,3850239
+2025-10-21,VIL,5120,Seguros Horizonte,Seguros de sede,9533581
+2025-10-22,ACA,5135,Vigilancia Centinela,Vigilancia,2267469
+2025-10-23,YOP,5205,Publicidad Mirador,Pauta comercial,10426418
+2025-10-24,YOP,5135,Aseo Integral,Aseo y cafetería,1659994
+2025-10-24,YOP,5135,Energía Cordillera,Servicios públicos,3950248
+2025-10-27,VIL,5135,Mantenimientos Roble,Mantenimiento,7843352
+2025-10-27,YOP,5135,Conecta Datos,Internet y software,2660002
+2025-10-27,YOP,5120,Seguros Horizonte,Seguros de sede,3968552
+2025-10-28,VIL,5135,Conecta Datos,Internet y software,6165626
+2025-10-28,YOP,5135,Mantenimientos Roble,Mantenimiento,3377055
+2025-10-29,YOP,5205,Comisiones Red Aliada,Comisiones externas,4951773
+2025-10-30,ACA,5205,Fletes La Sabana,Transporte de vehículos,3917848
+2025-10-31,ACA,5135,Energía Cordillera,Servicios públicos,1820871
+2025-10-31,VIL,5205,Alistamiento Exprés,Alistamiento,16075324

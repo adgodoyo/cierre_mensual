@@ -1,0 +1,39 @@
+{
+  "mes": "2026-10",
+  "concesionario": "AND",
+  "proveedores_duplicado": {
+    "sede": "SUR",
+    "cuenta": "2205",
+    "diferencia": 18400000
+  },
+  "personal_norte": {
+    "sede": "NOR",
+    "variacion": 0.14,
+    "vendedores_nuevos": 3
+  },
+  "usados_mas_60": {
+    "unidades": 9,
+    "total_unidades": 29,
+    "porcentaje_unidades": 0.3103,
+    "sin_movimiento_desde_agosto": [
+      "SIM6M8VLEBZG6VZAR",
+      "SIM5Z1300D4J5ADUT",
+      "SIM9ECMD9T9GF4A03",
+      "SIMWWU3CB4UT7LPKV",
+      "SIMW3ZWHFKWCPAX6R",
+      "SIMY29H7ANMGMWMNY"
+    ]
+  },
+  "cuenta_sin_mapear": {
+    "sede": "CEN",
+    "cuenta": "5195",
+    "valor": 7350000
+  },
+  "gastos": {
+    "duplicado": "Fletes La Sabana",
+    "proveedor_nuevo": "Soluciones Nébula SAS",
+    "monto_atipico": "Aseo Integral",
+    "factor": 3.4,
+    "domingo": "2026-10-18"
+  }
+}

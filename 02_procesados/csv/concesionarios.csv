@@ -1,0 +1,5 @@
+concesionario_id,nombre,fuente,cargado_en
+AND,Concesionario Andino,04_pruebas/catalogo.json,2024-12-05T07:00:00-05:00
+VAL,Autos del Valle,04_pruebas/catalogo.json,2024-12-05T07:00:00-05:00
+CAR,Motores Caribe,04_pruebas/catalogo.json,2024-12-05T07:00:00-05:00
+LLA,Llanos Motor,04_pruebas/catalogo.json,2024-12-05T07:00:00-05:00

@@ -1,0 +1,13 @@
+sede_id,concesionario_id,nombre,fuente,cargado_en
+NOR,AND,Norte,04_pruebas/catalogo.json,2024-12-05T07:00:00-05:00
+CEN,AND,Centro,04_pruebas/catalogo.json,2024-12-05T07:00:00-05:00
+SUR,AND,Sur,04_pruebas/catalogo.json,2024-12-05T07:00:00-05:00
+CAL,VAL,Cali,04_pruebas/catalogo.json,2024-12-05T07:00:00-05:00
+PAL,VAL,Palmira,04_pruebas/catalogo.json,2024-12-05T07:00:00-05:00
+TUL,VAL,Tuluá,04_pruebas/catalogo.json,2024-12-05T07:00:00-05:00
+BAQ,CAR,Barranquilla,04_pruebas/catalogo.json,2024-12-05T07:00:00-05:00
+CTG,CAR,Cartagena,04_pruebas/catalogo.json,2024-12-05T07:00:00-05:00
+SMR,CAR,Santa Marta,04_pruebas/catalogo.json,2024-12-05T07:00:00-05:00
+VIL,LLA,Villavicencio,04_pruebas/catalogo.json,2024-12-05T07:00:00-05:00
+YOP,LLA,Yopal,04_pruebas/catalogo.json,2024-12-05T07:00:00-05:00
+ACA,LLA,Acacías,04_pruebas/catalogo.json,2024-12-05T07:00:00-05:00

@@ -1,0 +1,34 @@
+fecha,sede,cuenta,proveedor,concepto,valor
+2025-04-01,CAL,5120,Seguros Horizonte,Seguros de sede,15293029
+2025-04-01,PAL,5205,Publicidad Mirador,Pauta comercial,18078854
+2025-04-02,CAL,5135,Mantenimientos Roble,Mantenimiento,13061859
+2025-04-03,CAL,5135,Conecta Datos,Internet y software,10263387
+2025-04-03,CAL,5120,Inmuebles del Parque,Arrendamiento,40087571
+2025-04-03,TUL,5135,Aseo Integral,Aseo y cafetería,2123886
+2025-04-03,TUL,5205,Comisiones Red Aliada,Comisiones externas,5613573
+2025-04-04,TUL,5120,Seguros Horizonte,Seguros de sede,5052475
+2025-04-04,TUL,5135,Vigilancia Centinela,Vigilancia,6456330
+2025-04-07,CAL,5205,Publicidad Mirador,Pauta comercial,37103232
+2025-04-07,CAL,5135,Vigilancia Centinela,Vigilancia,19741744
+2025-04-07,TUL,5135,Mantenimientos Roble,Mantenimiento,4227115
+2025-04-09,PAL,5135,Vigilancia Centinela,Vigilancia,9481658
+2025-04-10,PAL,5205,Comisiones Red Aliada,Comisiones externas,8519689
+2025-04-11,PAL,5135,Energía Cordillera,Servicios públicos,7640743
+2025-04-14,CAL,5205,Alistamiento Exprés,Alistamiento,23981307
+2025-04-14,TUL,5120,Inmuebles del Parque,Arrendamiento,13072084
+2025-04-17,CAL,5135,Energía Cordillera,Servicios públicos,15585199
+2025-04-17,PAL,5205,Alistamiento Exprés,Alistamiento,11698209
+2025-04-17,PAL,5120,Inmuebles del Parque,Arrendamiento,19563119
+2025-04-17,TUL,5135,Conecta Datos,Internet y software,3446965
+2025-04-21,TUL,5205,Alistamiento Exprés,Alistamiento,7667346
+2025-04-22,CAL,5135,Aseo Integral,Aseo y cafetería,6565325
+2025-04-22,CAL,5205,Comisiones Red Aliada,Comisiones externas,17217373
+2025-04-22,TUL,5135,Energía Cordillera,Servicios públicos,5170639
+2025-04-23,CAL,5205,Fletes La Sabana,Transporte de vehículos,29966130
+2025-04-23,PAL,5135,Conecta Datos,Internet y software,5159792
+2025-04-23,PAL,5205,Fletes La Sabana,Transporte de vehículos,14853014
+2025-04-25,PAL,5120,Seguros Horizonte,Seguros de sede,7623721
+2025-04-28,TUL,5205,Fletes La Sabana,Transporte de vehículos,10036208
+2025-04-29,TUL,5205,Publicidad Mirador,Pauta comercial,12116050
+2025-04-30,PAL,5135,Aseo Integral,Aseo y cafetería,3207477
+2025-04-30,PAL,5135,Mantenimientos Roble,Mantenimiento,6415156

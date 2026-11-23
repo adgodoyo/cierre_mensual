@@ -1,0 +1,34 @@
+fecha,sede,cuenta,proveedor,concepto,valor
+2026-10-01,TUL,5135,Energía Cordillera,Servicios públicos,5082601
+2026-10-02,CAL,5205,Comisiones Red Aliada,Comisiones externas,21716402
+2026-10-02,CAL,5120,Inmuebles del Parque,Arrendamiento,39726088
+2026-10-02,CAL,5135,Vigilancia Centinela,Vigilancia,19316453
+2026-10-02,PAL,5205,Comisiones Red Aliada,Comisiones externas,10785842
+2026-10-02,PAL,5120,Seguros Horizonte,Seguros de sede,7672055
+2026-10-02,TUL,5205,Alistamiento Exprés,Alistamiento,9828542
+2026-10-02,TUL,5205,Fletes La Sabana,Transporte de vehículos,12398711
+2026-10-06,CAL,5135,Conecta Datos,Internet y software,10351501
+2026-10-06,PAL,5205,Alistamiento Exprés,Alistamiento,14537614
+2026-10-06,PAL,5135,Conecta Datos,Internet y software,4981244
+2026-10-07,PAL,5120,Inmuebles del Parque,Arrendamiento,19514785
+2026-10-09,CAL,5135,Aseo Integral,Aseo y cafetería,6357920
+2026-10-09,TUL,5135,Conecta Datos,Internet y software,3336634
+2026-10-12,CAL,5205,Alistamiento Exprés,Alistamiento,29722655
+2026-10-12,PAL,5205,Fletes La Sabana,Transporte de vehículos,18667036
+2026-10-13,CAL,5135,Energía Cordillera,Servicios públicos,15604587
+2026-10-14,CAL,5205,Publicidad Mirador,Pauta comercial,46152877
+2026-10-19,PAL,5205,Publicidad Mirador,Pauta comercial,22405747
+2026-10-19,TUL,5120,Seguros Horizonte,Seguros de sede,5060904
+2026-10-19,TUL,5135,Vigilancia Centinela,Vigilancia,6316420
+2026-10-20,CAL,5205,Fletes La Sabana,Transporte de vehículos,37659665
+2026-10-20,PAL,5135,Aseo Integral,Aseo y cafetería,3168762
+2026-10-21,PAL,5135,Vigilancia Centinela,Vigilancia,9542669
+2026-10-22,TUL,5205,Publicidad Mirador,Pauta comercial,14973454
+2026-10-23,CAL,5135,Mantenimientos Roble,Mantenimiento,12806869
+2026-10-26,TUL,5135,Aseo Integral,Aseo y cafetería,2093797
+2026-10-27,TUL,5120,Inmuebles del Parque,Arrendamiento,13063655
+2026-10-28,PAL,5135,Energía Cordillera,Servicios públicos,7649123
+2026-10-29,CAL,5120,Seguros Horizonte,Seguros de sede,15654512
+2026-10-29,PAL,5135,Mantenimientos Roble,Mantenimiento,6283858
+2026-10-29,TUL,5205,Comisiones Red Aliada,Comisiones externas,7063452
+2026-10-30,TUL,5135,Mantenimientos Roble,Mantenimiento,4170771

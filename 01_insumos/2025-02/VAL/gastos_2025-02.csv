@@ -1,0 +1,34 @@
+fecha,sede,cuenta,proveedor,concepto,valor
+2025-02-04,PAL,5205,Alistamiento Exprés,Alistamiento,11092566
+2025-02-05,PAL,5135,Mantenimientos Roble,Mantenimiento,6315175
+2025-02-05,TUL,5135,Energía Cordillera,Servicios públicos,4963464
+2025-02-05,TUL,5205,Publicidad Mirador,Pauta comercial,11257900
+2025-02-06,CAL,5135,Vigilancia Centinela,Vigilancia,19280621
+2025-02-06,PAL,5135,Conecta Datos,Internet y software,5092020
+2025-02-10,CAL,5205,Alistamiento Exprés,Alistamiento,22232055
+2025-02-10,CAL,5205,Comisiones Red Aliada,Comisiones externas,16107836
+2025-02-10,TUL,5120,Inmuebles del Parque,Arrendamiento,13054194
+2025-02-11,PAL,5135,Vigilancia Centinela,Vigilancia,9344957
+2025-02-12,CAL,5135,Aseo Integral,Aseo y cafetería,6471798
+2025-02-12,CAL,5135,Mantenimientos Roble,Mantenimiento,12944571
+2025-02-14,CAL,5120,Inmuebles del Parque,Arrendamiento,39722333
+2025-02-14,PAL,5205,Comisiones Red Aliada,Comisiones externas,7849848
+2025-02-14,TUL,5120,Seguros Horizonte,Seguros de sede,5070365
+2025-02-17,CAL,5135,Energía Cordillera,Servicios públicos,15323750
+2025-02-17,PAL,5205,Publicidad Mirador,Pauta comercial,16896883
+2025-02-17,TUL,5205,Fletes La Sabana,Transporte de vehículos,9239785
+2025-02-17,TUL,5135,Mantenimientos Roble,Mantenimiento,4242259
+2025-02-19,PAL,5205,Fletes La Sabana,Transporte de vehículos,13809930
+2025-02-20,CAL,5135,Conecta Datos,Internet y software,10445673
+2025-02-20,CAL,5205,Fletes La Sabana,Transporte de vehículos,28243770
+2025-02-20,TUL,5135,Vigilancia Centinela,Vigilancia,6255768
+2025-02-21,PAL,5135,Aseo Integral,Aseo y cafetería,3173777
+2025-02-21,PAL,5120,Inmuebles del Parque,Arrendamiento,19474916
+2025-02-25,TUL,5205,Alistamiento Exprés,Alistamiento,7324209
+2025-02-25,TUL,5205,Comisiones Red Aliada,Comisiones externas,5277590
+2025-02-26,PAL,5135,Energía Cordillera,Servicios públicos,7525194
+2025-02-26,TUL,5135,Aseo Integral,Aseo y cafetería,2120967
+2025-02-27,CAL,5205,Publicidad Mirador,Pauta comercial,34553653
+2025-02-27,CAL,5120,Seguros Horizonte,Seguros de sede,15658267
+2025-02-27,PAL,5120,Seguros Horizonte,Seguros de sede,7711924
+2025-02-28,TUL,5135,Conecta Datos,Internet y software,3405818

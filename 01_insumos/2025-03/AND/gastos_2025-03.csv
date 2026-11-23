@@ -1,0 +1,34 @@
+fecha,sede,cuenta,proveedor,concepto,valor
+2025-03-04,NOR,5120,Inmuebles del Parque,Arrendamiento,40478611
+2025-03-04,NOR,5120,Seguros Horizonte,Seguros de sede,15461389
+2025-03-04,SUR,5135,Aseo Integral,Aseo y cafetería,4160631
+2025-03-05,CEN,5120,Seguros Horizonte,Seguros de sede,13503152
+2025-03-05,NOR,5205,Alistamiento Exprés,Alistamiento,24897127
+2025-03-05,SUR,5205,Fletes La Sabana,Transporte de vehículos,19772511
+2025-03-06,CEN,5135,Conecta Datos,Internet y software,9189286
+2025-03-10,CEN,5135,Energía Cordillera,Servicios públicos,13528983
+2025-03-10,CEN,5205,Fletes La Sabana,Transporte de vehículos,28009671
+2025-03-10,SUR,5205,Publicidad Mirador,Pauta comercial,24614640
+2025-03-12,NOR,5135,Aseo Integral,Aseo y cafetería,6455187
+2025-03-13,NOR,5205,Comisiones Red Aliada,Comisiones externas,18312555
+2025-03-13,NOR,5135,Vigilancia Centinela,Vigilancia,19218177
+2025-03-14,NOR,5135,Energía Cordillera,Servicios públicos,15608488
+2025-03-14,NOR,5135,Mantenimientos Roble,Mantenimiento,13021289
+2025-03-14,SUR,5205,Alistamiento Exprés,Alistamiento,15526090
+2025-03-17,CEN,5205,Publicidad Mirador,Pauta comercial,33926643
+2025-03-18,SUR,5135,Energía Cordillera,Servicios públicos,9939689
+2025-03-18,SUR,5120,Seguros Horizonte,Seguros de sede,9762902
+2025-03-18,SUR,5135,Vigilancia Centinela,Vigilancia,12283289
+2025-03-19,SUR,5205,Comisiones Red Aliada,Comisiones externas,11586759
+2025-03-20,CEN,5120,Inmuebles del Parque,Arrendamiento,35444348
+2025-03-21,CEN,5205,Comisiones Red Aliada,Comisiones externas,16132807
+2025-03-21,NOR,5205,Publicidad Mirador,Pauta comercial,38797062
+2025-03-21,SUR,5135,Conecta Datos,Internet y software,6548752
+2025-03-21,SUR,5120,Inmuebles del Parque,Arrendamiento,25199598
+2025-03-24,CEN,5205,Alistamiento Exprés,Alistamiento,22030879
+2025-03-25,CEN,5135,Vigilancia Centinela,Vigilancia,17182147
+2025-03-25,NOR,5135,Conecta Datos,Internet y software,10337943
+2025-03-25,SUR,5135,Mantenimientos Roble,Mantenimiento,8164027
+2025-03-26,NOR,5205,Fletes La Sabana,Transporte de vehículos,32393256
+2025-03-27,CEN,5135,Aseo Integral,Aseo y cafetería,5672766
+2025-03-31,CEN,5135,Mantenimientos Roble,Mantenimiento,11457677

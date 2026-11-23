@@ -1,0 +1,34 @@
+fecha,sede,cuenta,proveedor,concepto,valor
+2025-06-02,CAL,5120,Seguros Horizonte,Seguros de sede,15665354
+2025-06-03,CAL,5205,Alistamiento Exprés,Alistamiento,25490759
+2025-06-03,PAL,5120,Inmuebles del Parque,Arrendamiento,19552487
+2025-06-03,TUL,5135,Mantenimientos Roble,Mantenimiento,4289949
+2025-06-04,PAL,5205,Publicidad Mirador,Pauta comercial,19370639
+2025-06-05,PAL,5135,Aseo Integral,Aseo y cafetería,3224548
+2025-06-06,PAL,5135,Vigilancia Centinela,Vigilancia,9532795
+2025-06-10,PAL,5205,Fletes La Sabana,Transporte de vehículos,15744242
+2025-06-10,PAL,5135,Mantenimientos Roble,Mantenimiento,6413510
+2025-06-10,TUL,5205,Alistamiento Exprés,Alistamiento,8296959
+2025-06-11,CAL,5205,Publicidad Mirador,Pauta comercial,38982880
+2025-06-11,TUL,5135,Vigilancia Centinela,Vigilancia,6385740
+2025-06-13,CAL,5205,Comisiones Red Aliada,Comisiones externas,18431673
+2025-06-13,PAL,5135,Energía Cordillera,Servicios públicos,7635820
+2025-06-17,CAL,5135,Mantenimientos Roble,Mantenimiento,12954414
+2025-06-17,PAL,5135,Conecta Datos,Internet y software,5156850
+2025-06-17,TUL,5120,Inmuebles del Parque,Arrendamiento,13137588
+2025-06-17,TUL,5120,Seguros Horizonte,Seguros de sede,4986971
+2025-06-18,CAL,5135,Energía Cordillera,Servicios públicos,15562853
+2025-06-19,CAL,5135,Conecta Datos,Internet y software,10340557
+2025-06-19,PAL,5205,Alistamiento Exprés,Alistamiento,12466406
+2025-06-19,TUL,5135,Conecta Datos,Internet y software,3389898
+2025-06-20,PAL,5120,Seguros Horizonte,Seguros de sede,7634353
+2025-06-20,TUL,5135,Energía Cordillera,Servicios públicos,5187839
+2025-06-23,CAL,5135,Vigilancia Centinela,Vigilancia,19152974
+2025-06-24,PAL,5205,Comisiones Red Aliada,Comisiones externas,9067241
+2025-06-25,CAL,5205,Fletes La Sabana,Transporte de vehículos,32489837
+2025-06-25,TUL,5205,Comisiones Red Aliada,Comisiones externas,6036532
+2025-06-26,CAL,5120,Inmuebles del Parque,Arrendamiento,39715246
+2025-06-26,TUL,5205,Publicidad Mirador,Pauta comercial,12846758
+2025-06-27,TUL,5135,Aseo Integral,Aseo y cafetería,2162468
+2025-06-27,TUL,5205,Fletes La Sabana,Transporte de vehículos,10585436
+2025-06-30,CAL,5135,Aseo Integral,Aseo y cafetería,6464588

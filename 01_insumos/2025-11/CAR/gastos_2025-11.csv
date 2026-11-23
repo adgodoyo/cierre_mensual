@@ -1,0 +1,34 @@
+fecha,sede,cuenta,proveedor,concepto,valor
+2025-11-03,CTG,5205,Comisiones Red Aliada,Comisiones externas,8681325
+2025-11-04,BAQ,5205,Comisiones Red Aliada,Comisiones externas,13247352
+2025-11-04,BAQ,5120,Inmuebles del Parque,Arrendamiento,29169955
+2025-11-04,SMR,5135,Energía Cordillera,Servicios públicos,4006206
+2025-11-05,SMR,5205,Alistamiento Exprés,Alistamiento,6648673
+2025-11-05,SMR,5120,Seguros Horizonte,Seguros de sede,4057472
+2025-11-06,CTG,5120,Seguros Horizonte,Seguros de sede,7185544
+2025-11-06,SMR,5135,Vigilancia Centinela,Vigilancia,5058541
+2025-11-07,SMR,5135,Aseo Integral,Aseo y cafetería,1696417
+2025-11-07,SMR,5135,Conecta Datos,Internet y software,2691506
+2025-11-10,BAQ,5135,Energía Cordillera,Servicios públicos,11397178
+2025-11-10,BAQ,5135,Vigilancia Centinela,Vigilancia,13965698
+2025-11-10,SMR,5205,Comisiones Red Aliada,Comisiones externas,4840078
+2025-11-11,BAQ,5205,Alistamiento Exprés,Alistamiento,18305574
+2025-11-11,BAQ,5205,Fletes La Sabana,Transporte de vehículos,23264132
+2025-11-12,BAQ,5135,Aseo Integral,Aseo y cafetería,4652815
+2025-11-12,CTG,5135,Energía Cordillera,Servicios públicos,7382652
+2025-11-13,CTG,5135,Conecta Datos,Internet y software,4945079
+2025-11-13,SMR,5205,Fletes La Sabana,Transporte de vehículos,8416160
+2025-11-17,CTG,5120,Inmuebles del Parque,Arrendamiento,18770615
+2025-11-19,BAQ,5135,Mantenimientos Roble,Mantenimiento,9499794
+2025-11-19,CTG,5205,Alistamiento Exprés,Alistamiento,11666389
+2025-11-19,CTG,5205,Publicidad Mirador,Pauta comercial,18214320
+2025-11-19,CTG,5135,Vigilancia Centinela,Vigilancia,9071737
+2025-11-19,SMR,5120,Inmuebles del Parque,Arrendamiento,10542867
+2025-11-19,SMR,5135,Mantenimientos Roble,Mantenimiento,3395943
+2025-11-19,SMR,5205,Publicidad Mirador,Pauta comercial,10129822
+2025-11-21,BAQ,5205,Publicidad Mirador,Pauta comercial,28612757
+2025-11-25,BAQ,5120,Seguros Horizonte,Seguros de sede,11386545
+2025-11-25,CTG,5135,Aseo Integral,Aseo y cafetería,3026127
+2025-11-25,CTG,5135,Mantenimientos Roble,Mantenimiento,6006993
+2025-11-26,BAQ,5135,Conecta Datos,Internet y software,7586489
+2025-11-26,CTG,5205,Fletes La Sabana,Transporte de vehículos,14833048

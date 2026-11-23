@@ -1,0 +1,34 @@
+fecha,sede,cuenta,proveedor,concepto,valor
+2026-10-01,VIL,5135,Mantenimientos Roble,Mantenimiento,7994354
+2026-10-01,YOP,5120,Seguros Horizonte,Seguros de sede,3955400
+2026-10-02,ACA,5135,Conecta Datos,Internet y software,1213505
+2026-10-05,VIL,5205,Comisiones Red Aliada,Comisiones externas,12957819
+2026-10-05,YOP,5205,Fletes La Sabana,Transporte de vehículos,9599726
+2026-10-06,ACA,5120,Seguros Horizonte,Seguros de sede,1828714
+2026-10-08,VIL,5205,Fletes La Sabana,Transporte de vehículos,22460153
+2026-10-09,ACA,5135,Vigilancia Centinela,Vigilancia,2252749
+2026-10-09,YOP,5120,Inmuebles del Parque,Arrendamiento,10225390
+2026-10-12,YOP,5135,Energía Cordillera,Servicios públicos,3965064
+2026-10-12,YOP,5135,Vigilancia Centinela,Vigilancia,4983141
+2026-10-14,ACA,5205,Publicidad Mirador,Pauta comercial,5235255
+2026-10-14,VIL,5205,Alistamiento Exprés,Alistamiento,17954224
+2026-10-14,YOP,5205,Publicidad Mirador,Pauta comercial,11431390
+2026-10-15,YOP,5135,Aseo Integral,Aseo y cafetería,1662306
+2026-10-16,VIL,5135,Aseo Integral,Aseo y cafetería,3962458
+2026-10-19,VIL,5120,Inmuebles del Parque,Arrendamiento,24533400
+2026-10-19,YOP,5205,Alistamiento Exprés,Alistamiento,7476316
+2026-10-19,YOP,5135,Conecta Datos,Internet y software,2664955
+2026-10-20,ACA,5135,Energía Cordillera,Servicios públicos,1841630
+2026-10-20,VIL,5135,Energía Cordillera,Servicios públicos,9510732
+2026-10-21,VIL,5135,Conecta Datos,Internet y software,6279100
+2026-10-22,VIL,5135,Vigilancia Centinela,Vigilancia,11967195
+2026-10-23,ACA,5205,Alistamiento Exprés,Alistamiento,3482281
+2026-10-23,YOP,5135,Mantenimientos Roble,Mantenimiento,3314891
+2026-10-26,ACA,5120,Inmuebles del Parque,Arrendamiento,4716266
+2026-10-26,VIL,5205,Publicidad Mirador,Pauta comercial,27523426
+2026-10-26,VIL,5120,Seguros Horizonte,Seguros de sede,9282330
+2026-10-27,ACA,5205,Comisiones Red Aliada,Comisiones externas,2518902
+2026-10-27,ACA,5135,Mantenimientos Roble,Mantenimiento,1527886
+2026-10-27,YOP,5205,Comisiones Red Aliada,Comisiones externas,5416538
+2026-10-29,ACA,5205,Fletes La Sabana,Transporte de vehículos,4420779
+2026-10-30,ACA,5135,Aseo Integral,Aseo y cafetería,757789

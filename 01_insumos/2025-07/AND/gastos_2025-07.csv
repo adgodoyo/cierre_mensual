@@ -1,0 +1,34 @@
+fecha,sede,cuenta,proveedor,concepto,valor
+2025-07-01,NOR,5120,Seguros Horizonte,Seguros de sede,15533595
+2025-07-01,SUR,5205,Comisiones Red Aliada,Comisiones externas,11866662
+2025-07-02,CEN,5135,Aseo Integral,Aseo y cafetería,5669087
+2025-07-02,CEN,5135,Energía Cordillera,Servicios públicos,13738214
+2025-07-03,NOR,5205,Comisiones Red Aliada,Comisiones externas,18853034
+2025-07-03,SUR,5205,Alistamiento Exprés,Alistamiento,16153172
+2025-07-04,CEN,5135,Vigilancia Centinela,Vigilancia,17254724
+2025-07-04,SUR,5135,Vigilancia Centinela,Vigilancia,12496613
+2025-07-07,CEN,5205,Comisiones Red Aliada,Comisiones externas,16293248
+2025-07-07,NOR,5135,Vigilancia Centinela,Vigilancia,19411103
+2025-07-08,CEN,5120,Seguros Horizonte,Seguros de sede,13794415
+2025-07-08,SUR,5120,Seguros Horizonte,Seguros de sede,9684820
+2025-07-09,NOR,5205,Alistamiento Exprés,Alistamiento,25995156
+2025-07-09,NOR,5205,Fletes La Sabana,Transporte de vehículos,33221345
+2025-07-10,CEN,5205,Publicidad Mirador,Pauta comercial,35107157
+2025-07-14,SUR,5135,Mantenimientos Roble,Mantenimiento,8177051
+2025-07-14,SUR,5205,Publicidad Mirador,Pauta comercial,25033573
+2025-07-16,SUR,5135,Conecta Datos,Internet y software,6510930
+2025-07-21,CEN,5135,Conecta Datos,Internet y software,9129008
+2025-07-21,NOR,5120,Inmuebles del Parque,Arrendamiento,40406405
+2025-07-22,CEN,5120,Inmuebles del Parque,Arrendamiento,35153085
+2025-07-22,NOR,5135,Conecta Datos,Internet y software,10224886
+2025-07-22,NOR,5135,Energía Cordillera,Servicios públicos,15515328
+2025-07-23,CEN,5135,Mantenimientos Roble,Mantenimiento,11559062
+2025-07-23,NOR,5135,Mantenimientos Roble,Mantenimiento,12864726
+2025-07-25,SUR,5205,Fletes La Sabana,Transporte de vehículos,20396593
+2025-07-28,SUR,5120,Inmuebles del Parque,Arrendamiento,25277680
+2025-07-29,CEN,5205,Alistamiento Exprés,Alistamiento,22670524
+2025-07-29,NOR,5135,Aseo Integral,Aseo y cafetería,6414224
+2025-07-29,NOR,5205,Publicidad Mirador,Pauta comercial,39450464
+2025-07-30,SUR,5135,Energía Cordillera,Servicios públicos,9840415
+2025-07-31,CEN,5205,Fletes La Sabana,Transporte de vehículos,28759071
+2025-07-31,SUR,5135,Aseo Integral,Aseo y cafetería,4078328

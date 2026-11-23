@@ -1,0 +1,34 @@
+fecha,sede,cuenta,proveedor,concepto,valor
+2025-10-01,BAQ,5135,Energía Cordillera,Servicios públicos,11469207
+2025-10-01,BAQ,5135,Vigilancia Centinela,Vigilancia,14335806
+2025-10-01,CTG,5205,Publicidad Mirador,Pauta comercial,19345329
+2025-10-01,SMR,5120,Seguros Horizonte,Seguros de sede,4088692
+2025-10-02,BAQ,5205,Publicidad Mirador,Pauta comercial,30599208
+2025-10-03,BAQ,5205,Fletes La Sabana,Transporte de vehículos,24943633
+2025-10-03,SMR,5135,Energía Cordillera,Servicios públicos,4097064
+2025-10-06,BAQ,5120,Inmuebles del Parque,Arrendamiento,29162080
+2025-10-07,CTG,5135,Mantenimientos Roble,Mantenimiento,6095294
+2025-10-07,SMR,5135,Mantenimientos Roble,Mantenimiento,3386968
+2025-10-08,CTG,5205,Fletes La Sabana,Transporte de vehículos,16218544
+2025-10-09,CTG,5135,Energía Cordillera,Servicios públicos,7246492
+2025-10-10,BAQ,5120,Seguros Horizonte,Seguros de sede,11394420
+2025-10-10,SMR,5135,Vigilancia Centinela,Vigilancia,5108686
+2025-10-13,SMR,5205,Comisiones Red Aliada,Comisiones externas,5086417
+2025-10-15,BAQ,5205,Alistamiento Exprés,Alistamiento,19569437
+2025-10-15,CTG,5120,Seguros Horizonte,Seguros de sede,7208249
+2025-10-17,CTG,5135,Conecta Datos,Internet y software,4935088
+2025-10-20,CTG,5135,Vigilancia Centinela,Vigilancia,9262980
+2025-10-20,SMR,5135,Aseo Integral,Aseo y cafetería,1696760
+2025-10-21,BAQ,5135,Aseo Integral,Aseo y cafetería,4680934
+2025-10-21,BAQ,5205,Comisiones Red Aliada,Comisiones externas,14232391
+2025-10-21,CTG,5135,Aseo Integral,Aseo y cafetería,3017134
+2025-10-21,CTG,5120,Inmuebles del Parque,Arrendamiento,18747910
+2025-10-22,BAQ,5135,Mantenimientos Roble,Mantenimiento,9350370
+2025-10-23,SMR,5120,Inmuebles del Parque,Arrendamiento,10511647
+2025-10-28,SMR,5205,Publicidad Mirador,Pauta comercial,10967046
+2025-10-29,SMR,5135,Conecta Datos,Internet y software,2726258
+2025-10-30,BAQ,5135,Conecta Datos,Internet y software,7663129
+2025-10-30,CTG,5205,Alistamiento Exprés,Alistamiento,12481074
+2025-10-31,CTG,5205,Comisiones Red Aliada,Comisiones externas,9135641
+2025-10-31,SMR,5205,Alistamiento Exprés,Alistamiento,7094953
+2025-10-31,SMR,5205,Fletes La Sabana,Transporte de vehículos,9015665

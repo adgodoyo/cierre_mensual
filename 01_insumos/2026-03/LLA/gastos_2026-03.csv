@@ -1,0 +1,34 @@
+fecha,sede,cuenta,proveedor,concepto,valor
+2026-03-02,ACA,5135,Aseo Integral,Aseo y cafetería,756953
+2026-03-02,ACA,5135,Mantenimientos Roble,Mantenimiento,1516294
+2026-03-02,ACA,5135,Vigilancia Centinela,Vigilancia,2278500
+2026-03-02,VIL,5205,Fletes La Sabana,Transporte de vehículos,21418343
+2026-03-02,VIL,5135,Vigilancia Centinela,Vigilancia,11710342
+2026-03-03,YOP,5135,Conecta Datos,Internet y software,2679575
+2026-03-03,YOP,5205,Fletes La Sabana,Transporte de vehículos,8889322
+2026-03-03,YOP,5120,Inmuebles del Parque,Arrendamiento,10194383
+2026-03-03,YOP,5120,Seguros Horizonte,Seguros de sede,3986407
+2026-03-06,VIL,5120,Seguros Horizonte,Seguros de sede,9588909
+2026-03-09,VIL,5205,Alistamiento Exprés,Alistamiento,16542457
+2026-03-11,ACA,5120,Seguros Horizonte,Seguros de sede,1819015
+2026-03-12,VIL,5205,Publicidad Mirador,Pauta comercial,26233006
+2026-03-13,ACA,5205,Alistamiento Exprés,Alistamiento,3245331
+2026-03-16,ACA,5205,Comisiones Red Aliada,Comisiones externas,2345016
+2026-03-16,VIL,5120,Inmuebles del Parque,Arrendamiento,24226821
+2026-03-16,YOP,5135,Aseo Integral,Aseo y cafetería,1653157
+2026-03-18,ACA,5135,Energía Cordillera,Servicios públicos,1846117
+2026-03-18,ACA,5205,Publicidad Mirador,Pauta comercial,5042350
+2026-03-19,ACA,5120,Inmuebles del Parque,Arrendamiento,4725965
+2026-03-19,YOP,5205,Comisiones Red Aliada,Comisiones externas,5147006
+2026-03-20,ACA,5135,Conecta Datos,Internet y software,1224217
+2026-03-23,ACA,5205,Fletes La Sabana,Transporte de vehículos,4127500
+2026-03-23,VIL,5205,Comisiones Red Aliada,Comisiones externas,12067214
+2026-03-23,VIL,5135,Energía Cordillera,Servicios públicos,9546693
+2026-03-24,VIL,5135,Aseo Integral,Aseo y cafetería,3905059
+2026-03-24,VIL,5135,Conecta Datos,Internet y software,6354759
+2026-03-24,YOP,5135,Vigilancia Centinela,Vigilancia,4970871
+2026-03-25,YOP,5205,Alistamiento Exprés,Alistamiento,7045732
+2026-03-27,YOP,5135,Energía Cordillera,Servicios públicos,4047919
+2026-03-31,VIL,5135,Mantenimientos Roble,Mantenimiento,7990278
+2026-03-31,YOP,5135,Mantenimientos Roble,Mantenimiento,3296728
+2026-03-31,YOP,5205,Publicidad Mirador,Pauta comercial,10898367

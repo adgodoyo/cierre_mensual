@@ -1,0 +1,76 @@
+{
+  "concesionarios": {
+    "AND": {
+      "nombre": "Concesionario Andino",
+      "sedes": {
+        "NOR": "Norte",
+        "CEN": "Centro",
+        "SUR": "Sur"
+      }
+    },
+    "VAL": {
+      "nombre": "Autos del Valle",
+      "sedes": {
+        "CAL": "Cali",
+        "PAL": "Palmira",
+        "TUL": "Tuluá"
+      }
+    },
+    "CAR": {
+      "nombre": "Motores Caribe",
+      "sedes": {
+        "BAQ": "Barranquilla",
+        "CTG": "Cartagena",
+        "SMR": "Santa Marta"
+      }
+    },
+    "LLA": {
+      "nombre": "Llanos Motor",
+      "sedes": {
+        "VIL": "Villavicencio",
+        "YOP": "Yopal",
+        "ACA": "Acacías"
+      }
+    }
+  },
+  "departamentos": {
+    "LIV": "Livianos",
+    "USA": "Usados",
+    "ELE": "Eléctricos",
+    "PES": "Pesados",
+    "FYI": "F&I",
+    "SER": "Servicio",
+    "REP": "Repuestos",
+    "ACC": "Accesorios",
+    "ADM": "Administrativo"
+  },
+  "cuentas": {
+    "1105": "Caja",
+    "1110": "Bancos",
+    "1305": "Clientes",
+    "143501": "Inventario Livianos",
+    "143502": "Inventario Eléctricos",
+    "143503": "Inventario Usados",
+    "143504": "Inventario Pesados",
+    "143505": "Inventario Repuestos",
+    "1516": "Construcciones",
+    "1524": "Equipo de oficina",
+    "1592": "Depreciación acumulada",
+    "2105": "Obligaciones wholesale",
+    "2205": "Proveedores",
+    "2404": "Impuesto de renta",
+    "2408": "IVA por pagar",
+    "2505": "Salarios por pagar",
+    "3105": "Capital social",
+    "3605": "Utilidad del ejercicio",
+    "3705": "Utilidades acumuladas",
+    "4135": "Ventas netas",
+    "6135": "Costo de ventas",
+    "5105": "Gastos de personal",
+    "5120": "Gastos fijos",
+    "5135": "Gastos semifijos",
+    "5195": "Diversos",
+    "5205": "Gastos variables",
+    "5305": "Gasto financiero"
+  }
+}

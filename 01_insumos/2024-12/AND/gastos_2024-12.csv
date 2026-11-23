@@ -1,0 +1,34 @@
+fecha,sede,cuenta,proveedor,concepto,valor
+2024-12-02,CEN,5205,Alistamiento Exprés,Alistamiento,26269673
+2024-12-02,NOR,5135,Energía Cordillera,Servicios públicos,15710625
+2024-12-02,NOR,5205,Fletes La Sabana,Transporte de vehículos,38776372
+2024-12-02,SUR,5135,Mantenimientos Roble,Mantenimiento,8033224
+2024-12-03,CEN,5205,Comisiones Red Aliada,Comisiones externas,18987892
+2024-12-03,CEN,5135,Mantenimientos Roble,Mantenimiento,11292552
+2024-12-04,CEN,5135,Aseo Integral,Aseo y cafetería,5642342
+2024-12-04,SUR,5205,Fletes La Sabana,Transporte de vehículos,23760174
+2024-12-06,SUR,5135,Energía Cordillera,Servicios públicos,9554401
+2024-12-09,SUR,5120,Seguros Horizonte,Seguros de sede,9873396
+2024-12-10,NOR,5135,Conecta Datos,Internet y software,10391148
+2024-12-11,CEN,5205,Publicidad Mirador,Pauta comercial,41103860
+2024-12-12,CEN,5135,Conecta Datos,Internet y software,9255036
+2024-12-12,NOR,5205,Alistamiento Exprés,Alistamiento,30151651
+2024-12-12,NOR,5120,Inmuebles del Parque,Arrendamiento,40027031
+2024-12-13,CEN,5135,Vigilancia Centinela,Vigilancia,17216521
+2024-12-16,SUR,5135,Vigilancia Centinela,Vigilancia,12082441
+2024-12-17,CEN,5120,Inmuebles del Parque,Arrendamiento,35047387
+2024-12-17,NOR,5135,Mantenimientos Roble,Mantenimiento,13111537
+2024-12-17,SUR,5205,Alistamiento Exprés,Alistamiento,19010710
+2024-12-18,NOR,5135,Aseo Integral,Aseo y cafetería,6641625
+2024-12-19,CEN,5205,Fletes La Sabana,Transporte de vehículos,33758575
+2024-12-19,NOR,5205,Publicidad Mirador,Pauta comercial,46313387
+2024-12-19,SUR,5135,Aseo Integral,Aseo y cafetería,3985641
+2024-12-23,SUR,5135,Conecta Datos,Internet y software,6532398
+2024-12-25,CEN,5135,Energía Cordillera,Servicios públicos,13871948
+2024-12-25,SUR,5205,Comisiones Red Aliada,Comisiones externas,13668330
+2024-12-26,NOR,5205,Comisiones Red Aliada,Comisiones externas,22038590
+2024-12-26,NOR,5135,Vigilancia Centinela,Vigilancia,19443829
+2024-12-26,SUR,5120,Inmuebles del Parque,Arrendamiento,25089104
+2024-12-26,SUR,5205,Publicidad Mirador,Pauta comercial,29360785
+2024-12-31,CEN,5120,Seguros Horizonte,Seguros de sede,13900113
+2024-12-31,NOR,5120,Seguros Horizonte,Seguros de sede,15912969

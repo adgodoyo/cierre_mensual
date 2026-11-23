@@ -1,0 +1,10 @@
+sede,entidad,tipo,saldo,tasa_mensual,interes_mes
+CAL,Banco Cordillera,Wholesale,2129384286,0.01155,24594389
+CAL,Financiera Altiplano,Wholesale,1277630572,0.01205,15395448
+CAL,Crédito Rutas,Wholesale,851753715,0.01305,11115386
+PAL,Banco Cordillera,Wholesale,1164280151,0.01155,13447436
+PAL,Financiera Altiplano,Wholesale,698568091,0.01205,8417745
+PAL,Crédito Rutas,Wholesale,465712061,0.01305,6077542
+TUL,Banco Cordillera,Wholesale,564514726,0.01155,6520145
+TUL,Financiera Altiplano,Wholesale,338708836,0.01205,4081441
+TUL,Crédito Rutas,Wholesale,225805891,0.01305,2946767

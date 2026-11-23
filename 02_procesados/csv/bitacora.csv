@@ -1,0 +1,25 @@
+bitacora_id,fecha,periodo,paso,resultado,accion,responsable,fuente,cargado_en
+1,2024-12-05T07:00:00-05:00,2024-11,ingesta,Correcto,Cargó 36 archivos y 1960 filas,Agente de procesamiento,src/ingesta.py,2024-12-05T07:00:00-05:00
+2,2025-01-05T07:00:00-05:00,2024-12,ingesta,Correcto,Cargó 36 archivos y 2155 filas,Agente de procesamiento,src/ingesta.py,2025-01-05T07:00:00-05:00
+3,2025-02-05T07:00:00-05:00,2025-01,ingesta,Correcto,Cargó 36 archivos y 1971 filas,Agente de procesamiento,src/ingesta.py,2025-02-05T07:00:00-05:00
+4,2025-03-05T07:00:00-05:00,2025-02,ingesta,Correcto,Cargó 36 archivos y 1921 filas,Agente de procesamiento,src/ingesta.py,2025-03-05T07:00:00-05:00
+5,2025-04-05T07:00:00-05:00,2025-03,ingesta,Correcto,Cargó 36 archivos y 2017 filas,Agente de procesamiento,src/ingesta.py,2025-04-05T07:00:00-05:00
+6,2025-05-05T07:00:00-05:00,2025-04,ingesta,Correcto,Cargó 36 archivos y 2004 filas,Agente de procesamiento,src/ingesta.py,2025-05-05T07:00:00-05:00
+7,2025-06-05T07:00:00-05:00,2025-05,ingesta,Correcto,Cargó 36 archivos y 2055 filas,Agente de procesamiento,src/ingesta.py,2025-06-05T07:00:00-05:00
+8,2025-07-05T07:00:00-05:00,2025-06,ingesta,Correcto,Cargó 36 archivos y 2011 filas,Agente de procesamiento,src/ingesta.py,2025-07-05T07:00:00-05:00
+9,2025-08-05T07:00:00-05:00,2025-07,ingesta,Correcto,Cargó 36 archivos y 2043 filas,Agente de procesamiento,src/ingesta.py,2025-08-05T07:00:00-05:00
+10,2025-09-05T07:00:00-05:00,2025-08,ingesta,Correcto,Cargó 36 archivos y 2079 filas,Agente de procesamiento,src/ingesta.py,2025-09-05T07:00:00-05:00
+11,2025-10-05T07:00:00-05:00,2025-09,ingesta,Correcto,Cargó 36 archivos y 2030 filas,Agente de procesamiento,src/ingesta.py,2025-10-05T07:00:00-05:00
+12,2025-11-05T07:00:00-05:00,2025-10,ingesta,Correcto,Cargó 36 archivos y 2067 filas,Agente de procesamiento,src/ingesta.py,2025-11-05T07:00:00-05:00
+13,2025-12-05T07:00:00-05:00,2025-11,ingesta,Correcto,Cargó 36 archivos y 2030 filas,Agente de procesamiento,src/ingesta.py,2025-12-05T07:00:00-05:00
+14,2026-01-05T07:00:00-05:00,2025-12,ingesta,Correcto,Cargó 36 archivos y 2223 filas,Agente de procesamiento,src/ingesta.py,2026-01-05T07:00:00-05:00
+15,2026-02-05T07:00:00-05:00,2026-01,ingesta,Correcto,Cargó 36 archivos y 2028 filas,Agente de procesamiento,src/ingesta.py,2026-02-05T07:00:00-05:00
+16,2026-03-05T07:00:00-05:00,2026-02,ingesta,Correcto,Cargó 36 archivos y 1990 filas,Agente de procesamiento,src/ingesta.py,2026-03-05T07:00:00-05:00
+17,2026-04-05T07:00:00-05:00,2026-03,ingesta,Correcto,Cargó 36 archivos y 2083 filas,Agente de procesamiento,src/ingesta.py,2026-04-05T07:00:00-05:00
+18,2026-05-05T07:00:00-05:00,2026-04,ingesta,Correcto,Cargó 36 archivos y 2086 filas,Agente de procesamiento,src/ingesta.py,2026-05-05T07:00:00-05:00
+19,2026-06-05T07:00:00-05:00,2026-05,ingesta,Correcto,Cargó 36 archivos y 2129 filas,Agente de procesamiento,src/ingesta.py,2026-06-05T07:00:00-05:00
+20,2026-07-05T07:00:00-05:00,2026-06,ingesta,Correcto,Cargó 36 archivos y 2072 filas,Agente de procesamiento,src/ingesta.py,2026-07-05T07:00:00-05:00
+21,2026-08-05T07:00:00-05:00,2026-07,ingesta,Correcto,Cargó 36 archivos y 2129 filas,Agente de procesamiento,src/ingesta.py,2026-08-05T07:00:00-05:00
+22,2026-09-05T07:00:00-05:00,2026-08,ingesta,Correcto,Cargó 36 archivos y 2137 filas,Agente de procesamiento,src/ingesta.py,2026-09-05T07:00:00-05:00
+23,2026-10-05T07:00:00-05:00,2026-09,ingesta,Correcto,Cargó 36 archivos y 2083 filas,Agente de procesamiento,src/ingesta.py,2026-10-05T07:00:00-05:00
+24,2026-11-05T07:00:00-05:00,2026-10,ingesta,Correcto,Cargó 36 archivos y 2145 filas,Agente de procesamiento,src/ingesta.py,2026-11-05T07:00:00-05:00

@@ -1,0 +1,34 @@
+fecha,sede,cuenta,proveedor,concepto,valor
+2026-02-02,TUL,5135,Aseo Integral,Aseo y cafetería,2141612
+2026-02-03,CAL,5135,Aseo Integral,Aseo y cafetería,6384396
+2026-02-03,TUL,5135,Vigilancia Centinela,Vigilancia,6410072
+2026-02-05,PAL,5205,Alistamiento Exprés,Alistamiento,11507032
+2026-02-05,TUL,5205,Comisiones Red Aliada,Comisiones externas,5651262
+2026-02-06,PAL,5135,Mantenimientos Roble,Mantenimiento,6362702
+2026-02-06,PAL,5205,Publicidad Mirador,Pauta comercial,17987822
+2026-02-09,PAL,5205,Fletes La Sabana,Transporte de vehículos,15041616
+2026-02-09,TUL,5205,Fletes La Sabana,Transporte de vehículos,9981499
+2026-02-10,CAL,5135,Conecta Datos,Internet y software,10348241
+2026-02-11,CAL,5205,Fletes La Sabana,Transporte de vehículos,30079037
+2026-02-11,CAL,5135,Mantenimientos Roble,Mantenimiento,12793742
+2026-02-11,PAL,5135,Aseo Integral,Aseo y cafetería,3160289
+2026-02-11,TUL,5205,Publicidad Mirador,Pauta comercial,12062175
+2026-02-12,PAL,5135,Energía Cordillera,Servicios públicos,7669515
+2026-02-12,TUL,5135,Energía Cordillera,Servicios públicos,5081353
+2026-02-13,CAL,5135,Energía Cordillera,Servicios públicos,15453599
+2026-02-16,PAL,5120,Seguros Horizonte,Seguros de sede,7572248
+2026-02-16,TUL,5135,Conecta Datos,Internet y software,3435889
+2026-02-16,TUL,5120,Seguros Horizonte,Seguros de sede,5142658
+2026-02-17,PAL,5135,Conecta Datos,Internet y software,5057351
+2026-02-17,PAL,5120,Inmuebles del Parque,Arrendamiento,19614592
+2026-02-17,TUL,5120,Inmuebles del Parque,Arrendamiento,12981901
+2026-02-17,TUL,5135,Mantenimientos Roble,Mantenimiento,4285366
+2026-02-19,CAL,5205,Alistamiento Exprés,Alistamiento,23944030
+2026-02-19,CAL,5205,Publicidad Mirador,Pauta comercial,36649205
+2026-02-19,PAL,5205,Comisiones Red Aliada,Comisiones externas,8579875
+2026-02-20,CAL,5120,Seguros Horizonte,Seguros de sede,15454011
+2026-02-20,CAL,5135,Vigilancia Centinela,Vigilancia,19303049
+2026-02-23,CAL,5120,Inmuebles del Parque,Arrendamiento,39926589
+2026-02-26,TUL,5205,Alistamiento Exprés,Alistamiento,7715961
+2026-02-27,CAL,5205,Comisiones Red Aliada,Comisiones externas,17527691
+2026-02-27,PAL,5135,Vigilancia Centinela,Vigilancia,9529768

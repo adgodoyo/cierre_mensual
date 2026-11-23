@@ -1,0 +1,34 @@
+fecha,sede,cuenta,proveedor,concepto,valor
+2024-11-01,YOP,5205,Alistamiento Exprés,Alistamiento,6036697
+2024-11-01,YOP,5135,Aseo Integral,Aseo y cafetería,1673929
+2024-11-04,YOP,5120,Seguros Horizonte,Seguros de sede,4036901
+2024-11-05,ACA,5205,Alistamiento Exprés,Alistamiento,2774919
+2024-11-05,ACA,5120,Seguros Horizonte,Seguros de sede,1822592
+2024-11-05,ACA,5135,Vigilancia Centinela,Vigilancia,2300776
+2024-11-05,VIL,5205,Comisiones Red Aliada,Comisiones externas,10492207
+2024-11-06,YOP,5205,Comisiones Red Aliada,Comisiones externas,4407983
+2024-11-07,ACA,5120,Inmuebles del Parque,Arrendamiento,4722388
+2024-11-07,ACA,5135,Mantenimientos Roble,Mantenimiento,1543899
+2024-11-08,ACA,5135,Conecta Datos,Internet y software,1245652
+2024-11-08,VIL,5135,Vigilancia Centinela,Vigilancia,11593670
+2024-11-11,VIL,5135,Energía Cordillera,Servicios públicos,9349332
+2024-11-11,VIL,5205,Fletes La Sabana,Transporte de vehículos,18034459
+2024-11-11,VIL,5120,Inmuebles del Parque,Arrendamiento,24388515
+2024-11-11,YOP,5135,Energía Cordillera,Servicios públicos,3924191
+2024-11-11,YOP,5135,Vigilancia Centinela,Vigilancia,5015794
+2024-11-12,ACA,5205,Fletes La Sabana,Transporte de vehículos,3573548
+2024-11-15,ACA,5205,Comisiones Red Aliada,Comisiones externas,2034512
+2024-11-15,VIL,5135,Aseo Integral,Aseo y cafetería,3935084
+2024-11-15,YOP,5205,Publicidad Mirador,Pauta comercial,9368505
+2024-11-18,YOP,5120,Inmuebles del Parque,Arrendamiento,10143889
+2024-11-19,VIL,5205,Publicidad Mirador,Pauta comercial,22466695
+2024-11-20,VIL,5135,Mantenimientos Roble,Mantenimiento,7720443
+2024-11-21,ACA,5135,Aseo Integral,Aseo y cafetería,779071
+2024-11-21,YOP,5135,Conecta Datos,Internet y software,2642705
+2024-11-21,YOP,5205,Fletes La Sabana,Transporte de vehículos,7674922
+2024-11-22,ACA,5205,Publicidad Mirador,Pauta comercial,4303839
+2024-11-25,ACA,5135,Energía Cordillera,Servicios públicos,1867250
+2024-11-25,VIL,5135,Conecta Datos,Internet y software,6283162
+2024-11-27,VIL,5205,Alistamiento Exprés,Alistamiento,14555202
+2024-11-27,VIL,5120,Seguros Horizonte,Seguros de sede,9427215
+2024-11-29,YOP,5135,Mantenimientos Roble,Mantenimiento,3269434

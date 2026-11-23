@@ -1,0 +1,81 @@
+Cuenta;Nombre;Saldo
+1105;Caja;5.576.640,00
+1110;Bancos;55.766.400,00
+1305;Clientes;306.715.200,00
+143501;Inventario Livianos;279.797.772,00
+143502;Inventario Eléctricos;93.467.648,00
+143503;Inventario Usados;177.241.497,00
+143504;Inventario Pesados;0,00
+143505;Inventario Repuestos;50.189.760,00
+1516;Construcciones;98.174.700,00
+1524;Equipo de oficina;38.179.050,00
+1592;Depreciación acumulada;-29.725.117,00
+2105;Obligaciones wholesale;429.395.395,00
+2205;Proveedores;133.839.360,00
+2404;Impuesto de renta;6.691.968,00
+2408;IVA por pagar;16.729.920,00
+2505;Salarios por pagar;20.728.024,00
+3105;Capital social;109.083.000,00
+3605;Utilidad del ejercicio;25.370.862,00
+3705;Utilidades acumuladas;333.545.021,00
+4135-LIV;Ventas netas - Livianos;273.042.111,00
+6135-LIV;Costo de ventas - Livianos;249.198.474,00
+4135-USA;Ventas netas - Usados;63.521.104,00
+6135-USA;Costo de ventas - Usados;56.514.323,00
+4135-ELE;Ventas netas - Eléctricos;53.526.065,00
+6135-ELE;Costo de ventas - Eléctricos;48.113.822,00
+4135-PES;Ventas netas - Pesados;57.471.475,00
+6135-PES;Costo de ventas - Pesados;52.981.018,00
+4135-FYI;Ventas netas - F&I;9.679.406,00
+6135-FYI;Costo de ventas - F&I;967.940,00
+4135-SER;Ventas netas - Servicio;37.507.699,00
+6135-SER;Costo de ventas - Servicio;19.504.003,00
+4135-REP;Ventas netas - Repuestos;49.606.957,00
+6135-REP;Costo de ventas - Repuestos;36.213.079,00
+4135-ACC;Ventas netas - Accesorios;13.309.184,00
+6135-ACC;Costo de ventas - Accesorios;8.917.153,00
+5105-LIV;Gastos de personal - Livianos;6.477.508,00
+5105-USA;Gastos de personal - Usados;1.813.702,00
+5105-ELE;Gastos de personal - Eléctricos;1.813.702,00
+5105-PES;Gastos de personal - Pesados;1.813.702,00
+5105-FYI;Gastos de personal - F&I;777.301,00
+5105-SER;Gastos de personal - Servicio;3.368.304,00
+5105-REP;Gastos de personal - Repuestos;2.072.802,00
+5105-ACC;Gastos de personal - Accesorios;777.301,00
+5105-ADM;Gastos de personal - Administrativo;6.995.708,00
+5205-LIV;Gastos variables - Livianos;3.624.816,00
+5205-USA;Gastos variables - Usados;1.014.949,00
+5205-ELE;Gastos variables - Eléctricos;1.014.949,00
+5205-PES;Gastos variables - Pesados;1.014.948,00
+5205-FYI;Gastos variables - F&I;434.978,00
+5205-SER;Gastos variables - Servicio;1.884.904,00
+5205-REP;Gastos variables - Repuestos;1.159.941,00
+5205-ACC;Gastos variables - Accesorios;434.978,00
+5205-ADM;Gastos variables - Administrativo;3.914.801,00
+5135-LIV;Gastos semifijos - Livianos;1.932.269,00
+5135-USA;Gastos semifijos - Usados;541.035,00
+5135-ELE;Gastos semifijos - Eléctricos;541.035,00
+5135-PES;Gastos semifijos - Pesados;541.035,00
+5135-FYI;Gastos semifijos - F&I;231.872,00
+5135-SER;Gastos semifijos - Servicio;1.004.780,00
+5135-REP;Gastos semifijos - Repuestos;618.326,00
+5135-ACC;Gastos semifijos - Accesorios;231.872,00
+5135-ADM;Gastos semifijos - Administrativo;2.086.851,00
+5120-LIV;Gastos fijos - Livianos;1.636.245,00
+5120-USA;Gastos fijos - Usados;458.149,00
+5120-ELE;Gastos fijos - Eléctricos;458.149,00
+5120-PES;Gastos fijos - Pesados;458.149,00
+5120-FYI;Gastos fijos - F&I;196.349,00
+5120-SER;Gastos fijos - Servicio;850.847,00
+5120-REP;Gastos fijos - Repuestos;523.598,00
+5120-ACC;Gastos fijos - Accesorios;196.349,00
+5120-ADM;Gastos fijos - Administrativo;1.767.145,00
+5305-LIV;Gasto financiero - Livianos;1.299.995,00
+5305-USA;Gasto financiero - Usados;363.999,00
+5305-ELE;Gasto financiero - Eléctricos;363.999,00
+5305-PES;Gasto financiero - Pesados;363.998,00
+5305-FYI;Gasto financiero - F&I;155.999,00
+5305-SER;Gasto financiero - Servicio;675.997,00
+5305-REP;Gasto financiero - Repuestos;415.998,00
+5305-ACC;Gasto financiero - Accesorios;155.999,00
+5305-ADM;Gasto financiero - Administrativo;1.403.994,00

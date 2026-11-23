@@ -1,0 +1,34 @@
+fecha,sede,cuenta,proveedor,concepto,valor
+2025-09-01,NOR,5205,Alistamiento Exprés,Alistamiento,25329391
+2025-09-02,NOR,5205,Comisiones Red Aliada,Comisiones externas,18566703
+2025-09-02,NOR,5120,Inmuebles del Parque,Arrendamiento,40317183
+2025-09-04,CEN,5135,Aseo Integral,Aseo y cafetería,5769881
+2025-09-04,CEN,5135,Vigilancia Centinela,Vigilancia,17558241
+2025-09-04,NOR,5135,Energía Cordillera,Servicios públicos,15465258
+2025-09-04,SUR,5135,Mantenimientos Roble,Mantenimiento,8292185
+2025-09-05,SUR,5205,Comisiones Red Aliada,Comisiones externas,11397959
+2025-09-09,NOR,5135,Aseo Integral,Aseo y cafetería,6507683
+2025-09-09,SUR,5135,Conecta Datos,Internet y software,6681698
+2025-09-10,CEN,5205,Publicidad Mirador,Pauta comercial,34268251
+2025-09-10,NOR,5135,Mantenimientos Roble,Mantenimiento,12999239
+2025-09-10,SUR,5135,Energía Cordillera,Servicios públicos,9845776
+2025-09-11,SUR,5120,Inmuebles del Parque,Arrendamiento,24975978
+2025-09-15,NOR,5205,Publicidad Mirador,Pauta comercial,39257266
+2025-09-16,SUR,5135,Aseo Integral,Aseo y cafetería,4148406
+2025-09-16,SUR,5205,Publicidad Mirador,Pauta comercial,24264642
+2025-09-18,CEN,5205,Alistamiento Exprés,Alistamiento,21975682
+2025-09-18,CEN,5120,Inmuebles del Parque,Arrendamiento,35310585
+2025-09-19,CEN,5205,Comisiones Red Aliada,Comisiones externas,16069069
+2025-09-22,CEN,5120,Seguros Horizonte,Seguros de sede,13636915
+2025-09-22,NOR,5120,Seguros Horizonte,Seguros de sede,15622817
+2025-09-22,SUR,5205,Alistamiento Exprés,Alistamiento,16037809
+2025-09-22,SUR,5205,Fletes La Sabana,Transporte de vehículos,20449590
+2025-09-23,CEN,5135,Energía Cordillera,Servicios públicos,13917872
+2025-09-24,CEN,5135,Conecta Datos,Internet y software,9220565
+2025-09-24,CEN,5135,Mantenimientos Roble,Mantenimiento,11397096
+2025-09-24,SUR,5120,Seguros Horizonte,Seguros de sede,9986522
+2025-09-25,CEN,5205,Fletes La Sabana,Transporte de vehículos,28696997
+2025-09-25,NOR,5135,Vigilancia Centinela,Vigilancia,19447537
+2025-09-29,SUR,5135,Vigilancia Centinela,Vigilancia,12257000
+2025-09-30,NOR,5135,Conecta Datos,Internet y software,10283478
+2025-09-30,NOR,5205,Fletes La Sabana,Transporte de vehículos,32286640
