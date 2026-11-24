@@ -3035,138 +3035,138 @@ gasto_id,periodo,fecha,sede_id,cuenta_origen,proveedor,concepto,valor,fuente,car
 3034,2026-09,2026-09-28,TUL,5135,Energía Cordillera,Servicios públicos,5127093,2026-09/reporte_mensual_VAL_2026-09.xlsx!Libro de gastos!A32,2026-10-05T07:00:00-05:00
 3035,2026-09,2026-09-29,CAL,5120,Seguros Horizonte,Seguros de sede,15595148,2026-09/reporte_mensual_VAL_2026-09.xlsx!Libro de gastos!A33,2026-10-05T07:00:00-05:00
 3036,2026-09,2026-09-30,CAL,5120,Inmuebles del Parque,Arrendamiento,39785452,2026-09/reporte_mensual_VAL_2026-09.xlsx!Libro de gastos!A34,2026-10-05T07:00:00-05:00
-3172,2026-10,2026-10-02,NOR,5135,Vigilancia Centinela,Vigilancia,3614125,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A2,2026-11-24T12:58:42+00:00
-3173,2026-10,2026-10-02,SUR,5205,Fletes La Sabana,Transporte de vehículos,23277980,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A3,2026-11-24T12:58:42+00:00
-3174,2026-10,2026-10-05,NOR,5205,Comisiones Red Aliada,Comisiones externas,21263329,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A4,2026-11-24T12:58:42+00:00
-3175,2026-10,2026-10-05,SUR,5120,Seguros Horizonte,Seguros de sede,9722373,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A5,2026-11-24T12:58:42+00:00
-3176,2026-10,2026-10-06,CEN,5205,Fletes La Sabana,Transporte de vehículos,32762985,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A6,2026-11-24T12:58:42+00:00
-3177,2026-10,2026-10-08,NOR,5135,Conecta Datos,Internet y software,10233957,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A7,2026-11-24T12:58:42+00:00
-3178,2026-10,2026-10-08,NOR,5135,Energía Cordillera,Servicios públicos,15434313,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A8,2026-11-24T12:58:42+00:00
-3179,2026-10,2026-10-09,CEN,5205,Alistamiento Exprés,Alistamiento,25700655,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A9,2026-11-24T12:58:42+00:00
-3180,2026-10,2026-10-09,CEN,5205,Publicidad Mirador,Pauta comercial,39862302,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A10,2026-11-24T12:58:42+00:00
-3181,2026-10,2026-10-13,NOR,5205,Alistamiento Exprés,Alistamiento,29460715,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A11,2026-11-24T12:58:42+00:00
-3182,2026-10,2026-10-13,NOR,5205,Publicidad Mirador,Pauta comercial,45717200,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A12,2026-11-24T12:58:42+00:00
-3183,2026-10,2026-10-14,CEN,5205,Comisiones Red Aliada,Comisiones externas,19064058,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A13,2026-11-24T12:58:42+00:00
-3184,2026-10,2026-10-14,CEN,5135,Mantenimientos Roble,Mantenimiento,11519783,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A14,2026-11-24T12:58:42+00:00
-3185,2026-10,2026-10-14,CEN,5195,Mantenimientos Roble,Gastos diversos sin clasificar,7350000,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A15,2026-11-24T12:58:42+00:00
-3186,2026-10,2026-10-14,NOR,5135,Mantenimientos Roble,Mantenimiento,13046479,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A16,2026-11-24T12:58:42+00:00
-3187,2026-10,2026-10-14,NOR,5120,Seguros Horizonte,Seguros de sede,15432702,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A17,2026-11-24T12:58:42+00:00
-3188,2026-10,2026-10-15,SUR,5135,Conecta Datos,Internet y software,6400652,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A18,2026-11-24T12:58:42+00:00
-3189,2026-10,2026-10-16,SUR,5135,Aseo Integral,Aseo y cafetería,4000212,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A19,2026-11-24T12:58:42+00:00
-3190,2026-10,2026-10-18,CEN,5135,Conecta Datos,Internet y software,9128642,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A20,2026-11-24T12:58:42+00:00
-3191,2026-10,2026-10-19,NOR,5135,Aseo Integral,Aseo y cafetería,22210320,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A21,2026-11-24T12:58:42+00:00
-3192,2026-10,2026-10-19,NOR,5120,Inmuebles del Parque,Arrendamiento,40507298,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A22,2026-11-24T12:58:42+00:00
-3193,2026-10,2026-10-19,SUR,5135,Vigilancia Centinela,Vigilancia,12228422,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A23,2026-11-24T12:58:42+00:00
-3194,2026-10,2026-10-20,SUR,5205,Publicidad Mirador,Pauta comercial,28671281,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A24,2026-11-24T12:58:42+00:00
-3195,2026-10,2026-10-21,CEN,5120,Seguros Horizonte,Seguros de sede,13613971,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A25,2026-11-24T12:58:42+00:00
-3196,2026-10,2026-10-21,SUR,5135,Mantenimientos Roble,Mantenimiento,8053949,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A26,2026-11-24T12:58:42+00:00
-3197,2026-10,2026-10-21,SUR,5205,Soluciones Nébula SAS,Alistamiento,4850000,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A27,2026-11-24T12:58:42+00:00
-3198,2026-10,2026-10-22,CEN,5135,Aseo Integral,Aseo y cafetería,5669581,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A28,2026-11-24T12:58:42+00:00
-3199,2026-10,2026-10-22,CEN,5135,Energía Cordillera,Servicios públicos,13661289,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A29,2026-11-24T12:58:42+00:00
-3200,2026-10,2026-10-22,CEN,5135,Vigilancia Centinela,Vigilancia,9866208,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A30,2026-11-24T12:58:42+00:00
-3201,2026-10,2026-10-22,NOR,5205,Fletes La Sabana,Transporte de vehículos,37718756,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A31,2026-11-24T12:58:42+00:00
-3202,2026-10,2026-10-22,NOR,5205,Fletes La Sabana,Transporte de vehículos,37718756,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A32,2026-11-24T12:58:42+00:00
-3203,2026-10,2026-10-22,SUR,5205,Alistamiento Exprés,Alistamiento,13648228,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A33,2026-11-24T12:58:42+00:00
-3204,2026-10,2026-10-23,SUR,5135,Energía Cordillera,Servicios públicos,9597286,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A34,2026-11-24T12:58:42+00:00
-3205,2026-10,2026-10-28,SUR,5205,Comisiones Red Aliada,Comisiones externas,13402511,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A35,2026-11-24T12:58:42+00:00
-3206,2026-10,2026-10-30,CEN,5120,Inmuebles del Parque,Arrendamiento,35333529,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A36,2026-11-24T12:58:42+00:00
-3207,2026-10,2026-10-30,SUR,5120,Inmuebles del Parque,Arrendamiento,25240127,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A37,2026-11-24T12:58:42+00:00
-3208,2026-10,2026-10-07,BAQ,5135,Conecta Datos,Internet y software,7551025,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A2,2026-11-24T12:58:42+00:00
-3209,2026-10,2026-10-07,CTG,5135,Vigilancia Centinela,Vigilancia,9107312,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A3,2026-11-24T12:58:42+00:00
-3210,2026-10,2026-10-08,BAQ,5205,Fletes La Sabana,Transporte de vehículos,28348828,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A4,2026-11-24T12:58:42+00:00
-3211,2026-10,2026-10-08,CTG,5205,Comisiones Red Aliada,Comisiones externas,10342934,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A5,2026-11-24T12:58:42+00:00
-3212,2026-10,2026-10-08,SMR,5205,Alistamiento Exprés,Alistamiento,7983247,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A6,2026-11-24T12:58:42+00:00
-3213,2026-10,2026-10-08,SMR,5135,Aseo Integral,Aseo y cafetería,1699750,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A7,2026-11-24T12:58:42+00:00
-3214,2026-10,2026-10-09,BAQ,5205,Publicidad Mirador,Pauta comercial,34304559,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A8,2026-11-24T12:58:42+00:00
-3215,2026-10,2026-10-09,BAQ,5120,Seguros Horizonte,Seguros de sede,11136695,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A9,2026-11-24T12:58:42+00:00
-3216,2026-10,2026-10-09,SMR,5135,Mantenimientos Roble,Mantenimiento,3417265,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A10,2026-11-24T12:58:42+00:00
-3217,2026-10,2026-10-09,SMR,5135,Vigilancia Centinela,Vigilancia,5071857,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A11,2026-11-24T12:58:42+00:00
-3218,2026-10,2026-10-13,BAQ,5135,Vigilancia Centinela,Vigilancia,14156833,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A12,2026-11-24T12:58:42+00:00
-3219,2026-10,2026-10-13,SMR,5120,Seguros Horizonte,Seguros de sede,4067975,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A13,2026-11-24T12:58:42+00:00
-3220,2026-10,2026-10-15,BAQ,5205,Comisiones Red Aliada,Comisiones externas,16300525,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A14,2026-11-24T12:58:42+00:00
-3221,2026-10,2026-10-15,BAQ,5120,Inmuebles del Parque,Arrendamiento,29419805,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A15,2026-11-24T12:58:42+00:00
-3222,2026-10,2026-10-16,SMR,5205,Comisiones Red Aliada,Comisiones externas,5738830,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A16,2026-11-24T12:58:42+00:00
-3223,2026-10,2026-10-16,SMR,5120,Inmuebles del Parque,Arrendamiento,10532364,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A17,2026-11-24T12:58:42+00:00
-3224,2026-10,2026-10-19,BAQ,5135,Mantenimientos Roble,Mantenimiento,9495052,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A18,2026-11-24T12:58:42+00:00
-3225,2026-10,2026-10-20,CTG,5135,Energía Cordillera,Servicios públicos,7257033,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A19,2026-11-24T12:58:42+00:00
-3226,2026-10,2026-10-22,CTG,5120,Seguros Horizonte,Seguros de sede,7365580,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A20,2026-11-24T12:58:42+00:00
-3227,2026-10,2026-10-22,SMR,5205,Publicidad Mirador,Pauta comercial,12363018,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A21,2026-11-24T12:58:42+00:00
-3228,2026-10,2026-10-23,BAQ,5205,Alistamiento Exprés,Alistamiento,22142419,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A22,2026-11-24T12:58:42+00:00
-3229,2026-10,2026-10-23,CTG,5205,Alistamiento Exprés,Alistamiento,14233944,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A23,2026-11-24T12:58:42+00:00
-3230,2026-10,2026-10-23,CTG,5205,Fletes La Sabana,Transporte de vehículos,18117903,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A24,2026-11-24T12:58:42+00:00
-3231,2026-10,2026-10-26,CTG,5120,Inmuebles del Parque,Arrendamiento,18590579,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A25,2026-11-24T12:58:42+00:00
-3232,2026-10,2026-10-26,SMR,5135,Conecta Datos,Internet y software,2723501,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A26,2026-11-24T12:58:42+00:00
-3233,2026-10,2026-10-27,SMR,5135,Energía Cordillera,Servicios públicos,4113065,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A27,2026-11-24T12:58:42+00:00
-3234,2026-10,2026-10-29,BAQ,5135,Energía Cordillera,Servicios públicos,11097401,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A28,2026-11-24T12:58:42+00:00
-3235,2026-10,2026-10-29,CTG,5205,Publicidad Mirador,Pauta comercial,22006871,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A29,2026-11-24T12:58:42+00:00
-3236,2026-10,2026-10-29,SMR,5205,Fletes La Sabana,Transporte de vehículos,10309584,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A30,2026-11-24T12:58:42+00:00
-3237,2026-10,2026-10-30,BAQ,5135,Aseo Integral,Aseo y cafetería,4619316,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A31,2026-11-24T12:58:42+00:00
-3238,2026-10,2026-10-30,CTG,5135,Aseo Integral,Aseo y cafetería,3034989,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A32,2026-11-24T12:58:42+00:00
-3239,2026-10,2026-10-30,CTG,5135,Conecta Datos,Internet y software,4903667,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A33,2026-11-24T12:58:42+00:00
-3240,2026-10,2026-10-30,CTG,5135,Mantenimientos Roble,Mantenimiento,6088203,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A34,2026-11-24T12:58:42+00:00
-3241,2026-10,2026-10-02,ACA,5205,Comisiones Red Aliada,Comisiones externas,2414095,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A2,2026-11-24T12:58:42+00:00
-3242,2026-10,2026-10-05,ACA,5135,Conecta Datos,Internet y software,1218751,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A3,2026-11-24T12:58:42+00:00
-3243,2026-10,2026-10-05,YOP,5205,Fletes La Sabana,Transporte de vehículos,9299857,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A4,2026-11-24T12:58:42+00:00
-3244,2026-10,2026-10-06,YOP,5135,Energía Cordillera,Servicios públicos,4000548,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A5,2026-11-24T12:58:42+00:00
-3245,2026-10,2026-10-07,ACA,5205,Fletes La Sabana,Transporte de vehículos,4257716,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A6,2026-11-24T12:58:42+00:00
-3246,2026-10,2026-10-07,YOP,5205,Alistamiento Exprés,Alistamiento,7150510,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A7,2026-11-24T12:58:42+00:00
-3247,2026-10,2026-10-08,VIL,5135,Aseo Integral,Aseo y cafetería,3843055,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A8,2026-11-24T12:58:42+00:00
-3248,2026-10,2026-10-12,ACA,5135,Mantenimientos Roble,Mantenimiento,1554879,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A9,2026-11-24T12:58:42+00:00
-3249,2026-10,2026-10-12,ACA,5205,Publicidad Mirador,Pauta comercial,5125852,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A10,2026-11-24T12:58:42+00:00
-3250,2026-10,2026-10-12,VIL,5120,Seguros Horizonte,Seguros de sede,9483514,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A11,2026-11-24T12:58:42+00:00
-3251,2026-10,2026-10-15,ACA,5205,Alistamiento Exprés,Alistamiento,3367162,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A12,2026-11-24T12:58:42+00:00
-3252,2026-10,2026-10-15,VIL,5205,Alistamiento Exprés,Alistamiento,17144414,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A13,2026-11-24T12:58:42+00:00
-3253,2026-10,2026-10-15,VIL,5135,Vigilancia Centinela,Vigilancia,11865335,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A14,2026-11-24T12:58:42+00:00
-3254,2026-10,2026-10-16,YOP,5135,Aseo Integral,Aseo y cafetería,1664786,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A15,2026-11-24T12:58:42+00:00
-3255,2026-10,2026-10-16,YOP,5120,Inmuebles del Parque,Arrendamiento,10240458,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A16,2026-11-24T12:58:42+00:00
-3256,2026-10,2026-10-19,YOP,5205,Publicidad Mirador,Pauta comercial,11088936,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A17,2026-11-24T12:58:42+00:00
-3257,2026-10,2026-10-21,YOP,5135,Mantenimientos Roble,Mantenimiento,3386245,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A18,2026-11-24T12:58:42+00:00
-3258,2026-10,2026-10-22,ACA,5135,Aseo Integral,Aseo y cafetería,758345,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A19,2026-11-24T12:58:42+00:00
-3259,2026-10,2026-10-22,ACA,5120,Seguros Horizonte,Seguros de sede,1809918,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A20,2026-11-24T12:58:42+00:00
-3260,2026-10,2026-10-22,YOP,5135,Conecta Datos,Internet y software,2636644,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A21,2026-11-24T12:58:42+00:00
-3261,2026-10,2026-10-23,VIL,5135,Conecta Datos,Internet y software,6322664,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A22,2026-11-24T12:58:42+00:00
-3262,2026-10,2026-10-23,VIL,5120,Inmuebles del Parque,Arrendamiento,24332216,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A23,2026-11-24T12:58:42+00:00
-3263,2026-10,2026-10-26,ACA,5135,Energía Cordillera,Servicios públicos,1821062,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A24,2026-11-24T12:58:42+00:00
-3264,2026-10,2026-10-26,ACA,5135,Vigilancia Centinela,Vigilancia,2282072,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A25,2026-11-24T12:58:42+00:00
-3265,2026-10,2026-10-27,VIL,5135,Energía Cordillera,Servicios públicos,9311294,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A26,2026-11-24T12:58:42+00:00
-3266,2026-10,2026-10-27,VIL,5135,Mantenimientos Roble,Mantenimiento,7812322,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A27,2026-11-24T12:58:42+00:00
-3267,2026-10,2026-10-27,VIL,5205,Publicidad Mirador,Pauta comercial,26813895,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A28,2026-11-24T12:58:42+00:00
-3268,2026-10,2026-10-27,YOP,5120,Seguros Horizonte,Seguros de sede,3940332,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A29,2026-11-24T12:58:42+00:00
-3269,2026-10,2026-10-28,VIL,5205,Comisiones Red Aliada,Comisiones externas,12668795,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A30,2026-11-24T12:58:42+00:00
-3270,2026-10,2026-10-28,YOP,5205,Comisiones Red Aliada,Comisiones externas,5317818,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A31,2026-11-24T12:58:42+00:00
-3271,2026-10,2026-10-28,YOP,5135,Vigilancia Centinela,Vigilancia,5045079,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A32,2026-11-24T12:58:42+00:00
-3272,2026-10,2026-10-30,ACA,5120,Inmuebles del Parque,Arrendamiento,4735062,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A33,2026-11-24T12:58:42+00:00
-3273,2026-10,2026-10-30,VIL,5205,Fletes La Sabana,Transporte de vehículos,21724493,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A34,2026-11-24T12:58:42+00:00
-3274,2026-10,2026-10-01,PAL,5135,Conecta Datos,Internet y software,5130043,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A2,2026-11-24T12:58:42+00:00
-3275,2026-10,2026-10-02,CAL,5135,Aseo Integral,Aseo y cafetería,6515894,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A3,2026-11-24T12:58:42+00:00
-3276,2026-10,2026-10-02,TUL,5205,Comisiones Red Aliada,Comisiones externas,7116590,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A4,2026-11-24T12:58:42+00:00
-3277,2026-10,2026-10-05,CAL,5205,Comisiones Red Aliada,Comisiones externas,21611202,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A5,2026-11-24T12:58:42+00:00
-3278,2026-10,2026-10-05,CAL,5135,Conecta Datos,Internet y software,10330989,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A6,2026-11-24T12:58:42+00:00
-3279,2026-10,2026-10-05,PAL,5135,Energía Cordillera,Servicios públicos,7607021,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A7,2026-11-24T12:58:42+00:00
-3280,2026-10,2026-10-05,PAL,5120,Seguros Horizonte,Seguros de sede,7640060,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A8,2026-11-24T12:58:42+00:00
-3281,2026-10,2026-10-06,CAL,5205,Alistamiento Exprés,Alistamiento,30020319,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A9,2026-11-24T12:58:42+00:00
-3282,2026-10,2026-10-06,CAL,5135,Vigilancia Centinela,Vigilancia,19201754,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A10,2026-11-24T12:58:42+00:00
-3283,2026-10,2026-10-07,PAL,5205,Fletes La Sabana,Transporte de vehículos,18874880,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A11,2026-11-24T12:58:42+00:00
-3284,2026-10,2026-10-09,PAL,5135,Vigilancia Centinela,Vigilancia,9538454,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A12,2026-11-24T12:58:42+00:00
-3285,2026-10,2026-10-09,TUL,5120,Seguros Horizonte,Seguros de sede,5088157,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A13,2026-11-24T12:58:42+00:00
-3286,2026-10,2026-10-12,PAL,5120,Inmuebles del Parque,Arrendamiento,19546780,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A14,2026-11-24T12:58:42+00:00
-3287,2026-10,2026-10-13,PAL,5135,Mantenimientos Roble,Mantenimiento,6502242,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A15,2026-11-24T12:58:42+00:00
-3288,2026-10,2026-10-13,TUL,5135,Mantenimientos Roble,Mantenimiento,4316978,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A16,2026-11-24T12:58:42+00:00
-3289,2026-10,2026-10-14,CAL,5120,Seguros Horizonte,Seguros de sede,15732138,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A17,2026-11-24T12:58:42+00:00
-3290,2026-10,2026-10-14,PAL,5205,Comisiones Red Aliada,Comisiones externas,10770273,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A18,2026-11-24T12:58:42+00:00
-3291,2026-10,2026-10-14,TUL,5205,Fletes La Sabana,Transporte de vehículos,12395007,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A19,2026-11-24T12:58:42+00:00
-3292,2026-10,2026-10-14,TUL,5120,Inmuebles del Parque,Arrendamiento,13036402,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A20,2026-11-24T12:58:42+00:00
-3293,2026-10,2026-10-15,CAL,5120,Inmuebles del Parque,Arrendamiento,39648462,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A21,2026-11-24T12:58:42+00:00
-3294,2026-10,2026-10-15,TUL,5135,Energía Cordillera,Servicios públicos,5179658,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A22,2026-11-24T12:58:42+00:00
-3295,2026-10,2026-10-16,TUL,5135,Conecta Datos,Internet y software,3392482,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A23,2026-11-24T12:58:42+00:00
-3296,2026-10,2026-10-19,CAL,5135,Mantenimientos Roble,Mantenimiento,12674104,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A24,2026-11-24T12:58:42+00:00
-3297,2026-10,2026-10-19,TUL,5135,Vigilancia Centinela,Vigilancia,6318311,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A25,2026-11-24T12:58:42+00:00
-3298,2026-10,2026-10-20,PAL,5135,Aseo Integral,Aseo y cafetería,3229220,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A26,2026-11-24T12:58:42+00:00
-3299,2026-10,2026-10-20,TUL,5205,Publicidad Mirador,Pauta comercial,15108454,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A27,2026-11-24T12:58:42+00:00
-3300,2026-10,2026-10-21,TUL,5205,Alistamiento Exprés,Alistamiento,9838780,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A28,2026-11-24T12:58:42+00:00
-3301,2026-10,2026-10-22,CAL,5205,Fletes La Sabana,Transporte de vehículos,38213295,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A29,2026-11-24T12:58:42+00:00
-3302,2026-10,2026-10-26,CAL,5205,Publicidad Mirador,Pauta comercial,46001613,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A30,2026-11-24T12:58:42+00:00
-3303,2026-10,2026-10-26,PAL,5205,Publicidad Mirador,Pauta comercial,22365105,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A31,2026-11-24T12:58:42+00:00
-3304,2026-10,2026-10-29,CAL,5135,Energía Cordillera,Servicios públicos,15355784,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A32,2026-11-24T12:58:42+00:00
-3305,2026-10,2026-10-30,PAL,5205,Alistamiento Exprés,Alistamiento,14677989,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A33,2026-11-24T12:58:42+00:00
-3306,2026-10,2026-10-30,TUL,5135,Aseo Integral,Aseo y cafetería,2113850,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A34,2026-11-24T12:58:42+00:00
+3307,2026-10,2026-10-02,NOR,5135,Vigilancia Centinela,Vigilancia,3614125,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A2,2026-11-24T13:03:15+00:00
+3308,2026-10,2026-10-02,SUR,5205,Fletes La Sabana,Transporte de vehículos,23277980,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A3,2026-11-24T13:03:15+00:00
+3309,2026-10,2026-10-05,NOR,5205,Comisiones Red Aliada,Comisiones externas,21263329,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A4,2026-11-24T13:03:15+00:00
+3310,2026-10,2026-10-05,SUR,5120,Seguros Horizonte,Seguros de sede,9722373,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A5,2026-11-24T13:03:15+00:00
+3311,2026-10,2026-10-06,CEN,5205,Fletes La Sabana,Transporte de vehículos,32762985,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A6,2026-11-24T13:03:15+00:00
+3312,2026-10,2026-10-08,NOR,5135,Conecta Datos,Internet y software,10233957,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A7,2026-11-24T13:03:15+00:00
+3313,2026-10,2026-10-08,NOR,5135,Energía Cordillera,Servicios públicos,15434313,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A8,2026-11-24T13:03:15+00:00
+3314,2026-10,2026-10-09,CEN,5205,Alistamiento Exprés,Alistamiento,25700655,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A9,2026-11-24T13:03:15+00:00
+3315,2026-10,2026-10-09,CEN,5205,Publicidad Mirador,Pauta comercial,39862302,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A10,2026-11-24T13:03:15+00:00
+3316,2026-10,2026-10-13,NOR,5205,Alistamiento Exprés,Alistamiento,29460715,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A11,2026-11-24T13:03:15+00:00
+3317,2026-10,2026-10-13,NOR,5205,Publicidad Mirador,Pauta comercial,45717200,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A12,2026-11-24T13:03:15+00:00
+3318,2026-10,2026-10-14,CEN,5205,Comisiones Red Aliada,Comisiones externas,19064058,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A13,2026-11-24T13:03:15+00:00
+3319,2026-10,2026-10-14,CEN,5135,Mantenimientos Roble,Mantenimiento,11519783,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A14,2026-11-24T13:03:15+00:00
+3320,2026-10,2026-10-14,CEN,5195,Mantenimientos Roble,Gastos diversos sin clasificar,7350000,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A15,2026-11-24T13:03:15+00:00
+3321,2026-10,2026-10-14,NOR,5135,Mantenimientos Roble,Mantenimiento,13046479,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A16,2026-11-24T13:03:15+00:00
+3322,2026-10,2026-10-14,NOR,5120,Seguros Horizonte,Seguros de sede,15432702,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A17,2026-11-24T13:03:15+00:00
+3323,2026-10,2026-10-15,SUR,5135,Conecta Datos,Internet y software,6400652,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A18,2026-11-24T13:03:15+00:00
+3324,2026-10,2026-10-16,SUR,5135,Aseo Integral,Aseo y cafetería,4000212,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A19,2026-11-24T13:03:15+00:00
+3325,2026-10,2026-10-18,CEN,5135,Conecta Datos,Internet y software,9128642,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A20,2026-11-24T13:03:15+00:00
+3326,2026-10,2026-10-19,NOR,5135,Aseo Integral,Aseo y cafetería,22210320,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A21,2026-11-24T13:03:15+00:00
+3327,2026-10,2026-10-19,NOR,5120,Inmuebles del Parque,Arrendamiento,40507298,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A22,2026-11-24T13:03:15+00:00
+3328,2026-10,2026-10-19,SUR,5135,Vigilancia Centinela,Vigilancia,12228422,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A23,2026-11-24T13:03:15+00:00
+3329,2026-10,2026-10-20,SUR,5205,Publicidad Mirador,Pauta comercial,28671281,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A24,2026-11-24T13:03:15+00:00
+3330,2026-10,2026-10-21,CEN,5120,Seguros Horizonte,Seguros de sede,13613971,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A25,2026-11-24T13:03:15+00:00
+3331,2026-10,2026-10-21,SUR,5135,Mantenimientos Roble,Mantenimiento,8053949,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A26,2026-11-24T13:03:15+00:00
+3332,2026-10,2026-10-21,SUR,5205,Soluciones Nébula SAS,Alistamiento,4850000,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A27,2026-11-24T13:03:15+00:00
+3333,2026-10,2026-10-22,CEN,5135,Aseo Integral,Aseo y cafetería,5669581,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A28,2026-11-24T13:03:15+00:00
+3334,2026-10,2026-10-22,CEN,5135,Energía Cordillera,Servicios públicos,13661289,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A29,2026-11-24T13:03:15+00:00
+3335,2026-10,2026-10-22,CEN,5135,Vigilancia Centinela,Vigilancia,9866208,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A30,2026-11-24T13:03:15+00:00
+3336,2026-10,2026-10-22,NOR,5205,Fletes La Sabana,Transporte de vehículos,37718756,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A31,2026-11-24T13:03:15+00:00
+3337,2026-10,2026-10-22,NOR,5205,Fletes La Sabana,Transporte de vehículos,37718756,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A32,2026-11-24T13:03:15+00:00
+3338,2026-10,2026-10-22,SUR,5205,Alistamiento Exprés,Alistamiento,13648228,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A33,2026-11-24T13:03:15+00:00
+3339,2026-10,2026-10-23,SUR,5135,Energía Cordillera,Servicios públicos,9597286,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A34,2026-11-24T13:03:15+00:00
+3340,2026-10,2026-10-28,SUR,5205,Comisiones Red Aliada,Comisiones externas,13402511,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A35,2026-11-24T13:03:15+00:00
+3341,2026-10,2026-10-30,CEN,5120,Inmuebles del Parque,Arrendamiento,35333529,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A36,2026-11-24T13:03:15+00:00
+3342,2026-10,2026-10-30,SUR,5120,Inmuebles del Parque,Arrendamiento,25240127,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos!A37,2026-11-24T13:03:15+00:00
+3343,2026-10,2026-10-07,BAQ,5135,Conecta Datos,Internet y software,7551025,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A2,2026-11-24T13:03:15+00:00
+3344,2026-10,2026-10-07,CTG,5135,Vigilancia Centinela,Vigilancia,9107312,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A3,2026-11-24T13:03:15+00:00
+3345,2026-10,2026-10-08,BAQ,5205,Fletes La Sabana,Transporte de vehículos,28348828,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A4,2026-11-24T13:03:15+00:00
+3346,2026-10,2026-10-08,CTG,5205,Comisiones Red Aliada,Comisiones externas,10342934,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A5,2026-11-24T13:03:15+00:00
+3347,2026-10,2026-10-08,SMR,5205,Alistamiento Exprés,Alistamiento,7983247,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A6,2026-11-24T13:03:15+00:00
+3348,2026-10,2026-10-08,SMR,5135,Aseo Integral,Aseo y cafetería,1699750,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A7,2026-11-24T13:03:15+00:00
+3349,2026-10,2026-10-09,BAQ,5205,Publicidad Mirador,Pauta comercial,34304559,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A8,2026-11-24T13:03:15+00:00
+3350,2026-10,2026-10-09,BAQ,5120,Seguros Horizonte,Seguros de sede,11136695,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A9,2026-11-24T13:03:15+00:00
+3351,2026-10,2026-10-09,SMR,5135,Mantenimientos Roble,Mantenimiento,3417265,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A10,2026-11-24T13:03:15+00:00
+3352,2026-10,2026-10-09,SMR,5135,Vigilancia Centinela,Vigilancia,5071857,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A11,2026-11-24T13:03:15+00:00
+3353,2026-10,2026-10-13,BAQ,5135,Vigilancia Centinela,Vigilancia,14156833,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A12,2026-11-24T13:03:15+00:00
+3354,2026-10,2026-10-13,SMR,5120,Seguros Horizonte,Seguros de sede,4067975,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A13,2026-11-24T13:03:15+00:00
+3355,2026-10,2026-10-15,BAQ,5205,Comisiones Red Aliada,Comisiones externas,16300525,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A14,2026-11-24T13:03:15+00:00
+3356,2026-10,2026-10-15,BAQ,5120,Inmuebles del Parque,Arrendamiento,29419805,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A15,2026-11-24T13:03:15+00:00
+3357,2026-10,2026-10-16,SMR,5205,Comisiones Red Aliada,Comisiones externas,5738830,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A16,2026-11-24T13:03:15+00:00
+3358,2026-10,2026-10-16,SMR,5120,Inmuebles del Parque,Arrendamiento,10532364,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A17,2026-11-24T13:03:15+00:00
+3359,2026-10,2026-10-19,BAQ,5135,Mantenimientos Roble,Mantenimiento,9495052,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A18,2026-11-24T13:03:15+00:00
+3360,2026-10,2026-10-20,CTG,5135,Energía Cordillera,Servicios públicos,7257033,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A19,2026-11-24T13:03:15+00:00
+3361,2026-10,2026-10-22,CTG,5120,Seguros Horizonte,Seguros de sede,7365580,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A20,2026-11-24T13:03:15+00:00
+3362,2026-10,2026-10-22,SMR,5205,Publicidad Mirador,Pauta comercial,12363018,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A21,2026-11-24T13:03:15+00:00
+3363,2026-10,2026-10-23,BAQ,5205,Alistamiento Exprés,Alistamiento,22142419,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A22,2026-11-24T13:03:15+00:00
+3364,2026-10,2026-10-23,CTG,5205,Alistamiento Exprés,Alistamiento,14233944,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A23,2026-11-24T13:03:15+00:00
+3365,2026-10,2026-10-23,CTG,5205,Fletes La Sabana,Transporte de vehículos,18117903,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A24,2026-11-24T13:03:15+00:00
+3366,2026-10,2026-10-26,CTG,5120,Inmuebles del Parque,Arrendamiento,18590579,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A25,2026-11-24T13:03:15+00:00
+3367,2026-10,2026-10-26,SMR,5135,Conecta Datos,Internet y software,2723501,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A26,2026-11-24T13:03:15+00:00
+3368,2026-10,2026-10-27,SMR,5135,Energía Cordillera,Servicios públicos,4113065,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A27,2026-11-24T13:03:15+00:00
+3369,2026-10,2026-10-29,BAQ,5135,Energía Cordillera,Servicios públicos,11097401,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A28,2026-11-24T13:03:15+00:00
+3370,2026-10,2026-10-29,CTG,5205,Publicidad Mirador,Pauta comercial,22006871,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A29,2026-11-24T13:03:15+00:00
+3371,2026-10,2026-10-29,SMR,5205,Fletes La Sabana,Transporte de vehículos,10309584,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A30,2026-11-24T13:03:15+00:00
+3372,2026-10,2026-10-30,BAQ,5135,Aseo Integral,Aseo y cafetería,4619316,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A31,2026-11-24T13:03:15+00:00
+3373,2026-10,2026-10-30,CTG,5135,Aseo Integral,Aseo y cafetería,3034989,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A32,2026-11-24T13:03:15+00:00
+3374,2026-10,2026-10-30,CTG,5135,Conecta Datos,Internet y software,4903667,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A33,2026-11-24T13:03:15+00:00
+3375,2026-10,2026-10-30,CTG,5135,Mantenimientos Roble,Mantenimiento,6088203,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos!A34,2026-11-24T13:03:15+00:00
+3376,2026-10,2026-10-02,ACA,5205,Comisiones Red Aliada,Comisiones externas,2414095,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A2,2026-11-24T13:03:15+00:00
+3377,2026-10,2026-10-05,ACA,5135,Conecta Datos,Internet y software,1218751,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A3,2026-11-24T13:03:15+00:00
+3378,2026-10,2026-10-05,YOP,5205,Fletes La Sabana,Transporte de vehículos,9299857,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A4,2026-11-24T13:03:15+00:00
+3379,2026-10,2026-10-06,YOP,5135,Energía Cordillera,Servicios públicos,4000548,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A5,2026-11-24T13:03:15+00:00
+3380,2026-10,2026-10-07,ACA,5205,Fletes La Sabana,Transporte de vehículos,4257716,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A6,2026-11-24T13:03:15+00:00
+3381,2026-10,2026-10-07,YOP,5205,Alistamiento Exprés,Alistamiento,7150510,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A7,2026-11-24T13:03:15+00:00
+3382,2026-10,2026-10-08,VIL,5135,Aseo Integral,Aseo y cafetería,3843055,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A8,2026-11-24T13:03:15+00:00
+3383,2026-10,2026-10-12,ACA,5135,Mantenimientos Roble,Mantenimiento,1554879,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A9,2026-11-24T13:03:15+00:00
+3384,2026-10,2026-10-12,ACA,5205,Publicidad Mirador,Pauta comercial,5125852,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A10,2026-11-24T13:03:15+00:00
+3385,2026-10,2026-10-12,VIL,5120,Seguros Horizonte,Seguros de sede,9483514,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A11,2026-11-24T13:03:15+00:00
+3386,2026-10,2026-10-15,ACA,5205,Alistamiento Exprés,Alistamiento,3367162,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A12,2026-11-24T13:03:15+00:00
+3387,2026-10,2026-10-15,VIL,5205,Alistamiento Exprés,Alistamiento,17144414,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A13,2026-11-24T13:03:15+00:00
+3388,2026-10,2026-10-15,VIL,5135,Vigilancia Centinela,Vigilancia,11865335,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A14,2026-11-24T13:03:15+00:00
+3389,2026-10,2026-10-16,YOP,5135,Aseo Integral,Aseo y cafetería,1664786,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A15,2026-11-24T13:03:15+00:00
+3390,2026-10,2026-10-16,YOP,5120,Inmuebles del Parque,Arrendamiento,10240458,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A16,2026-11-24T13:03:15+00:00
+3391,2026-10,2026-10-19,YOP,5205,Publicidad Mirador,Pauta comercial,11088936,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A17,2026-11-24T13:03:15+00:00
+3392,2026-10,2026-10-21,YOP,5135,Mantenimientos Roble,Mantenimiento,3386245,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A18,2026-11-24T13:03:15+00:00
+3393,2026-10,2026-10-22,ACA,5135,Aseo Integral,Aseo y cafetería,758345,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A19,2026-11-24T13:03:15+00:00
+3394,2026-10,2026-10-22,ACA,5120,Seguros Horizonte,Seguros de sede,1809918,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A20,2026-11-24T13:03:15+00:00
+3395,2026-10,2026-10-22,YOP,5135,Conecta Datos,Internet y software,2636644,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A21,2026-11-24T13:03:15+00:00
+3396,2026-10,2026-10-23,VIL,5135,Conecta Datos,Internet y software,6322664,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A22,2026-11-24T13:03:15+00:00
+3397,2026-10,2026-10-23,VIL,5120,Inmuebles del Parque,Arrendamiento,24332216,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A23,2026-11-24T13:03:15+00:00
+3398,2026-10,2026-10-26,ACA,5135,Energía Cordillera,Servicios públicos,1821062,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A24,2026-11-24T13:03:15+00:00
+3399,2026-10,2026-10-26,ACA,5135,Vigilancia Centinela,Vigilancia,2282072,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A25,2026-11-24T13:03:15+00:00
+3400,2026-10,2026-10-27,VIL,5135,Energía Cordillera,Servicios públicos,9311294,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A26,2026-11-24T13:03:15+00:00
+3401,2026-10,2026-10-27,VIL,5135,Mantenimientos Roble,Mantenimiento,7812322,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A27,2026-11-24T13:03:15+00:00
+3402,2026-10,2026-10-27,VIL,5205,Publicidad Mirador,Pauta comercial,26813895,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A28,2026-11-24T13:03:15+00:00
+3403,2026-10,2026-10-27,YOP,5120,Seguros Horizonte,Seguros de sede,3940332,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A29,2026-11-24T13:03:15+00:00
+3404,2026-10,2026-10-28,VIL,5205,Comisiones Red Aliada,Comisiones externas,12668795,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A30,2026-11-24T13:03:15+00:00
+3405,2026-10,2026-10-28,YOP,5205,Comisiones Red Aliada,Comisiones externas,5317818,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A31,2026-11-24T13:03:15+00:00
+3406,2026-10,2026-10-28,YOP,5135,Vigilancia Centinela,Vigilancia,5045079,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A32,2026-11-24T13:03:15+00:00
+3407,2026-10,2026-10-30,ACA,5120,Inmuebles del Parque,Arrendamiento,4735062,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A33,2026-11-24T13:03:15+00:00
+3408,2026-10,2026-10-30,VIL,5205,Fletes La Sabana,Transporte de vehículos,21724493,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos!A34,2026-11-24T13:03:15+00:00
+3409,2026-10,2026-10-01,PAL,5135,Conecta Datos,Internet y software,5130043,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A2,2026-11-24T13:03:15+00:00
+3410,2026-10,2026-10-02,CAL,5135,Aseo Integral,Aseo y cafetería,6515894,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A3,2026-11-24T13:03:15+00:00
+3411,2026-10,2026-10-02,TUL,5205,Comisiones Red Aliada,Comisiones externas,7116590,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A4,2026-11-24T13:03:15+00:00
+3412,2026-10,2026-10-05,CAL,5205,Comisiones Red Aliada,Comisiones externas,21611202,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A5,2026-11-24T13:03:15+00:00
+3413,2026-10,2026-10-05,CAL,5135,Conecta Datos,Internet y software,10330989,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A6,2026-11-24T13:03:15+00:00
+3414,2026-10,2026-10-05,PAL,5135,Energía Cordillera,Servicios públicos,7607021,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A7,2026-11-24T13:03:15+00:00
+3415,2026-10,2026-10-05,PAL,5120,Seguros Horizonte,Seguros de sede,7640060,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A8,2026-11-24T13:03:15+00:00
+3416,2026-10,2026-10-06,CAL,5205,Alistamiento Exprés,Alistamiento,30020319,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A9,2026-11-24T13:03:15+00:00
+3417,2026-10,2026-10-06,CAL,5135,Vigilancia Centinela,Vigilancia,19201754,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A10,2026-11-24T13:03:15+00:00
+3418,2026-10,2026-10-07,PAL,5205,Fletes La Sabana,Transporte de vehículos,18874880,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A11,2026-11-24T13:03:15+00:00
+3419,2026-10,2026-10-09,PAL,5135,Vigilancia Centinela,Vigilancia,9538454,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A12,2026-11-24T13:03:15+00:00
+3420,2026-10,2026-10-09,TUL,5120,Seguros Horizonte,Seguros de sede,5088157,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A13,2026-11-24T13:03:15+00:00
+3421,2026-10,2026-10-12,PAL,5120,Inmuebles del Parque,Arrendamiento,19546780,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A14,2026-11-24T13:03:15+00:00
+3422,2026-10,2026-10-13,PAL,5135,Mantenimientos Roble,Mantenimiento,6502242,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A15,2026-11-24T13:03:15+00:00
+3423,2026-10,2026-10-13,TUL,5135,Mantenimientos Roble,Mantenimiento,4316978,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A16,2026-11-24T13:03:15+00:00
+3424,2026-10,2026-10-14,CAL,5120,Seguros Horizonte,Seguros de sede,15732138,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A17,2026-11-24T13:03:15+00:00
+3425,2026-10,2026-10-14,PAL,5205,Comisiones Red Aliada,Comisiones externas,10770273,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A18,2026-11-24T13:03:15+00:00
+3426,2026-10,2026-10-14,TUL,5205,Fletes La Sabana,Transporte de vehículos,12395007,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A19,2026-11-24T13:03:15+00:00
+3427,2026-10,2026-10-14,TUL,5120,Inmuebles del Parque,Arrendamiento,13036402,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A20,2026-11-24T13:03:15+00:00
+3428,2026-10,2026-10-15,CAL,5120,Inmuebles del Parque,Arrendamiento,39648462,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A21,2026-11-24T13:03:15+00:00
+3429,2026-10,2026-10-15,TUL,5135,Energía Cordillera,Servicios públicos,5179658,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A22,2026-11-24T13:03:15+00:00
+3430,2026-10,2026-10-16,TUL,5135,Conecta Datos,Internet y software,3392482,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A23,2026-11-24T13:03:15+00:00
+3431,2026-10,2026-10-19,CAL,5135,Mantenimientos Roble,Mantenimiento,12674104,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A24,2026-11-24T13:03:15+00:00
+3432,2026-10,2026-10-19,TUL,5135,Vigilancia Centinela,Vigilancia,6318311,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A25,2026-11-24T13:03:15+00:00
+3433,2026-10,2026-10-20,PAL,5135,Aseo Integral,Aseo y cafetería,3229220,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A26,2026-11-24T13:03:15+00:00
+3434,2026-10,2026-10-20,TUL,5205,Publicidad Mirador,Pauta comercial,15108454,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A27,2026-11-24T13:03:15+00:00
+3435,2026-10,2026-10-21,TUL,5205,Alistamiento Exprés,Alistamiento,9838780,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A28,2026-11-24T13:03:15+00:00
+3436,2026-10,2026-10-22,CAL,5205,Fletes La Sabana,Transporte de vehículos,38213295,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A29,2026-11-24T13:03:15+00:00
+3437,2026-10,2026-10-26,CAL,5205,Publicidad Mirador,Pauta comercial,46001613,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A30,2026-11-24T13:03:15+00:00
+3438,2026-10,2026-10-26,PAL,5205,Publicidad Mirador,Pauta comercial,22365105,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A31,2026-11-24T13:03:15+00:00
+3439,2026-10,2026-10-29,CAL,5135,Energía Cordillera,Servicios públicos,15355784,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A32,2026-11-24T13:03:15+00:00
+3440,2026-10,2026-10-30,PAL,5205,Alistamiento Exprés,Alistamiento,14677989,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A33,2026-11-24T13:03:15+00:00
+3441,2026-10,2026-10-30,TUL,5135,Aseo Integral,Aseo y cafetería,2113850,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos!A34,2026-11-24T13:03:15+00:00

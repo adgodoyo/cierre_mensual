@@ -74,6 +74,10 @@ bitacora_id,fecha,periodo,paso,resultado,accion,responsable,fuente,cargado_en
 77,2026-11-24T07:57:28-05:00,2026-10,reporte,Borrador,Generó 4 reportes y sus guiones,Agente de reporting,src/reporte.py,2026-11-24T07:57:28-05:00
 78,2026-11-24T12:58:42+00:00,2026-10,ingesta,Correcto,"Cargó 4 libros, 40 hojas y 2155 filas",Agente de procesamiento,src/ingesta.py,2026-11-24T12:58:42+00:00
 79,2026-11-24T12:58:42+00:00,2026-10,validacion,Requiere revisión,8 alertas (3 altas) y 4 anomalías de gasto,Agente de procesamiento,src/procesamiento.py,2026-11-24T12:58:42+00:00
-80,2026-11-24T12:58:43+00:00,2026-10,aprobacion,Pendiente,Esperando revisión humana de las alertas altas,Supervisión humana,run_cierre.py,2026-11-24T12:58:43+00:00
 81,2026-11-24T12:58:43+00:00,2026-10,pronostico,Correcto,"Cierre 2026 Andino: $145,2 mil millones a $151,8 mil millones",Agente predictivo,src/pronostico.py,2026-11-24T12:58:43+00:00
 82,2026-11-24T13:00:13+00:00,2026-10,reporte,Borrador,Generó 4 reportes y sus guiones,Agente de reporting,src/reporte.py,2026-11-24T13:00:13+00:00
+83,2026-11-24T13:03:15+00:00,2026-10,ingesta,Correcto,"Cargó 4 libros, 40 hojas y 2155 filas",Agente de procesamiento,src/ingesta.py,2026-11-24T13:03:15+00:00
+84,2026-11-24T13:03:16+00:00,2026-10,validacion,Requiere revisión,8 alertas (3 altas) y 4 anomalías de gasto,Agente de procesamiento,src/procesamiento.py,2026-11-24T13:03:16+00:00
+85,2026-11-24T13:03:17+00:00,2026-10,aprobacion,Pendiente,Esperando revisión humana de las alertas altas,Supervisión humana,run_cierre.py,2026-11-24T13:03:17+00:00
+86,2026-11-24T13:03:17+00:00,2026-10,pronostico,Correcto,"Cierre 2026 Andino: $145,2 mil millones a $151,8 mil millones",Agente predictivo,src/pronostico.py,2026-11-24T13:03:17+00:00
+87,2026-11-24T13:03:27+00:00,2026-10,reporte,Borrador,Generó 4 reportes y sus guiones,Agente de reporting,src/reporte.py,2026-11-24T13:03:27+00:00
