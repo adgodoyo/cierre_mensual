@@ -99,7 +99,7 @@ TABS.rutina = {
     if (APP.meta.repo) this.github(APP.meta.repo);
   },
   pintarPasos({ run, pasos }) {
-    const vis = pasos.filter(p => !p.name.startsWith('Post '));
+    const vis = pasos.filter(p => !p.name.startsWith('Post ') && p.conclusion !== 'skipped');
     const icono = p => p.status !== 'completed' ? (p.status === 'in_progress' ? '<span class="pp ahora">●</span>' : '<span class="pp">○</span>') : p.conclusion === 'success' ? '<span class="pp ok">✓</span>' : p.conclusion === 'skipped' ? '<span class="pp">–</span>' : '<span class="pp mal">✕</span>';
     const dur = p => p.started_at ? `${n(((p.completed_at ? new Date(p.completed_at) : new Date()) - new Date(p.started_at)) / 1000, 0)} s` : '';
     const total = n((Date.now() - new Date(run.run_started_at || run.created_at)) / 1000, 0);
