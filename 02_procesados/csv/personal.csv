@@ -1655,75 +1655,75 @@ periodo,sede_id,rol,personas,costo,fuente,cargado_en
 2026-09,CAL,Gerencia,1,20169423,2026-09/reporte_mensual_VAL_2026-09.xlsx!Personal!C11,2026-10-05T07:00:00-05:00
 2026-09,PAL,Gerencia,1,18855126,2026-09/reporte_mensual_VAL_2026-09.xlsx!Personal!E11,2026-10-05T07:00:00-05:00
 2026-09,TUL,Gerencia,1,16065931,2026-09/reporte_mensual_VAL_2026-09.xlsx!Personal!G11,2026-10-05T07:00:00-05:00
-2026-10,NOR,Vendedores,13,97224168,2026-10/reporte_mensual_AND_2026-10.xlsx!Personal!C6,2026-11-24T13:16:04+00:00
-2026-10,CEN,Vendedores,9,62873368,2026-10/reporte_mensual_AND_2026-10.xlsx!Personal!E6,2026-11-24T13:16:04+00:00
-2026-10,SUR,Vendedores,6,44134126,2026-10/reporte_mensual_AND_2026-10.xlsx!Personal!G6,2026-11-24T13:16:04+00:00
-2026-10,NOR,Asesores F&I,2,16453321,2026-10/reporte_mensual_AND_2026-10.xlsx!Personal!C7,2026-11-24T13:16:04+00:00
-2026-10,CEN,Asesores F&I,2,15369046,2026-10/reporte_mensual_AND_2026-10.xlsx!Personal!E7,2026-11-24T13:16:04+00:00
-2026-10,SUR,Asesores F&I,2,16182513,2026-10/reporte_mensual_AND_2026-10.xlsx!Personal!G7,2026-11-24T13:16:04+00:00
-2026-10,NOR,Técnicos,9,63943588,2026-10/reporte_mensual_AND_2026-10.xlsx!Personal!C8,2026-11-24T13:16:04+00:00
-2026-10,CEN,Técnicos,8,53093067,2026-10/reporte_mensual_AND_2026-10.xlsx!Personal!E8,2026-11-24T13:16:04+00:00
-2026-10,SUR,Técnicos,5,34939516,2026-10/reporte_mensual_AND_2026-10.xlsx!Personal!G8,2026-11-24T13:16:04+00:00
-2026-10,NOR,Repuestos,4,23932103,2026-10/reporte_mensual_AND_2026-10.xlsx!Personal!C9,2026-11-24T13:16:04+00:00
-2026-10,CEN,Repuestos,4,22354975,2026-10/reporte_mensual_AND_2026-10.xlsx!Personal!E9,2026-11-24T13:16:04+00:00
-2026-10,SUR,Repuestos,2,11769100,2026-10/reporte_mensual_AND_2026-10.xlsx!Personal!G9,2026-11-24T13:16:04+00:00
-2026-10,NOR,Administrativos,6,40385424,2026-10/reporte_mensual_AND_2026-10.xlsx!Personal!C10,2026-11-24T13:16:04+00:00
-2026-10,CEN,Administrativos,5,31436684,2026-10/reporte_mensual_AND_2026-10.xlsx!Personal!E10,2026-11-24T13:16:04+00:00
-2026-10,SUR,Administrativos,3,19860357,2026-10/reporte_mensual_AND_2026-10.xlsx!Personal!G10,2026-11-24T13:16:04+00:00
-2026-10,NOR,Gerencia,1,20940590,2026-10/reporte_mensual_AND_2026-10.xlsx!Personal!C11,2026-11-24T13:16:04+00:00
-2026-10,CEN,Gerencia,1,19560603,2026-10/reporte_mensual_AND_2026-10.xlsx!Personal!E11,2026-11-24T13:16:04+00:00
-2026-10,SUR,Gerencia,1,20595925,2026-10/reporte_mensual_AND_2026-10.xlsx!Personal!G11,2026-11-24T13:16:04+00:00
-2026-10,BAQ,Vendedores,7,50299574,2026-10/reporte_mensual_CAR_2026-10.xlsx!Personal!C6,2026-11-24T13:16:04+00:00
-2026-10,CTG,Vendedores,5,32204007,2026-10/reporte_mensual_CAR_2026-10.xlsx!Personal!E6,2026-11-24T13:16:04+00:00
-2026-10,SMR,Vendedores,3,13934120,2026-10/reporte_mensual_CAR_2026-10.xlsx!Personal!G6,2026-11-24T13:16:04+00:00
-2026-10,BAQ,Asesores F&I,2,15808437,2026-10/reporte_mensual_CAR_2026-10.xlsx!Personal!C7,2026-11-24T13:16:04+00:00
-2026-10,CTG,Asesores F&I,1,7084882,2026-10/reporte_mensual_CAR_2026-10.xlsx!Personal!E7,2026-11-24T13:16:04+00:00
-2026-10,SMR,Asesores F&I,1,5109177,2026-10/reporte_mensual_CAR_2026-10.xlsx!Personal!G7,2026-11-24T13:16:04+00:00
-2026-10,BAQ,Técnicos,6,40958224,2026-10/reporte_mensual_CAR_2026-10.xlsx!Personal!C8,2026-11-24T13:16:04+00:00
-2026-10,CTG,Técnicos,4,24475046,2026-10/reporte_mensual_CAR_2026-10.xlsx!Personal!E8,2026-11-24T13:16:04+00:00
-2026-10,SMR,Técnicos,3,13237414,2026-10/reporte_mensual_CAR_2026-10.xlsx!Personal!G8,2026-11-24T13:16:04+00:00
-2026-10,BAQ,Repuestos,3,17245568,2026-10/reporte_mensual_CAR_2026-10.xlsx!Personal!C9,2026-11-24T13:16:04+00:00
-2026-10,CTG,Repuestos,2,10305282,2026-10/reporte_mensual_CAR_2026-10.xlsx!Personal!E9,2026-11-24T13:16:04+00:00
-2026-10,SMR,Repuestos,2,7431531,2026-10/reporte_mensual_CAR_2026-10.xlsx!Personal!G9,2026-11-24T13:16:04+00:00
-2026-10,BAQ,Administrativos,4,25868352,2026-10/reporte_mensual_CAR_2026-10.xlsx!Personal!C10,2026-11-24T13:16:04+00:00
-2026-10,CTG,Administrativos,3,17390164,2026-10/reporte_mensual_CAR_2026-10.xlsx!Personal!E10,2026-11-24T13:16:04+00:00
-2026-10,SMR,Administrativos,2,8360472,2026-10/reporte_mensual_CAR_2026-10.xlsx!Personal!G10,2026-11-24T13:16:04+00:00
-2026-10,BAQ,Gerencia,1,20119829,2026-10/reporte_mensual_CAR_2026-10.xlsx!Personal!C11,2026-11-24T13:16:04+00:00
-2026-10,CTG,Gerencia,1,18034244,2026-10/reporte_mensual_CAR_2026-10.xlsx!Personal!E11,2026-11-24T13:16:04+00:00
-2026-10,SMR,Gerencia,1,13005179,2026-10/reporte_mensual_CAR_2026-10.xlsx!Personal!G11,2026-11-24T13:16:04+00:00
-2026-10,VIL,Vendedores,6,41948066,2026-10/reporte_mensual_LLA_2026-10.xlsx!Personal!C6,2026-11-24T13:16:04+00:00
-2026-10,YOP,Vendedores,3,13476097,2026-10/reporte_mensual_LLA_2026-10.xlsx!Personal!E6,2026-11-24T13:16:04+00:00
-2026-10,ACA,Vendedores,3,6276784,2026-10/reporte_mensual_LLA_2026-10.xlsx!Personal!G6,2026-11-24T13:16:04+00:00
-2026-10,VIL,Asesores F&I,2,15380957,2026-10/reporte_mensual_LLA_2026-10.xlsx!Personal!C7,2026-11-24T13:16:04+00:00
-2026-10,YOP,Asesores F&I,1,4941235,2026-10/reporte_mensual_LLA_2026-10.xlsx!Personal!E7,2026-11-24T13:16:04+00:00
-2026-10,ACA,Asesores F&I,1,2301488,2026-10/reporte_mensual_LLA_2026-10.xlsx!Personal!G7,2026-11-24T13:16:04+00:00
-2026-10,VIL,Técnicos,5,33208886,2026-10/reporte_mensual_LLA_2026-10.xlsx!Personal!C8,2026-11-24T13:16:04+00:00
-2026-10,YOP,Técnicos,3,12802292,2026-10/reporte_mensual_LLA_2026-10.xlsx!Personal!E8,2026-11-24T13:16:04+00:00
-2026-10,ACA,Técnicos,3,5962945,2026-10/reporte_mensual_LLA_2026-10.xlsx!Personal!G8,2026-11-24T13:16:04+00:00
-2026-10,VIL,Repuestos,2,11186151,2026-10/reporte_mensual_LLA_2026-10.xlsx!Personal!C9,2026-11-24T13:16:04+00:00
-2026-10,YOP,Repuestos,2,7187251,2026-10/reporte_mensual_LLA_2026-10.xlsx!Personal!E9,2026-11-24T13:16:04+00:00
-2026-10,ACA,Repuestos,2,3347618,2026-10/reporte_mensual_LLA_2026-10.xlsx!Personal!G9,2026-11-24T13:16:04+00:00
-2026-10,VIL,Administrativos,3,18876630,2026-10/reporte_mensual_LLA_2026-10.xlsx!Personal!C10,2026-11-24T13:16:04+00:00
-2026-10,YOP,Administrativos,2,8085658,2026-10/reporte_mensual_LLA_2026-10.xlsx!Personal!E10,2026-11-24T13:16:04+00:00
-2026-10,ACA,Administrativos,2,3766071,2026-10/reporte_mensual_LLA_2026-10.xlsx!Personal!G10,2026-11-24T13:16:04+00:00
-2026-10,VIL,Gerencia,1,19575764,2026-10/reporte_mensual_LLA_2026-10.xlsx!Personal!C11,2026-11-24T13:16:04+00:00
-2026-10,YOP,Gerencia,1,12577690,2026-10/reporte_mensual_LLA_2026-10.xlsx!Personal!E11,2026-11-24T13:16:04+00:00
-2026-10,ACA,Gerencia,1,5858332,2026-10/reporte_mensual_LLA_2026-10.xlsx!Personal!G11,2026-11-24T13:16:04+00:00
-2026-10,CAL,Vendedores,10,71856942,2026-10/reporte_mensual_VAL_2026-10.xlsx!Personal!C6,2026-11-24T13:16:04+00:00
-2026-10,PAL,Vendedores,5,33200785,2026-10/reporte_mensual_VAL_2026-10.xlsx!Personal!E6,2026-11-24T13:16:04+00:00
-2026-10,TUL,Vendedores,3,17208749,2026-10/reporte_mensual_VAL_2026-10.xlsx!Personal!G6,2026-11-24T13:16:04+00:00
-2026-10,CAL,Asesores F&I,2,15808527,2026-10/reporte_mensual_VAL_2026-10.xlsx!Personal!C7,2026-11-24T13:16:04+00:00
-2026-10,PAL,Asesores F&I,1,7304173,2026-10/reporte_mensual_VAL_2026-10.xlsx!Personal!E7,2026-11-24T13:16:04+00:00
-2026-10,TUL,Asesores F&I,1,6309875,2026-10/reporte_mensual_VAL_2026-10.xlsx!Personal!G7,2026-11-24T13:16:04+00:00
-2026-10,CAL,Técnicos,9,61437686,2026-10/reporte_mensual_VAL_2026-10.xlsx!Personal!C8,2026-11-24T13:16:04+00:00
-2026-10,PAL,Técnicos,4,25232596,2026-10/reporte_mensual_VAL_2026-10.xlsx!Personal!E8,2026-11-24T13:16:04+00:00
-2026-10,TUL,Técnicos,3,16348312,2026-10/reporte_mensual_VAL_2026-10.xlsx!Personal!G8,2026-11-24T13:16:04+00:00
-2026-10,CAL,Repuestos,4,22994222,2026-10/reporte_mensual_VAL_2026-10.xlsx!Personal!C9,2026-11-24T13:16:04+00:00
-2026-10,PAL,Repuestos,2,10624251,2026-10/reporte_mensual_VAL_2026-10.xlsx!Personal!E9,2026-11-24T13:16:04+00:00
-2026-10,TUL,Repuestos,2,9178000,2026-10/reporte_mensual_VAL_2026-10.xlsx!Personal!G9,2026-11-24T13:16:04+00:00
-2026-10,CAL,Administrativos,6,38802749,2026-10/reporte_mensual_VAL_2026-10.xlsx!Personal!C10,2026-11-24T13:16:04+00:00
-2026-10,PAL,Administrativos,3,17928424,2026-10/reporte_mensual_VAL_2026-10.xlsx!Personal!E10,2026-11-24T13:16:04+00:00
-2026-10,TUL,Administrativos,2,10325250,2026-10/reporte_mensual_VAL_2026-10.xlsx!Personal!G10,2026-11-24T13:16:04+00:00
-2026-10,CAL,Gerencia,1,20119944,2026-10/reporte_mensual_VAL_2026-10.xlsx!Personal!C11,2026-11-24T13:16:04+00:00
-2026-10,PAL,Gerencia,1,18592439,2026-10/reporte_mensual_VAL_2026-10.xlsx!Personal!E11,2026-11-24T13:16:04+00:00
-2026-10,TUL,Gerencia,1,16061499,2026-10/reporte_mensual_VAL_2026-10.xlsx!Personal!G11,2026-11-24T13:16:04+00:00
+2026-10,NOR,Vendedores,13,97224168,2026-10/reporte_mensual_AND_2026-10.xlsx!Personal!C6,2026-11-24T13:17:46+00:00
+2026-10,CEN,Vendedores,9,62873368,2026-10/reporte_mensual_AND_2026-10.xlsx!Personal!E6,2026-11-24T13:17:46+00:00
+2026-10,SUR,Vendedores,6,44134126,2026-10/reporte_mensual_AND_2026-10.xlsx!Personal!G6,2026-11-24T13:17:46+00:00
+2026-10,NOR,Asesores F&I,2,16453321,2026-10/reporte_mensual_AND_2026-10.xlsx!Personal!C7,2026-11-24T13:17:46+00:00
+2026-10,CEN,Asesores F&I,2,15369046,2026-10/reporte_mensual_AND_2026-10.xlsx!Personal!E7,2026-11-24T13:17:46+00:00
+2026-10,SUR,Asesores F&I,2,16182513,2026-10/reporte_mensual_AND_2026-10.xlsx!Personal!G7,2026-11-24T13:17:46+00:00
+2026-10,NOR,Técnicos,9,63943588,2026-10/reporte_mensual_AND_2026-10.xlsx!Personal!C8,2026-11-24T13:17:46+00:00
+2026-10,CEN,Técnicos,8,53093067,2026-10/reporte_mensual_AND_2026-10.xlsx!Personal!E8,2026-11-24T13:17:46+00:00
+2026-10,SUR,Técnicos,5,34939516,2026-10/reporte_mensual_AND_2026-10.xlsx!Personal!G8,2026-11-24T13:17:46+00:00
+2026-10,NOR,Repuestos,4,23932103,2026-10/reporte_mensual_AND_2026-10.xlsx!Personal!C9,2026-11-24T13:17:46+00:00
+2026-10,CEN,Repuestos,4,22354975,2026-10/reporte_mensual_AND_2026-10.xlsx!Personal!E9,2026-11-24T13:17:46+00:00
+2026-10,SUR,Repuestos,2,11769100,2026-10/reporte_mensual_AND_2026-10.xlsx!Personal!G9,2026-11-24T13:17:46+00:00
+2026-10,NOR,Administrativos,6,40385424,2026-10/reporte_mensual_AND_2026-10.xlsx!Personal!C10,2026-11-24T13:17:46+00:00
+2026-10,CEN,Administrativos,5,31436684,2026-10/reporte_mensual_AND_2026-10.xlsx!Personal!E10,2026-11-24T13:17:46+00:00
+2026-10,SUR,Administrativos,3,19860357,2026-10/reporte_mensual_AND_2026-10.xlsx!Personal!G10,2026-11-24T13:17:46+00:00
+2026-10,NOR,Gerencia,1,20940590,2026-10/reporte_mensual_AND_2026-10.xlsx!Personal!C11,2026-11-24T13:17:46+00:00
+2026-10,CEN,Gerencia,1,19560603,2026-10/reporte_mensual_AND_2026-10.xlsx!Personal!E11,2026-11-24T13:17:46+00:00
+2026-10,SUR,Gerencia,1,20595925,2026-10/reporte_mensual_AND_2026-10.xlsx!Personal!G11,2026-11-24T13:17:46+00:00
+2026-10,BAQ,Vendedores,7,50299574,2026-10/reporte_mensual_CAR_2026-10.xlsx!Personal!C6,2026-11-24T13:17:46+00:00
+2026-10,CTG,Vendedores,5,32204007,2026-10/reporte_mensual_CAR_2026-10.xlsx!Personal!E6,2026-11-24T13:17:46+00:00
+2026-10,SMR,Vendedores,3,13934120,2026-10/reporte_mensual_CAR_2026-10.xlsx!Personal!G6,2026-11-24T13:17:46+00:00
+2026-10,BAQ,Asesores F&I,2,15808437,2026-10/reporte_mensual_CAR_2026-10.xlsx!Personal!C7,2026-11-24T13:17:46+00:00
+2026-10,CTG,Asesores F&I,1,7084882,2026-10/reporte_mensual_CAR_2026-10.xlsx!Personal!E7,2026-11-24T13:17:46+00:00
+2026-10,SMR,Asesores F&I,1,5109177,2026-10/reporte_mensual_CAR_2026-10.xlsx!Personal!G7,2026-11-24T13:17:46+00:00
+2026-10,BAQ,Técnicos,6,40958224,2026-10/reporte_mensual_CAR_2026-10.xlsx!Personal!C8,2026-11-24T13:17:46+00:00
+2026-10,CTG,Técnicos,4,24475046,2026-10/reporte_mensual_CAR_2026-10.xlsx!Personal!E8,2026-11-24T13:17:46+00:00
+2026-10,SMR,Técnicos,3,13237414,2026-10/reporte_mensual_CAR_2026-10.xlsx!Personal!G8,2026-11-24T13:17:46+00:00
+2026-10,BAQ,Repuestos,3,17245568,2026-10/reporte_mensual_CAR_2026-10.xlsx!Personal!C9,2026-11-24T13:17:46+00:00
+2026-10,CTG,Repuestos,2,10305282,2026-10/reporte_mensual_CAR_2026-10.xlsx!Personal!E9,2026-11-24T13:17:46+00:00
+2026-10,SMR,Repuestos,2,7431531,2026-10/reporte_mensual_CAR_2026-10.xlsx!Personal!G9,2026-11-24T13:17:46+00:00
+2026-10,BAQ,Administrativos,4,25868352,2026-10/reporte_mensual_CAR_2026-10.xlsx!Personal!C10,2026-11-24T13:17:46+00:00
+2026-10,CTG,Administrativos,3,17390164,2026-10/reporte_mensual_CAR_2026-10.xlsx!Personal!E10,2026-11-24T13:17:46+00:00
+2026-10,SMR,Administrativos,2,8360472,2026-10/reporte_mensual_CAR_2026-10.xlsx!Personal!G10,2026-11-24T13:17:46+00:00
+2026-10,BAQ,Gerencia,1,20119829,2026-10/reporte_mensual_CAR_2026-10.xlsx!Personal!C11,2026-11-24T13:17:46+00:00
+2026-10,CTG,Gerencia,1,18034244,2026-10/reporte_mensual_CAR_2026-10.xlsx!Personal!E11,2026-11-24T13:17:46+00:00
+2026-10,SMR,Gerencia,1,13005179,2026-10/reporte_mensual_CAR_2026-10.xlsx!Personal!G11,2026-11-24T13:17:46+00:00
+2026-10,VIL,Vendedores,6,41948066,2026-10/reporte_mensual_LLA_2026-10.xlsx!Personal!C6,2026-11-24T13:17:46+00:00
+2026-10,YOP,Vendedores,3,13476097,2026-10/reporte_mensual_LLA_2026-10.xlsx!Personal!E6,2026-11-24T13:17:46+00:00
+2026-10,ACA,Vendedores,3,6276784,2026-10/reporte_mensual_LLA_2026-10.xlsx!Personal!G6,2026-11-24T13:17:46+00:00
+2026-10,VIL,Asesores F&I,2,15380957,2026-10/reporte_mensual_LLA_2026-10.xlsx!Personal!C7,2026-11-24T13:17:46+00:00
+2026-10,YOP,Asesores F&I,1,4941235,2026-10/reporte_mensual_LLA_2026-10.xlsx!Personal!E7,2026-11-24T13:17:46+00:00
+2026-10,ACA,Asesores F&I,1,2301488,2026-10/reporte_mensual_LLA_2026-10.xlsx!Personal!G7,2026-11-24T13:17:46+00:00
+2026-10,VIL,Técnicos,5,33208886,2026-10/reporte_mensual_LLA_2026-10.xlsx!Personal!C8,2026-11-24T13:17:46+00:00
+2026-10,YOP,Técnicos,3,12802292,2026-10/reporte_mensual_LLA_2026-10.xlsx!Personal!E8,2026-11-24T13:17:46+00:00
+2026-10,ACA,Técnicos,3,5962945,2026-10/reporte_mensual_LLA_2026-10.xlsx!Personal!G8,2026-11-24T13:17:46+00:00
+2026-10,VIL,Repuestos,2,11186151,2026-10/reporte_mensual_LLA_2026-10.xlsx!Personal!C9,2026-11-24T13:17:46+00:00
+2026-10,YOP,Repuestos,2,7187251,2026-10/reporte_mensual_LLA_2026-10.xlsx!Personal!E9,2026-11-24T13:17:46+00:00
+2026-10,ACA,Repuestos,2,3347618,2026-10/reporte_mensual_LLA_2026-10.xlsx!Personal!G9,2026-11-24T13:17:46+00:00
+2026-10,VIL,Administrativos,3,18876630,2026-10/reporte_mensual_LLA_2026-10.xlsx!Personal!C10,2026-11-24T13:17:46+00:00
+2026-10,YOP,Administrativos,2,8085658,2026-10/reporte_mensual_LLA_2026-10.xlsx!Personal!E10,2026-11-24T13:17:46+00:00
+2026-10,ACA,Administrativos,2,3766071,2026-10/reporte_mensual_LLA_2026-10.xlsx!Personal!G10,2026-11-24T13:17:46+00:00
+2026-10,VIL,Gerencia,1,19575764,2026-10/reporte_mensual_LLA_2026-10.xlsx!Personal!C11,2026-11-24T13:17:46+00:00
+2026-10,YOP,Gerencia,1,12577690,2026-10/reporte_mensual_LLA_2026-10.xlsx!Personal!E11,2026-11-24T13:17:46+00:00
+2026-10,ACA,Gerencia,1,5858332,2026-10/reporte_mensual_LLA_2026-10.xlsx!Personal!G11,2026-11-24T13:17:46+00:00
+2026-10,CAL,Vendedores,10,71856942,2026-10/reporte_mensual_VAL_2026-10.xlsx!Personal!C6,2026-11-24T13:17:46+00:00
+2026-10,PAL,Vendedores,5,33200785,2026-10/reporte_mensual_VAL_2026-10.xlsx!Personal!E6,2026-11-24T13:17:46+00:00
+2026-10,TUL,Vendedores,3,17208749,2026-10/reporte_mensual_VAL_2026-10.xlsx!Personal!G6,2026-11-24T13:17:46+00:00
+2026-10,CAL,Asesores F&I,2,15808527,2026-10/reporte_mensual_VAL_2026-10.xlsx!Personal!C7,2026-11-24T13:17:46+00:00
+2026-10,PAL,Asesores F&I,1,7304173,2026-10/reporte_mensual_VAL_2026-10.xlsx!Personal!E7,2026-11-24T13:17:46+00:00
+2026-10,TUL,Asesores F&I,1,6309875,2026-10/reporte_mensual_VAL_2026-10.xlsx!Personal!G7,2026-11-24T13:17:46+00:00
+2026-10,CAL,Técnicos,9,61437686,2026-10/reporte_mensual_VAL_2026-10.xlsx!Personal!C8,2026-11-24T13:17:46+00:00
+2026-10,PAL,Técnicos,4,25232596,2026-10/reporte_mensual_VAL_2026-10.xlsx!Personal!E8,2026-11-24T13:17:46+00:00
+2026-10,TUL,Técnicos,3,16348312,2026-10/reporte_mensual_VAL_2026-10.xlsx!Personal!G8,2026-11-24T13:17:46+00:00
+2026-10,CAL,Repuestos,4,22994222,2026-10/reporte_mensual_VAL_2026-10.xlsx!Personal!C9,2026-11-24T13:17:46+00:00
+2026-10,PAL,Repuestos,2,10624251,2026-10/reporte_mensual_VAL_2026-10.xlsx!Personal!E9,2026-11-24T13:17:46+00:00
+2026-10,TUL,Repuestos,2,9178000,2026-10/reporte_mensual_VAL_2026-10.xlsx!Personal!G9,2026-11-24T13:17:46+00:00
+2026-10,CAL,Administrativos,6,38802749,2026-10/reporte_mensual_VAL_2026-10.xlsx!Personal!C10,2026-11-24T13:17:46+00:00
+2026-10,PAL,Administrativos,3,17928424,2026-10/reporte_mensual_VAL_2026-10.xlsx!Personal!E10,2026-11-24T13:17:46+00:00
+2026-10,TUL,Administrativos,2,10325250,2026-10/reporte_mensual_VAL_2026-10.xlsx!Personal!G10,2026-11-24T13:17:46+00:00
+2026-10,CAL,Gerencia,1,20119944,2026-10/reporte_mensual_VAL_2026-10.xlsx!Personal!C11,2026-11-24T13:17:46+00:00
+2026-10,PAL,Gerencia,1,18592439,2026-10/reporte_mensual_VAL_2026-10.xlsx!Personal!E11,2026-11-24T13:17:46+00:00
+2026-10,TUL,Gerencia,1,16061499,2026-10/reporte_mensual_VAL_2026-10.xlsx!Personal!G11,2026-11-24T13:17:46+00:00

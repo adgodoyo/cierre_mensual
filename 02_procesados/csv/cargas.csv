@@ -919,43 +919,43 @@ carga_id,periodo,concesionario_id,archivo,tabla,filas,estado,modo,commit_hash,fu
 918,2026-09,VAL,2026-09/reporte_mensual_VAL_2026-09.xlsx!Personal,personal,18,Correcto,historico_simulado,fe071a6,src/ingesta.py,2026-10-05T07:00:00-05:00
 919,2026-09,VAL,2026-09/reporte_mensual_VAL_2026-09.xlsx!F&I,fi,3,Correcto,historico_simulado,fe071a6,src/ingesta.py,2026-10-05T07:00:00-05:00
 920,2026-09,VAL,2026-09/reporte_mensual_VAL_2026-09.xlsx!Obligaciones,obligaciones,9,Correcto,historico_simulado,fe071a6,src/ingesta.py,2026-10-05T07:00:00-05:00
-1121,2026-10,AND,2026-10/reporte_mensual_AND_2026-10.xlsx!Balance,saldos,59,Correcto,rutina,9211dae,src/ingesta.py,2026-11-24T13:16:04+00:00
-1122,2026-10,AND,2026-10/reporte_mensual_AND_2026-10.xlsx!Resultados Norte,saldos,61,Correcto,rutina,9211dae,src/ingesta.py,2026-11-24T13:16:04+00:00
-1123,2026-10,AND,2026-10/reporte_mensual_AND_2026-10.xlsx!Resultados Centro,saldos,62,Correcto,rutina,9211dae,src/ingesta.py,2026-11-24T13:16:04+00:00
-1124,2026-10,AND,2026-10/reporte_mensual_AND_2026-10.xlsx!Resultados Sur,saldos,61,Correcto,rutina,9211dae,src/ingesta.py,2026-11-24T13:16:04+00:00
-1125,2026-10,AND,2026-10/reporte_mensual_AND_2026-10.xlsx!Ventas,ventas,147,Correcto,rutina,9211dae,src/ingesta.py,2026-11-24T13:16:04+00:00
-1126,2026-10,AND,2026-10/reporte_mensual_AND_2026-10.xlsx!Inventario,inventario,191,Correcto,rutina,9211dae,src/ingesta.py,2026-11-24T13:16:04+00:00
-1127,2026-10,AND,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos,gastos,36,Correcto,rutina,9211dae,src/ingesta.py,2026-11-24T13:16:04+00:00
-1128,2026-10,AND,2026-10/reporte_mensual_AND_2026-10.xlsx!Personal,personal,18,Correcto,rutina,9211dae,src/ingesta.py,2026-11-24T13:16:04+00:00
-1129,2026-10,AND,2026-10/reporte_mensual_AND_2026-10.xlsx!F&I,fi,3,Correcto,rutina,9211dae,src/ingesta.py,2026-11-24T13:16:04+00:00
-1130,2026-10,AND,2026-10/reporte_mensual_AND_2026-10.xlsx!Obligaciones,obligaciones,9,Correcto,rutina,9211dae,src/ingesta.py,2026-11-24T13:16:04+00:00
-1131,2026-10,CAR,2026-10/reporte_mensual_CAR_2026-10.xlsx!Balance,saldos,57,Correcto,rutina,9211dae,src/ingesta.py,2026-11-24T13:16:04+00:00
-1132,2026-10,CAR,2026-10/reporte_mensual_CAR_2026-10.xlsx!Resultados Barranquilla,saldos,61,Correcto,rutina,9211dae,src/ingesta.py,2026-11-24T13:16:04+00:00
-1133,2026-10,CAR,2026-10/reporte_mensual_CAR_2026-10.xlsx!Resultados Cartagena,saldos,61,Correcto,rutina,9211dae,src/ingesta.py,2026-11-24T13:16:04+00:00
-1134,2026-10,CAR,2026-10/reporte_mensual_CAR_2026-10.xlsx!Resultados Santa Marta,saldos,61,Correcto,rutina,9211dae,src/ingesta.py,2026-11-24T13:16:04+00:00
-1135,2026-10,CAR,2026-10/reporte_mensual_CAR_2026-10.xlsx!Ventas,ventas,88,Correcto,rutina,9211dae,src/ingesta.py,2026-11-24T13:16:04+00:00
-1136,2026-10,CAR,2026-10/reporte_mensual_CAR_2026-10.xlsx!Inventario,inventario,122,Correcto,rutina,9211dae,src/ingesta.py,2026-11-24T13:16:04+00:00
-1137,2026-10,CAR,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos,gastos,33,Correcto,rutina,9211dae,src/ingesta.py,2026-11-24T13:16:04+00:00
-1138,2026-10,CAR,2026-10/reporte_mensual_CAR_2026-10.xlsx!Personal,personal,18,Correcto,rutina,9211dae,src/ingesta.py,2026-11-24T13:16:04+00:00
-1139,2026-10,CAR,2026-10/reporte_mensual_CAR_2026-10.xlsx!F&I,fi,3,Correcto,rutina,9211dae,src/ingesta.py,2026-11-24T13:16:04+00:00
-1140,2026-10,CAR,2026-10/reporte_mensual_CAR_2026-10.xlsx!Obligaciones,obligaciones,9,Correcto,rutina,9211dae,src/ingesta.py,2026-11-24T13:16:04+00:00
-1141,2026-10,LLA,2026-10/reporte_mensual_LLA_2026-10.xlsx!Balance,saldos,57,Correcto,rutina,9211dae,src/ingesta.py,2026-11-24T13:16:04+00:00
-1142,2026-10,LLA,2026-10/reporte_mensual_LLA_2026-10.xlsx!Resultados Villavicencio,saldos,61,Correcto,rutina,9211dae,src/ingesta.py,2026-11-24T13:16:04+00:00
-1143,2026-10,LLA,2026-10/reporte_mensual_LLA_2026-10.xlsx!Resultados Yopal,saldos,61,Correcto,rutina,9211dae,src/ingesta.py,2026-11-24T13:16:04+00:00
-1144,2026-10,LLA,2026-10/reporte_mensual_LLA_2026-10.xlsx!Resultados Acacías,saldos,61,Correcto,rutina,9211dae,src/ingesta.py,2026-11-24T13:16:04+00:00
-1145,2026-10,LLA,2026-10/reporte_mensual_LLA_2026-10.xlsx!Ventas,ventas,56,Correcto,rutina,9211dae,src/ingesta.py,2026-11-24T13:16:04+00:00
-1146,2026-10,LLA,2026-10/reporte_mensual_LLA_2026-10.xlsx!Inventario,inventario,76,Correcto,rutina,9211dae,src/ingesta.py,2026-11-24T13:16:04+00:00
-1147,2026-10,LLA,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos,gastos,33,Correcto,rutina,9211dae,src/ingesta.py,2026-11-24T13:16:04+00:00
-1148,2026-10,LLA,2026-10/reporte_mensual_LLA_2026-10.xlsx!Personal,personal,18,Correcto,rutina,9211dae,src/ingesta.py,2026-11-24T13:16:04+00:00
-1149,2026-10,LLA,2026-10/reporte_mensual_LLA_2026-10.xlsx!F&I,fi,3,Correcto,rutina,9211dae,src/ingesta.py,2026-11-24T13:16:04+00:00
-1150,2026-10,LLA,2026-10/reporte_mensual_LLA_2026-10.xlsx!Obligaciones,obligaciones,9,Correcto,rutina,9211dae,src/ingesta.py,2026-11-24T13:16:04+00:00
-1151,2026-10,VAL,2026-10/reporte_mensual_VAL_2026-10.xlsx!Balance,saldos,57,Correcto,rutina,9211dae,src/ingesta.py,2026-11-24T13:16:04+00:00
-1152,2026-10,VAL,2026-10/reporte_mensual_VAL_2026-10.xlsx!Resultados Cali,saldos,61,Correcto,rutina,9211dae,src/ingesta.py,2026-11-24T13:16:04+00:00
-1153,2026-10,VAL,2026-10/reporte_mensual_VAL_2026-10.xlsx!Resultados Palmira,saldos,61,Correcto,rutina,9211dae,src/ingesta.py,2026-11-24T13:16:04+00:00
-1154,2026-10,VAL,2026-10/reporte_mensual_VAL_2026-10.xlsx!Resultados Tuluá,saldos,61,Correcto,rutina,9211dae,src/ingesta.py,2026-11-24T13:16:04+00:00
-1155,2026-10,VAL,2026-10/reporte_mensual_VAL_2026-10.xlsx!Ventas,ventas,108,Correcto,rutina,9211dae,src/ingesta.py,2026-11-24T13:16:04+00:00
-1156,2026-10,VAL,2026-10/reporte_mensual_VAL_2026-10.xlsx!Inventario,inventario,149,Correcto,rutina,9211dae,src/ingesta.py,2026-11-24T13:16:04+00:00
-1157,2026-10,VAL,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos,gastos,33,Correcto,rutina,9211dae,src/ingesta.py,2026-11-24T13:16:04+00:00
-1158,2026-10,VAL,2026-10/reporte_mensual_VAL_2026-10.xlsx!Personal,personal,18,Correcto,rutina,9211dae,src/ingesta.py,2026-11-24T13:16:04+00:00
-1159,2026-10,VAL,2026-10/reporte_mensual_VAL_2026-10.xlsx!F&I,fi,3,Correcto,rutina,9211dae,src/ingesta.py,2026-11-24T13:16:04+00:00
-1160,2026-10,VAL,2026-10/reporte_mensual_VAL_2026-10.xlsx!Obligaciones,obligaciones,9,Correcto,rutina,9211dae,src/ingesta.py,2026-11-24T13:16:04+00:00
+1161,2026-10,AND,2026-10/reporte_mensual_AND_2026-10.xlsx!Balance,saldos,59,Correcto,rutina,448db5e,src/ingesta.py,2026-11-24T13:17:46+00:00
+1162,2026-10,AND,2026-10/reporte_mensual_AND_2026-10.xlsx!Resultados Norte,saldos,61,Correcto,rutina,448db5e,src/ingesta.py,2026-11-24T13:17:46+00:00
+1163,2026-10,AND,2026-10/reporte_mensual_AND_2026-10.xlsx!Resultados Centro,saldos,62,Correcto,rutina,448db5e,src/ingesta.py,2026-11-24T13:17:46+00:00
+1164,2026-10,AND,2026-10/reporte_mensual_AND_2026-10.xlsx!Resultados Sur,saldos,61,Correcto,rutina,448db5e,src/ingesta.py,2026-11-24T13:17:46+00:00
+1165,2026-10,AND,2026-10/reporte_mensual_AND_2026-10.xlsx!Ventas,ventas,147,Correcto,rutina,448db5e,src/ingesta.py,2026-11-24T13:17:46+00:00
+1166,2026-10,AND,2026-10/reporte_mensual_AND_2026-10.xlsx!Inventario,inventario,191,Correcto,rutina,448db5e,src/ingesta.py,2026-11-24T13:17:46+00:00
+1167,2026-10,AND,2026-10/reporte_mensual_AND_2026-10.xlsx!Libro de gastos,gastos,36,Correcto,rutina,448db5e,src/ingesta.py,2026-11-24T13:17:46+00:00
+1168,2026-10,AND,2026-10/reporte_mensual_AND_2026-10.xlsx!Personal,personal,18,Correcto,rutina,448db5e,src/ingesta.py,2026-11-24T13:17:46+00:00
+1169,2026-10,AND,2026-10/reporte_mensual_AND_2026-10.xlsx!F&I,fi,3,Correcto,rutina,448db5e,src/ingesta.py,2026-11-24T13:17:46+00:00
+1170,2026-10,AND,2026-10/reporte_mensual_AND_2026-10.xlsx!Obligaciones,obligaciones,9,Correcto,rutina,448db5e,src/ingesta.py,2026-11-24T13:17:46+00:00
+1171,2026-10,CAR,2026-10/reporte_mensual_CAR_2026-10.xlsx!Balance,saldos,57,Correcto,rutina,448db5e,src/ingesta.py,2026-11-24T13:17:46+00:00
+1172,2026-10,CAR,2026-10/reporte_mensual_CAR_2026-10.xlsx!Resultados Barranquilla,saldos,61,Correcto,rutina,448db5e,src/ingesta.py,2026-11-24T13:17:46+00:00
+1173,2026-10,CAR,2026-10/reporte_mensual_CAR_2026-10.xlsx!Resultados Cartagena,saldos,61,Correcto,rutina,448db5e,src/ingesta.py,2026-11-24T13:17:46+00:00
+1174,2026-10,CAR,2026-10/reporte_mensual_CAR_2026-10.xlsx!Resultados Santa Marta,saldos,61,Correcto,rutina,448db5e,src/ingesta.py,2026-11-24T13:17:46+00:00
+1175,2026-10,CAR,2026-10/reporte_mensual_CAR_2026-10.xlsx!Ventas,ventas,88,Correcto,rutina,448db5e,src/ingesta.py,2026-11-24T13:17:46+00:00
+1176,2026-10,CAR,2026-10/reporte_mensual_CAR_2026-10.xlsx!Inventario,inventario,122,Correcto,rutina,448db5e,src/ingesta.py,2026-11-24T13:17:46+00:00
+1177,2026-10,CAR,2026-10/reporte_mensual_CAR_2026-10.xlsx!Libro de gastos,gastos,33,Correcto,rutina,448db5e,src/ingesta.py,2026-11-24T13:17:46+00:00
+1178,2026-10,CAR,2026-10/reporte_mensual_CAR_2026-10.xlsx!Personal,personal,18,Correcto,rutina,448db5e,src/ingesta.py,2026-11-24T13:17:46+00:00
+1179,2026-10,CAR,2026-10/reporte_mensual_CAR_2026-10.xlsx!F&I,fi,3,Correcto,rutina,448db5e,src/ingesta.py,2026-11-24T13:17:46+00:00
+1180,2026-10,CAR,2026-10/reporte_mensual_CAR_2026-10.xlsx!Obligaciones,obligaciones,9,Correcto,rutina,448db5e,src/ingesta.py,2026-11-24T13:17:46+00:00
+1181,2026-10,LLA,2026-10/reporte_mensual_LLA_2026-10.xlsx!Balance,saldos,57,Correcto,rutina,448db5e,src/ingesta.py,2026-11-24T13:17:46+00:00
+1182,2026-10,LLA,2026-10/reporte_mensual_LLA_2026-10.xlsx!Resultados Villavicencio,saldos,61,Correcto,rutina,448db5e,src/ingesta.py,2026-11-24T13:17:46+00:00
+1183,2026-10,LLA,2026-10/reporte_mensual_LLA_2026-10.xlsx!Resultados Yopal,saldos,61,Correcto,rutina,448db5e,src/ingesta.py,2026-11-24T13:17:46+00:00
+1184,2026-10,LLA,2026-10/reporte_mensual_LLA_2026-10.xlsx!Resultados Acacías,saldos,61,Correcto,rutina,448db5e,src/ingesta.py,2026-11-24T13:17:46+00:00
+1185,2026-10,LLA,2026-10/reporte_mensual_LLA_2026-10.xlsx!Ventas,ventas,56,Correcto,rutina,448db5e,src/ingesta.py,2026-11-24T13:17:46+00:00
+1186,2026-10,LLA,2026-10/reporte_mensual_LLA_2026-10.xlsx!Inventario,inventario,76,Correcto,rutina,448db5e,src/ingesta.py,2026-11-24T13:17:46+00:00
+1187,2026-10,LLA,2026-10/reporte_mensual_LLA_2026-10.xlsx!Libro de gastos,gastos,33,Correcto,rutina,448db5e,src/ingesta.py,2026-11-24T13:17:46+00:00
+1188,2026-10,LLA,2026-10/reporte_mensual_LLA_2026-10.xlsx!Personal,personal,18,Correcto,rutina,448db5e,src/ingesta.py,2026-11-24T13:17:46+00:00
+1189,2026-10,LLA,2026-10/reporte_mensual_LLA_2026-10.xlsx!F&I,fi,3,Correcto,rutina,448db5e,src/ingesta.py,2026-11-24T13:17:46+00:00
+1190,2026-10,LLA,2026-10/reporte_mensual_LLA_2026-10.xlsx!Obligaciones,obligaciones,9,Correcto,rutina,448db5e,src/ingesta.py,2026-11-24T13:17:46+00:00
+1191,2026-10,VAL,2026-10/reporte_mensual_VAL_2026-10.xlsx!Balance,saldos,57,Correcto,rutina,448db5e,src/ingesta.py,2026-11-24T13:17:46+00:00
+1192,2026-10,VAL,2026-10/reporte_mensual_VAL_2026-10.xlsx!Resultados Cali,saldos,61,Correcto,rutina,448db5e,src/ingesta.py,2026-11-24T13:17:46+00:00
+1193,2026-10,VAL,2026-10/reporte_mensual_VAL_2026-10.xlsx!Resultados Palmira,saldos,61,Correcto,rutina,448db5e,src/ingesta.py,2026-11-24T13:17:46+00:00
+1194,2026-10,VAL,2026-10/reporte_mensual_VAL_2026-10.xlsx!Resultados Tuluá,saldos,61,Correcto,rutina,448db5e,src/ingesta.py,2026-11-24T13:17:46+00:00
+1195,2026-10,VAL,2026-10/reporte_mensual_VAL_2026-10.xlsx!Ventas,ventas,108,Correcto,rutina,448db5e,src/ingesta.py,2026-11-24T13:17:46+00:00
+1196,2026-10,VAL,2026-10/reporte_mensual_VAL_2026-10.xlsx!Inventario,inventario,149,Correcto,rutina,448db5e,src/ingesta.py,2026-11-24T13:17:46+00:00
+1197,2026-10,VAL,2026-10/reporte_mensual_VAL_2026-10.xlsx!Libro de gastos,gastos,33,Correcto,rutina,448db5e,src/ingesta.py,2026-11-24T13:17:46+00:00
+1198,2026-10,VAL,2026-10/reporte_mensual_VAL_2026-10.xlsx!Personal,personal,18,Correcto,rutina,448db5e,src/ingesta.py,2026-11-24T13:17:46+00:00
+1199,2026-10,VAL,2026-10/reporte_mensual_VAL_2026-10.xlsx!F&I,fi,3,Correcto,rutina,448db5e,src/ingesta.py,2026-11-24T13:17:46+00:00
+1200,2026-10,VAL,2026-10/reporte_mensual_VAL_2026-10.xlsx!Obligaciones,obligaciones,9,Correcto,rutina,448db5e,src/ingesta.py,2026-11-24T13:17:46+00:00
