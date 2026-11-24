@@ -125,11 +125,11 @@ def validar_concesionario(conn, mes, cid, catalogo, anterior, historia_personal)
             alertas.append(alerta(mes, cid, None, "suma_sedes", "Alta", f"La suma de sedes no coincide en {linea}", "El consolidado no es igual a la suma de las sedes.", por_sedes - consolidado[linea], f"formato_consolidado_{mes}.xlsx!ERI"))
     vehiculos = saldos[saldos.cuenta_origen.isin([f"4135-{d}" for d in ("LIV", "USA", "ELE", "PES")])].saldo.sum()
     if not control("Ventas por VIN = ventas de vehículos en ERI", "Consolidado", vehiculos, (ventas.precio - ventas.descuento).sum()):
-        alertas.append(alerta(mes, cid, None, "cruce_ventas", "Alta", "Ventas por VIN no coinciden con el ERI", "El detalle de vehículos vendidos no suma lo mismo que el estado de resultados.", vehiculos - (ventas.precio - ventas.descuento).sum(), f"{mes}/{cid}/ventas_vin_{mes}.csv"))
+        alertas.append(alerta(mes, cid, None, "cruce_ventas", "Alta", "Ventas por VIN no coinciden con el ERI", "El detalle de vehículos vendidos no suma lo mismo que el estado de resultados.", vehiculos - (ventas.precio - ventas.descuento).sum(), f"{mes}/reporte_mensual_{cid}_{mes}.xlsx!Ventas"))
     for linea, cuenta in CUENTA_INV.items():
         contable, detalle = saldos[saldos.cuenta_origen == cuenta].saldo.sum(), inv[inv.linea == linea].costo.sum()
         if not control(f"Inventario {linea}: detalle = balance", "Consolidado", contable, detalle):
-            alertas.append(alerta(mes, cid, None, "cruce_inventario", "Alta", f"Inventario {linea} no coincide con el balance", "El detalle por vehículo no suma lo mismo que la cuenta contable.", contable - detalle, f"{mes}/{cid}/inventario_dias.xlsx"))
+            alertas.append(alerta(mes, cid, None, "cruce_inventario", "Alta", f"Inventario {linea} no coincide con el balance", "El detalle por vehículo no suma lo mismo que la cuenta contable.", contable - detalle, f"{mes}/reporte_mensual_{cid}_{mes}.xlsx!Inventario"))
     utilidad_3605 = saldos[saldos.cuenta_origen == "3605"].saldo.sum()
     if not control("Utilidad del ERI = cuenta 3605", "Consolidado", utilidad_3605, consolidado["Utilidad operativa"]):
         alertas.append(alerta(mes, cid, None, "cruce_utilidad", "Alta", "La utilidad del ERI no coincide con el balance", "La utilidad calculada difiere de la cuenta 3605.", utilidad_3605 - consolidado["Utilidad operativa"], f"formato_consolidado_{mes}.xlsx!ERI"))

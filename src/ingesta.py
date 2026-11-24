@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Ingesta: lee los archivos crudos de un mes y los guarda ordenados en SQLite.
+"""Ingesta: lee el reporte mensual de cada concesionario (un libro de Excel) y lo guarda ordenado en SQLite.
 
 Uso:
   python src/ingesta.py --reconstruir     # carga los 24 meses, uno por uno
@@ -8,7 +8,6 @@ Uso:
 from __future__ import annotations
 
 import argparse
-import csv
 import json
 import re
 import sqlite3
@@ -19,7 +18,6 @@ from pathlib import Path
 
 import pandas as pd
 from openpyxl import load_workbook
-from openpyxl.utils import get_column_letter
 
 from esquema import TABLAS, ddl
 
@@ -29,19 +27,39 @@ PROCESADOS = RAIZ / "02_procesados"
 DB = PROCESADOS / "cierre.db"
 MAPEO = RAIZ / "00_manuales" / "mapeo_puc_formato.xlsx"
 CATALOGO = RAIZ / "04_pruebas" / "catalogo.json"
-RE_CUENTA = re.compile(r"^\d{4,6}(-[A-Z]{3})?$")
+RE_LIBRO = re.compile(r"^reporte_mensual_([A-Z]{3})_(\d{4}-\d{2})\.xlsx$")
+RE_CODIGO = re.compile(r"^\d{4,6}$")
 RE_VIN = re.compile(r"^[A-Z0-9]{17}$")
-RE_FECHA = re.compile(r"^\d{4}-\d{2}-\d{2}")
 TABLAS_MES = ["saldos", "ventas", "inventario", "gastos", "personal", "fi", "obligaciones"]
+DEPTOS = {"livianos": "LIV", "usados": "USA", "electricos": "ELE", "pesados": "PES", "fi": "FYI", "servicio": "SER", "repuestos": "REP", "accesorios": "ACC", "administrativo": "ADM"}
+
+# Qué trae cada hoja y qué tiene que resolver el agente. El tablero muestra esta tabla.
+HOJAS = {
+    "portada": ("Datos del concesionario y del periodo", "Confirma concesionario, sedes y mes", "—"),
+    "balance": ("Balance general por sede, con secciones y subtotales", "Toma solo filas con código de cuenta; ignora títulos y subtotales", "saldos"),
+    "resultados": ("Resultados por departamento de una sede", "Une código y columna: 4135 + Livianos = 4135-LIV", "saldos"),
+    "ventas": ("Una fila por vehículo vendido", "Encuentra el encabezado aunque haya títulos arriba", "ventas"),
+    "inventario": ("Vehículos en patio, sin encabezados", "Reconoce cada columna por lo que contiene", "inventario"),
+    "librodegastos": ("Pagos del mes a proveedores", "Base para detectar duplicados, montos atípicos y fines de semana", "gastos"),
+    "personal": ("Personas y costo por rol y sede", "Lee un encabezado combinado de dos filas", "personal"),
+    "fi": ("Créditos, pólizas y comisiones por sede", "Convierte las columnas de sedes en filas", "fi"),
+    "obligaciones": ("Cupos wholesale por entidad", "Convierte la tasa escrita como texto ('1,198 %') en número", "obligaciones"),
+    "validador": ("Controles propios del concesionario (fórmulas)", "No se carga: el agente rehace los controles por su cuenta", "—"),
+}
 
 
 class ArchivoNoReconocido(Exception):
-    """El archivo no se puede interpretar con certeza: se reporta, no se inventa."""
+    """La hoja no se puede interpretar con certeza: se reporta, no se inventa."""
 
 
 def normalizar(texto) -> str:
     t = unicodedata.normalize("NFKD", str(texto or "")).encode("ascii", "ignore").decode().lower()
-    return re.sub(r"[^a-z]", "", t)
+    return re.sub(r"[^a-z0-9]", "", t)
+
+
+def rol_hoja(titulo: str) -> str | None:
+    n = normalizar(titulo)
+    return next((k for k in HOJAS if n.startswith(k)), None)
 
 
 def numero(valor):
@@ -50,7 +68,7 @@ def numero(valor):
         return None
     if isinstance(valor, (int, float)):
         return float(valor)
-    t = str(valor).strip().replace("$", "").replace(" ", "")
+    t = str(valor).strip().replace("$", "").replace(" ", "").replace("%", "")
     if not t:
         return None
     if "," in t:
@@ -63,74 +81,86 @@ def numero(valor):
         return None
 
 
-def leer_matriz(ruta: Path):
-    """Devuelve filas como listas de (valor, celda), sin suponer dónde está el encabezado."""
-    if ruta.suffix.lower() == ".xlsx":
-        hoja = load_workbook(ruta, data_only=True).active
-        return [[(c.value, c.coordinate) for c in fila] for fila in hoja.iter_rows()]
-    texto = ruta.read_text(encoding="utf-8-sig")
-    primera = texto.splitlines()[0] if texto else ""
-    separador = ";" if primera.count(";") >= primera.count(",") else ","
-    return [[(v, f"{get_column_letter(j + 1)}{i + 1}") for j, v in enumerate(fila)]
-            for i, fila in enumerate(csv.reader(texto.splitlines(), delimiter=separador))]
+def fecha_iso(valor) -> str:
+    if isinstance(valor, (datetime, date)):
+        return valor.strftime("%Y-%m-%d")
+    return str(valor)[:10]
 
 
-def leer_balance(ruta: Path) -> list[dict]:
-    """Detecta por contenido la columna de cuenta y la de valor (saldo o débito/crédito)."""
-    matriz = [f for f in leer_matriz(ruta) if any(v not in (None, "") for v, _ in f)]
-    if not matriz:
-        raise ArchivoNoReconocido("El archivo está vacío.")
-    ancho = max(len(f) for f in matriz)
-    puntajes = [sum(1 for f in matriz if j < len(f) and RE_CUENTA.match(str(f[j][0]).strip())) for j in range(ancho)]
-    col_cuenta = max(range(ancho), key=lambda j: puntajes[j])
-    if puntajes[col_cuenta] < 3:
+def matriz(ws):
+    """Filas no vacías como listas de (valor, celda), sin suponer dónde está el encabezado."""
+    return [f for f in ([(c.value, c.coordinate) for c in fila] for fila in ws.iter_rows()) if any(v not in (None, "") for v, _ in f)]
+
+
+def leer_matriz(ruta: Path, hoja: str | None = None):
+    wb = load_workbook(ruta, data_only=True)
+    return matriz(wb[hoja] if hoja else wb.active)
+
+
+def leer_cuentas(ws, columnas: dict[str, str]) -> list[dict]:
+    """Tabla con códigos de cuenta en filas y sedes o departamentos en columnas. Los subtotales no tienen código."""
+    m = matriz(ws)
+    if not m:
+        raise ArchivoNoReconocido("La hoja está vacía.")
+    ancho = max(len(f) for f in m)
+    es_codigo = lambda f, j: j < len(f) and bool(RE_CODIGO.match(str(f[j][0] or "").strip()))
+    puntajes = [sum(1 for f in m if es_codigo(f, j)) for j in range(ancho)]
+    col = max(range(ancho), key=lambda j: puntajes[j])
+    if puntajes[col] < 3:
         raise ArchivoNoReconocido("No se encontró una columna con códigos de cuenta.")
-    primera = next(i for i, f in enumerate(matriz) if col_cuenta < len(f) and RE_CUENTA.match(str(f[col_cuenta][0]).strip()))
-    titulos = {}
-    for fila in matriz[:primera]:
-        for j, (v, _) in enumerate(fila):
-            n = normalizar(v)
-            if n.startswith("debito"):
-                titulos["debito"] = j
-            elif n.startswith("credito"):
-                titulos["credito"] = j
-            elif n.startswith("saldo"):
-                titulos["saldo"] = j
-    datos = [f for f in matriz[primera:] if col_cuenta < len(f) and RE_CUENTA.match(str(f[col_cuenta][0]).strip())]
-    if not ({"debito", "credito"} <= titulos.keys() or "saldo" in titulos):
-        numericas = [j for j in range(ancho) if j != col_cuenta and sum(1 for f in datos if j < len(f) and numero(f[j][0]) is not None) >= .9 * len(datos)]
-        if len(numericas) != 1:
-            raise ArchivoNoReconocido("No se pudo determinar con certeza cuál columna contiene el saldo.")
-        titulos["saldo"] = numericas[0]
+    primera = next(i for i, f in enumerate(m) if es_codigo(f, col))
+    encabezado = {}
+    for f in m[:primera]:
+        for j, (v, _) in enumerate(f):
+            if normalizar(v) in columnas:
+                encabezado[j] = columnas[normalizar(v)]
+    if not encabezado:
+        raise ArchivoNoReconocido("No se reconocieron las columnas de valores.")
     filas = []
-    for f in datos:
-        cuenta = str(f[col_cuenta][0]).strip()
-        if "saldo" in titulos:
-            valor, celda = numero(f[titulos["saldo"]][0]), f[titulos["saldo"]][1]
-        else:
-            deb, cre = numero(f[titulos["debito"]][0]) or 0, numero(f[titulos["credito"]][0]) or 0
-            valor = deb - cre if cuenta[0] in "156" else cre - deb
-            celda = f[titulos["debito"] if deb else titulos["credito"]][1]
-        if valor is None:
-            raise ArchivoNoReconocido(f"La cuenta {cuenta} no tiene un valor numérico ({celda}).")
-        filas.append({"cuenta_origen": cuenta, "saldo": int(round(valor)), "celda": celda})
+    for f in m[primera:]:
+        if not es_codigo(f, col):
+            continue  # Títulos de sección y subtotales: no se suman dos veces.
+        for j, clave in encabezado.items():
+            v = numero(f[j][0]) if j < len(f) else None
+            if v is not None:
+                filas.append({"cuenta": str(f[col][0]).strip(), "clave": clave, "saldo": int(round(v)), "celda": f[j][1]})
     return filas
 
 
-def leer_inventario(ruta: Path, sedes: set[str]) -> list[dict]:
-    """El archivo llega sin encabezados: cada columna se reconoce por lo que contiene."""
-    matriz = [f for f in leer_matriz(ruta) if any(v not in (None, "") for v, _ in f)]
-    if not matriz:
-        raise ArchivoNoReconocido("El archivo de inventario está vacío.")
-    ancho = max(len(f) for f in matriz)
-    columnas = [[f[j][0] for f in matriz if j < len(f)] for j in range(ancho)]
+def leer_tabla(ws, campos: dict[str, str]) -> list[dict]:
+    """Tabla con encabezado en cualquier fila: lo busca por los nombres de las columnas."""
+    m = matriz(ws)
+    for i, f in enumerate(m):
+        mapa = {j: campos[normalizar(v)] for j, (v, _) in enumerate(f) if normalizar(v) in campos}
+        if len(mapa) == len(campos):
+            break
+    else:
+        raise ArchivoNoReconocido(f"No se encontró el encabezado con {', '.join(campos.values())}.")
+    filas = []
+    for f in m[i + 1:]:
+        fila = {campo: (f[j][0] if j < len(f) else None) for j, campo in mapa.items()}
+        if all(v in (None, "") for v in fila.values()) or normalizar(fila.get(next(iter(mapa.values())))) == "total":
+            continue
+        fila["celda"] = f[min(mapa)][1]
+        filas.append(fila)
+    return filas
+
+
+def leer_inventario(ws, sedes: dict[str, str]) -> list[dict]:
+    """La hoja llega sin encabezados: cada columna se reconoce por lo que contiene."""
+    m = matriz(ws)
+    if not m:
+        raise ArchivoNoReconocido("La hoja de inventario está vacía.")
+    ancho = max(len(f) for f in m)
+    columnas = [[f[j][0] for f in m if j < len(f)] for j in range(ancho)]
+
     def col(condicion):
-        hallada = [j for j, vals in enumerate(columnas) if sum(1 for v in vals if condicion(v)) >= .95 * len(matriz)]
+        hallada = [j for j, vals in enumerate(columnas) if sum(1 for v in vals if condicion(v)) >= .95 * len(m)]
         return hallada[0] if len(hallada) == 1 else None
     lineas = {"Livianos", "Usados", "Eléctricos", "Pesados"}
-    pos = {"vin": col(lambda v: bool(RE_VIN.match(str(v)))), "sede": col(lambda v: v in sedes), "linea": col(lambda v: v in lineas),
-           "ingreso": col(lambda v: bool(RE_FECHA.match(str(v))))}
-    numericas = [j for j, vals in enumerate(columnas) if all(isinstance(v, (int, float)) for v in vals)]
+    pos = {"vin": col(lambda v: bool(RE_VIN.match(str(v)))), "sede": col(lambda v: normalizar(v) in sedes), "linea": col(lambda v: v in lineas),
+           "ingreso": col(lambda v: isinstance(v, (datetime, date)) or bool(re.match(r"^\d{4}-\d{2}-\d{2}", str(v))))}
+    numericas = [j for j, vals in enumerate(columnas) if all(isinstance(v, (int, float)) and not isinstance(v, bool) for v in vals)]
     if len(numericas) != 2 or any(v is None for v in pos.values()):
         raise ArchivoNoReconocido("No se pudieron identificar todas las columnas del inventario.")
     medias = {j: sum(columnas[j]) / len(columnas[j]) for j in numericas}
@@ -140,11 +170,35 @@ def leer_inventario(ruta: Path, sedes: set[str]) -> list[dict]:
         raise ArchivoNoReconocido("No se pudo identificar la columna de modelo.")
     pos["modelo"] = restantes[0]
     filas = []
-    for f in matriz:
+    for f in m:
         d = int(f[pos["dias"]][0])
-        filas.append({"vin": f[pos["vin"]][0], "sede_id": f[pos["sede"]][0], "linea": f[pos["linea"]][0], "modelo": f[pos["modelo"]][0], "dias": d,
-                      "rango": "0-30" if d <= 30 else "31-60" if d <= 60 else ">60", "costo": int(f[pos["costo"]][0]), "fecha_ingreso": str(f[pos["ingreso"]][0])[:10],
+        filas.append({"vin": f[pos["vin"]][0], "sede_id": sedes[normalizar(f[pos["sede"]][0])], "linea": f[pos["linea"]][0], "modelo": f[pos["modelo"]][0], "dias": d,
+                      "rango": "0-30" if d <= 30 else "31-60" if d <= 60 else ">60", "costo": int(f[pos["costo"]][0]), "fecha_ingreso": fecha_iso(f[pos["ingreso"]][0]),
                       "celda": f[pos["costo"]][1]})
+    return filas
+
+
+def leer_personal(ws, sedes: dict[str, str]) -> list[dict]:
+    """Encabezado de dos filas: la sede (celda combinada) arriba y Personas/Costo abajo."""
+    m = matriz(ws)
+    i = next((k for k, f in enumerate(m) if normalizar(f[0][0]) == "rol"), None)
+    if i is None or i == 0:
+        raise ArchivoNoReconocido("No se encontró el encabezado de roles.")
+    arriba = {j: sedes.get(normalizar(v)) for j, (v, _) in enumerate(m[i - 1]) if normalizar(v) in sedes}
+    columnas, sede = {}, None
+    for j, (v, _) in enumerate(m[i]):
+        sede = arriba.get(j, sede)
+        if normalizar(v) in ("personas", "costo") and sede:
+            columnas.setdefault(sede, {})[normalizar(v)] = j
+    if not columnas:
+        raise ArchivoNoReconocido("No se reconocieron las sedes del encabezado combinado.")
+    filas = []
+    for f in m[i + 1:]:
+        rol = f[0][0]
+        if not rol or normalizar(rol) == "total":
+            continue
+        for s, c in columnas.items():
+            filas.append({"sede_id": s, "rol": rol, "personas": int(numero(f[c["personas"]][0]) or 0), "costo": int(numero(f[c["costo"]][0]) or 0), "celda": f[c["costo"]][1]})
     return filas
 
 
@@ -190,84 +244,117 @@ def crear_base(conn) -> None:
     conn.commit()
 
 
+def libros_del_mes(mes: str) -> list[tuple[str, Path]]:
+    carpeta = INSUMOS / mes
+    return sorted((RE_LIBRO.match(p.name).group(1), p) for p in carpeta.glob("*.xlsx") if RE_LIBRO.match(p.name) and RE_LIBRO.match(p.name).group(2) == mes)
+
+
 def cargar_mes(conn, mes: str, modo: str = "rutina") -> dict:
     """Carga un mes completo. Es repetible: primero retira lo que hubiera de ese mes."""
-    carpeta_mes = INSUMOS / mes
-    if not carpeta_mes.is_dir():
-        raise FileNotFoundError(f"No existe la carpeta de insumos {carpeta_mes}")
+    if not (INSUMOS / mes).is_dir():
+        raise FileNotFoundError(f"No existe la carpeta de insumos {INSUMOS / mes}")
     ts, version = hora_carga(mes, modo), commit_actual()
     for tabla in TABLAS_MES + ["cargas"]:
         conn.execute(f"DELETE FROM {tabla} WHERE periodo = ?", (mes,))
     validas = {r[0] for r in conn.execute("SELECT cuenta_codigo FROM cuentas")}
-    sedes_por_conc: dict[str, set[str]] = {}
-    for sid, cid in conn.execute("SELECT sede_id, concesionario_id FROM sedes"):
-        sedes_por_conc.setdefault(cid, set()).add(sid)
-    resumen = {"archivos": 0, "filas": 0, "revisar": []}
+    sedes_por_conc: dict[str, dict[str, str]] = {}
+    nombres_por_conc: dict[str, dict[str, str]] = {}
+    for sid, cid, nombre in conn.execute("SELECT sede_id, concesionario_id, nombre FROM sedes"):
+        nombres_por_conc.setdefault(cid, {})[normalizar(nombre)] = sid
+        sedes_por_conc.setdefault(cid, {})[normalizar(nombre)] = sid
+        sedes_por_conc[cid][normalizar(sid)] = sid
+    resumen = {"archivos": 0, "hojas": 0, "filas": 0, "revisar": []}
 
-    def registrar(cid, ruta, tabla, filas, estado="Correcto"):
-        conn.execute("INSERT INTO cargas (periodo,concesionario_id,archivo,tabla,filas,estado,modo,commit_hash,fuente,cargado_en) VALUES (?,?,?,?,?,?,?,?,?,?)",
-                     (mes, cid, str(ruta.relative_to(INSUMOS)), tabla, filas, estado, modo, version, "src/ingesta.py", ts))
-        resumen["archivos"] += 1
-        resumen["filas"] += filas
-
-    def intentar(cid, ruta, tabla, funcion):
-        try:
-            registrar(cid, ruta, tabla, funcion())
-        except (ArchivoNoReconocido, ValueError, KeyError) as e:
-            registrar(cid, ruta, tabla, 0, "Revisar")
-            resumen["revisar"].append(f"{ruta.relative_to(INSUMOS)}: {e}")
-
-    for cid in sorted(sedes_por_conc):
-        carpeta = carpeta_mes / cid
-        if not carpeta.is_dir():
+    for cid, ruta in libros_del_mes(mes):
+        if cid not in sedes_por_conc:
+            resumen["revisar"].append(f"{ruta.name}: concesionario {cid} desconocido")
             continue
-        rel = lambda r: str(r.relative_to(INSUMOS))
-        for sede in sorted(sedes_por_conc[cid]):
-            ruta = next((carpeta / f"{sede}_balance{e}" for e in (".xlsx", ".csv") if (carpeta / f"{sede}_balance{e}").exists()), None)
-            if ruta is None:
-                continue
-            def balance(ruta=ruta, sede=sede):
-                filas = []
-                for f in leer_balance(ruta):
-                    base, _, depto = f["cuenta_origen"].partition("-")
-                    filas.append({"periodo": mes, "sede_id": sede, "cuenta_origen": f["cuenta_origen"], "cuenta_codigo": base if base in validas else None,
-                                  "departamento": depto or None, "saldo": f["saldo"], "fuente": f"{rel(ruta)}!{f['celda']}", "cargado_en": ts})
-                insertar(conn, "saldos", filas)
-                return len(filas)
-            intentar(cid, ruta, "saldos", balance)
+        resumen["archivos"] += 1
+        rel = str(ruta.relative_to(INSUMOS))
+        sedes = sedes_por_conc[cid]
+        wb = load_workbook(ruta, data_only=True)
 
-        def tabla_csv(ruta, tabla, renombrar=None, extra=None):
-            df = pd.read_csv(ruta) if ruta.suffix == ".csv" else pd.read_excel(ruta)
-            df = df.rename(columns=renombrar or {})
-            if extra:
-                df = extra(df)
-            prefijo = "L" if ruta.suffix == ".csv" else "A"
-            df["periodo"], df["cargado_en"] = mes, ts
-            df["fuente"] = [f"{rel(ruta)}!{prefijo}{i + 2}" for i in range(len(df))]
-            insertar(conn, tabla, df.astype(object).where(df.notna(), None).to_dict("records"))
-            return len(df)
+        def registrar(hoja, tabla, filas, estado="Correcto"):
+            conn.execute("INSERT INTO cargas (periodo,concesionario_id,archivo,tabla,filas,estado,modo,commit_hash,fuente,cargado_en) VALUES (?,?,?,?,?,?,?,?,?,?)",
+                         (mes, cid, f"{rel}!{hoja}", tabla, filas, estado, modo, version, "src/ingesta.py", ts))
+            resumen["hojas"] += 1
+            resumen["filas"] += filas
 
-        r = carpeta / f"ventas_vin_{mes}.csv"
-        intentar(cid, r, "ventas", lambda: tabla_csv(r, "ventas", {"sede": "sede_id"}))
-        r2 = carpeta / f"gastos_{mes}.csv"
-        intentar(cid, r2, "gastos", lambda: tabla_csv(r2, "gastos", {"sede": "sede_id", "cuenta": "cuenta_origen"}, lambda d: d.assign(cuenta_origen=d["cuenta_origen"].astype(str))))
-        r3 = carpeta / f"personal_{mes}.xlsx"
-        intentar(cid, r3, "personal", lambda: tabla_csv(r3, "personal", {"sede": "sede_id"}))
-        r4 = carpeta / f"fi_{mes}.csv"
-        intentar(cid, r4, "fi", lambda: tabla_csv(r4, "fi", {"sede": "sede_id"}))
-        r5 = carpeta / f"obligaciones_{mes}.csv"
-        intentar(cid, r5, "obligaciones", lambda: tabla_csv(r5, "obligaciones", {"sede": "sede_id"}))
-        r6 = carpeta / "inventario_dias.xlsx"
-        def inventario():
-            filas = leer_inventario(r6, sedes_por_conc[cid])
+        def fuente(hoja, celda):
+            return f"{rel}!{hoja}!{celda}"
+
+        def guardar(tabla, hoja, filas):
             for f in filas:
-                f.update(periodo=mes, fuente=f"{rel(r6)}!{f.pop('celda')}", cargado_en=ts)
-            insertar(conn, "inventario", filas)
+                f.update(periodo=mes, fuente=fuente(hoja, f.pop("celda")), cargado_en=ts)
+            insertar(conn, tabla, filas)
             return len(filas)
-        intentar(cid, r6, "inventario", inventario)
+
+        def saldos(ws):
+            if rol_hoja(ws.title) == "balance":
+                filas = [{"sede_id": f["clave"], "cuenta_origen": f["cuenta"], "departamento": None, "saldo": f["saldo"], "celda": f["celda"]} for f in leer_cuentas(ws, sedes)]
+            else:
+                sede = next((s for n, s in sedes.items() if normalizar(ws.title).endswith(n)), None)
+                if sede is None:
+                    raise ArchivoNoReconocido("El nombre de la hoja no indica una sede conocida.")
+                filas = [{"sede_id": sede, "cuenta_origen": f"{f['cuenta']}-{f['clave']}", "departamento": f["clave"], "saldo": f["saldo"], "celda": f["celda"]} for f in leer_cuentas(ws, DEPTOS)]
+            for f in filas:
+                base = f["cuenta_origen"].split("-")[0]
+                f["cuenta_codigo"] = base if base in validas else None
+            return guardar("saldos", ws.title, filas)
+
+        def ventas(ws):
+            filas = leer_tabla(ws, {"vin": "vin", "fecha": "fecha", "sede": "sede", "linea": "linea", "canal": "canal", "modelo": "modelo", "preciolista": "precio", "descuento": "descuento", "costo": "costo"})
+            for f in filas:
+                f.update(sede_id=sedes[normalizar(f.pop("sede"))], fecha=fecha_iso(f["fecha"]), precio=int(f["precio"]), descuento=int(f["descuento"]), costo=int(f["costo"]))
+                f["margen"] = f["precio"] - f["descuento"] - f["costo"]
+            return guardar("ventas", ws.title, filas)
+
+        def gastos(ws):
+            filas = leer_tabla(ws, {"fecha": "fecha", "sede": "sede", "cuenta": "cuenta_origen", "proveedor": "proveedor", "concepto": "concepto", "valor": "valor"})
+            for f in filas:
+                f.update(sede_id=sedes[normalizar(f.pop("sede"))], fecha=fecha_iso(f["fecha"]), cuenta_origen=str(f["cuenta_origen"]), valor=int(f["valor"]))
+            return guardar("gastos", ws.title, filas)
+
+        def fi(ws):
+            conceptos = {"vehiculosvendidos": "unidades", "creditoscolocados": "creditos", "polizascolocadas": "polizas", "comisionesfi": "comisiones"}
+            por_sede = {}
+            for f in leer_tabla(ws, {"concepto": "concepto", **nombres_por_conc[cid]}):
+                campo = conceptos.get(normalizar(f["concepto"]))
+                for s in set(sedes.values()):
+                    if campo and s in f:
+                        por_sede.setdefault(s, {"sede_id": s, "celda": f["celda"]})[campo] = int(numero(f[s]) or 0)
+            if any(len(v) < 6 for v in por_sede.values()) or not por_sede:
+                raise ArchivoNoReconocido("Faltan conceptos de F&I.")
+            return guardar("fi", ws.title, list(por_sede.values()))
+
+        def obligaciones(ws):
+            filas = leer_tabla(ws, {"entidad": "entidad", "sede": "sede", "tipo": "tipo", "saldo": "saldo", "tasamensual": "tasa_mensual", "interesdelmes": "interes_mes"})
+            for f in filas:
+                tasa = f["tasa_mensual"]
+                tasa = numero(tasa) / 100 if isinstance(tasa, str) and "%" in tasa else numero(tasa)
+                f.update(sede_id=sedes[normalizar(f.pop("sede"))], tasa_mensual=round(tasa, 6), saldo=int(f["saldo"]), interes_mes=int(f["interes_mes"]))
+            return guardar("obligaciones", ws.title, filas)
+
+        lectores = {"balance": saldos, "resultados": saldos, "ventas": ventas, "librodegastos": gastos, "fi": fi, "obligaciones": obligaciones,
+                    "inventario": lambda ws: guardar("inventario", ws.title, leer_inventario(ws, sedes)),
+                    "personal": lambda ws: guardar("personal", ws.title, leer_personal(ws, sedes))}
+        vistos = set()
+        for ws in wb.worksheets:
+            rol = rol_hoja(ws.title)
+            if rol not in lectores:
+                continue
+            vistos.add(rol)
+            tabla = HOJAS[rol][2]
+            try:
+                registrar(ws.title, tabla, lectores[rol](ws))
+            except (ArchivoNoReconocido, ValueError, KeyError, TypeError) as e:
+                registrar(ws.title, tabla, 0, "Revisar")
+                resumen["revisar"].append(f"{ruta.name} › {ws.title}: {e}")
+        for faltante in set(lectores) - vistos:
+            resumen["revisar"].append(f"{ruta.name}: falta la hoja «{faltante}»")
 
     estado = "Correcto" if not resumen["revisar"] else "Revisar"
-    accion = f"Cargó {resumen['archivos']} archivos y {resumen['filas']} filas"
+    accion = f"Cargó {resumen['archivos']} libros, {resumen['hojas']} hojas y {resumen['filas']} filas"
     if resumen["revisar"]:
         accion += ". Por revisar: " + " | ".join(resumen["revisar"])
     conn.execute("INSERT INTO bitacora (fecha,periodo,paso,resultado,accion,responsable,fuente,cargado_en) VALUES (?,?,?,?,?,?,?,?)",
@@ -291,13 +378,13 @@ def reconstruir() -> None:
     meses = sorted(p.name for p in INSUMOS.iterdir() if p.is_dir() and re.fullmatch(r"\d{4}-\d{2}", p.name))
     for mes in meses:
         r = cargar_mes(conn, mes, "historico_simulado")
-        print(f"  {mes}: {r['archivos']} archivos, {r['filas']} filas" + (f", {len(r['revisar'])} por revisar" if r["revisar"] else ""))
+        print(f"  {mes}: {r['archivos']} libros, {r['hojas']} hojas, {r['filas']} filas" + (f", {len(r['revisar'])} por revisar" if r["revisar"] else ""))
     exportar_csv(conn)
     conn.close()
 
 
 def main() -> None:
-    p = argparse.ArgumentParser(description="Carga los archivos crudos a la base de datos")
+    p = argparse.ArgumentParser(description="Carga los reportes mensuales a la base de datos")
     p.add_argument("--mes")
     p.add_argument("--reconstruir", action="store_true")
     a = p.parse_args()

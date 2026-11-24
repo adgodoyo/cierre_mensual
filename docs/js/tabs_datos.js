@@ -45,7 +45,7 @@ TABS.recorrido = {
   titulo: 'El recorrido del dato',
   etapa: 'crudo',
   render(el) {
-    el.insertAdjacentHTML('beforeend', `<div class="intro"><h2>El recorrido de una cifra</h2><p>Siga la cuenta 2205 Proveedores desde el archivo que envió la sede hasta el reporte. Haga clic en cada etapa.</p></div><div class="barra"><label>Sede a rastrear <select class="campo" id="rec-sede">${APP.sedes.filter(x => S.cid === 'TODOS' || x.concesionario_id === S.cid).map(x => `<option value="${x.sede_id}">${esc(x.nombre)}</option>`).join('')}</select></label></div><div class="flujo">${ETAPAS.map(([k, t, s]) => `<button type="button" class="paso" data-e="${k}"><b>${t}</b><small>${s}</small></button>`).join('')}</div><div class="rejilla" id="rec"></div>`);
+    el.insertAdjacentHTML('beforeend', `<div class="intro"><h2>El recorrido de una cifra</h2><p>Siga la cuenta 2205 Proveedores desde el reporte mensual que envió el concesionario hasta la página ejecutiva. Haga clic en cada etapa.</p></div><div class="barra"><label>Sede a rastrear <select class="campo" id="rec-sede">${APP.sedes.filter(x => S.cid === 'TODOS' || x.concesionario_id === S.cid).map(x => `<option value="${x.sede_id}">${esc(x.nombre)}</option>`).join('')}</select></label></div><div class="flujo">${ETAPAS.map(([k, t, s]) => `<button type="button" class="paso" data-e="${k}"><b>${t}</b><small>${s}</small></button>`).join('')}</div><div class="rejilla" id="rec"></div>`);
     const sel = document.getElementById('rec-sede');
     const pref = S.sede || (S.cid === 'AND' || S.cid === 'TODOS' ? 'SUR' : sel.value); sel.value = pref;
     const pintar = () => this.etapaVista(sel.value);
@@ -56,16 +56,16 @@ TABS.recorrido = {
   etapaVista(sede) {
     document.querySelectorAll('.paso').forEach(b => b.classList.toggle('activo', b.dataset.e === this.etapa));
     const r = document.getElementById('rec'); r.querySelectorAll('.js-plotly-plot').forEach(g => Plotly.purge(g)); r.innerHTML = '';
-    const info = APP.sedes.find(x => x.sede_id === sede), cid = info.concesionario_id, vista = APP.meta.vistas[S.mes]?.[sede];
+    const info = APP.sedes.find(x => x.sede_id === sede), cid = info.concesionario_id, vista = APP.meta.vistas[S.mes]?.[cid];
     if (this.etapa === 'crudo') {
       const ancho = Math.max(...vista.filas.map(f => f.celdas.length));
       const filas = vista.filas.map(f => { const o = { fila: f.n, _m: f.marca }; for (let i = 0; i < ancho; i++) o[String.fromCharCode(65 + i)] = f.celdas[i] ?? ''; return o; });
-      tarjeta(r, { w: 12, t: `Así llegó: ${vista.archivo.split('/').pop()}`, s: `Formato ${vista.formato.toUpperCase()}, ${vista.total_filas} filas. Se muestran las primeras filas y, resaltadas, las de la cuenta 2205.`, html: tablaHTML(filas, ['fila', ...Array.from({ length: ancho }, (_, i) => String.fromCharCode(65 + i))], { marca: f => f._m }), src: { script: '04_pruebas/generar_datos.py', ruta: vista.archivo } });
+      tarjeta(r, { w: 12, t: `Así llegó: hoja Balance de ${vista.archivo.split('/').pop()}`, s: `${vista.total_filas} filas, con títulos, secciones y subtotales. Se muestra el encabezado y, resaltadas, las filas de la cuenta 2205.`, html: tablaHTML(filas, ['fila', ...Array.from({ length: ancho }, (_, i) => String.fromCharCode(65 + i))], { marca: f => f._m }), src: { script: '04_pruebas/generar_datos.py', ruta: vista.archivo } });
     } else if (this.etapa === 'limpia') {
       const filas = q(`SELECT periodo, sede_id, cuenta_origen, cuenta_codigo, saldo, fuente FROM saldos WHERE periodo=? AND sede_id=? AND cuenta_codigo='2205'`, [S.mes, sede]);
       tarjeta(r, { w: 12, t: 'Las mismas filas, ordenadas', s: 'Cada fila conserva el archivo y la celda exacta de donde salió.', html: tablaHTML(filas, null, { fmt: { saldo: v => M(v) } }), src: { tabla: 'saldos', script: 'src/ingesta.py' } });
     } else if (this.etapa === 'base') {
-      const filas = q(`SELECT periodo, archivo, tabla, filas, estado, modo, commit_hash, cargado_en FROM cargas WHERE periodo=? AND archivo LIKE ?`, [S.mes, `%/${sede}_balance%`]);
+      const filas = q(`SELECT periodo, archivo, tabla, filas, estado, modo, commit_hash, cargado_en FROM cargas WHERE periodo=? AND concesionario_id=? AND tabla='saldos'`, [S.mes, cid]);
       tarjeta(r, { w: 12, t: 'La huella de la carga', s: 'La tabla cargas registra qué archivo entró, cuántas filas agregó, cuándo y con qué versión del código.', html: tablaHTML(filas), src: { tabla: 'cargas', script: 'src/ingesta.py' } });
     } else if (this.etapa === 'modelo') {
       const filas = q(`SELECT c.codigo_formato, c.linea_formato, s.sede_id, SUM(x.saldo) saldo FROM saldos x JOIN cuentas c USING(cuenta_codigo) JOIN sedes s ON s.sede_id=x.sede_id WHERE x.periodo=? AND s.concesionario_id=? AND c.cuenta_codigo='2205' GROUP BY 1,2,3`, [S.mes, cid]);

@@ -4,7 +4,7 @@
 
 ## Qué hace, en 5 líneas
 
-1. Recibe archivos desordenados de las sedes Norte, Centro y Sur, y de tres concesionarios más.
+1. Recibe el reporte mensual de cada concesionario: un solo libro de Excel con balance, resultados por sede, ventas, inventario, gastos, personal, F&I y obligaciones.
 2. Los ordena, los consolida y revisa que cuadren.
 3. Explica cada alerta en español y dice en qué archivo y celda verificarla.
 4. Proyecta el cierre del año con escenarios.
@@ -31,7 +31,7 @@ Luego abra <http://localhost:8000>.
 | Carpeta | Qué contiene |
 |---|---|
 | `00_manuales/` | Instrucciones del agente, homologación PUC y diccionario de datos |
-| `01_insumos/` | Archivos crudos de cada mes. Nunca se editan |
+| `01_insumos/` | Un reporte mensual por concesionario (`reporte_mensual_AND_2026-10.xlsx`). Nunca se editan |
 | `02_procesados/` | Base de datos SQLite y tablas en CSV |
 | `03_salidas/` | Excel, reportes, gráficos y audios de cada mes |
 | `04_pruebas/` | Generador de datos simulados y pruebas automáticas |

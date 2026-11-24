@@ -7,14 +7,14 @@
 1. Abra una terminal en `cierre_mensual` y ejecute `python -m http.server --directory docs 8000`, o use la URL de GitHub Pages.
 2. Abra el tablero con conexión a internet: los gráficos y el motor SQL se cargan desde un CDN.
 3. Presione **Restablecer** para volver a Concesionario Andino, octubre de 2026.
-4. Deje abiertos `SUR_balance.xlsx` y `formato_consolidado_2026-10.xlsx`.
+4. Deje abiertos `01_insumos/2026-10/reporte_mensual_AND_2026-10.xlsx` y `03_salidas/2026-10/formato_consolidado_2026-10.xlsx`.
 
 ## Paso a paso
 
 | # | Dónde | Qué hacer | Qué decir |
 |---|---|---|---|
-| 1 | Excel: `01_insumos/2026-10/AND/` | Abra `NOR_balance.xlsx`, `SUR_balance.xlsx` y `CEN_balance.csv` | "Tres sedes, tres formatos. ¿Les suena conocido?" |
-| 2 | Tablero: **Procesamiento** | Muestre Antes y Después, con las filas 2205 resaltadas | "El agente reconoce cada columna por su contenido." |
+| 1 | Excel: `reporte_mensual_AND_2026-10.xlsx` | Recorra las pestañas: Balance, Resultados Sur, Inventario y Validador (Sur dice "Revisar") | "Este es el reporte de cada mes. ¿Les suena conocido? El mismo Excel ya sabe que algo no cuadra." |
+| 2 | Tablero: **Procesamiento** | Muestre el mapa de hojas y luego Antes y Después, con las filas 2205 resaltadas | "Cada hoja tiene su truco: subtotales, encabezados combinados, una hoja sin títulos. El agente lee las diez." |
 | 3 | **El recorrido del dato** | Clic en cada etapa, con la sede Sur | "Puedo llevar cualquier cifra hasta su celda de origen." |
 | 4 | **Procesamiento**: Alertas | Lea la alerta de la cuenta 2205 y su origen | "No solo dice que no cuadra: dice por qué y dónde." |
 | 5 | **Patrones**: Gastos con anomalías | Pase el cursor por los puntos marcados | "Duplicado, proveedor nuevo, monto atípico y un domingo." |
@@ -31,7 +31,7 @@
 
 | Tema | Qué capturar |
 |---|---|
-| Archivos desordenados | Los tres archivos crudos abiertos |
+| Reporte mensual | Pestañas del libro `reporte_mensual_AND_2026-10.xlsx` y su hoja Validador |
 | Formato consolidado | Hojas ESF y Validador del Excel |
 | Alertas | Tabla de alertas en Procesamiento |
 | Anomalías | Gráfico de gastos con puntos marcados |

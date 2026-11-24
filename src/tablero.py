@@ -14,7 +14,9 @@ from datetime import datetime
 
 from comun import DB, NOTA, RAIZ
 from esquema import TABLAS, TRAZA
-from ingesta import INSUMOS, conectar, leer_matriz
+from openpyxl import load_workbook
+
+from ingesta import HOJAS, conectar, libros_del_mes, rol_hoja
 
 DESTINO = RAIZ / "docs" / "data"
 DESCRIPCIONES = {
@@ -28,7 +30,7 @@ DESCRIPCIONES = {
     "00_manuales/instrucciones_reporte.md": "Procedimiento para redactar los reportes.",
     "00_manuales/mapeo_puc_formato.xlsx": "Tabla que traduce cuentas PUC al formato.",
     "00_manuales/diccionario_de_datos.md": "Qué significa cada campo de cada tabla.",
-    "01_insumos": "Archivos crudos por mes. Nunca se editan.",
+    "01_insumos": "Un reporte mensual (libro de Excel) por concesionario. Nunca se editan.",
     "02_procesados": "Tablas ordenadas y base de datos SQLite.",
     "02_procesados/cierre.db": "La base de datos del cierre.",
     "02_procesados/csv": "Cada tabla en CSV, visible directamente en GitHub.",
@@ -73,25 +75,35 @@ def esquema_json() -> dict:
     return salida
 
 
+def celda_texto(v) -> str:
+    if v is None:
+        return ""
+    if isinstance(v, str) and v.startswith("="):
+        return "(fórmula)"
+    texto = str(v)
+    return texto if len(texto) <= 16 else texto[:15] + "…"  # Títulos largos no deben esconder las columnas de sedes.
+
+
 def vistas_crudas(conn) -> dict:
-    """Guarda una muestra real de cada balance crudo: encabezado y las filas de la cuenta 2205."""
-    sedes = conn.execute("SELECT sede_id, concesionario_id FROM sedes").fetchall()
+    """Muestra real de cada libro: la hoja Balance (encabezado y filas 2205) y el mapa de sus hojas."""
     meses = [m[0] for m in conn.execute("SELECT DISTINCT periodo FROM saldos ORDER BY 1")]
     vistas = {}
     for mes in meses:
         vistas[mes] = {}
-        for sede, cid in sedes:
-            ruta = next((INSUMOS / mes / cid / f"{sede}_balance{e}" for e in (".xlsx", ".csv") if (INSUMOS / mes / cid / f"{sede}_balance{e}").exists()), None)
-            if ruta is None:
-                continue
-            filas = leer_matriz(ruta)
-            seleccion, vistos = [], 0
+        for cid, ruta in libros_del_mes(mes):
+            wb = load_workbook(ruta)  # Sin data_only: se ven las fórmulas tal como las dejó el concesionario.
+            filas = [[(c.value, c.coordinate) for c in f] for f in wb["Balance"].iter_rows()]
+            seleccion = []
             for i, f in enumerate(filas):
                 es_2205 = any(str(v).strip() == "2205" for v, _ in f)
-                if i < 7 or es_2205:
-                    seleccion.append({"n": i + 1, "celdas": ["" if v is None else str(v) for v, _ in f], "marca": es_2205})
-                    vistos += 1
-            vistas[mes][sede] = {"archivo": str(ruta.relative_to(RAIZ)), "formato": ruta.suffix.lstrip("."), "total_filas": len(filas), "filas": seleccion}
+                if i < 8 or es_2205:
+                    seleccion.append({"n": i + 1, "celdas": [celda_texto(v) for v, _ in f], "marca": es_2205})
+            hojas = []
+            for ws in wb.worksheets:
+                rol = rol_hoja(ws.title)
+                contenido, reto, tabla = HOJAS.get(rol, ("", "", "—"))
+                hojas.append({"hoja": ws.title, "contenido": contenido, "reto": reto, "tabla": tabla, "filas": ws.max_row})
+            vistas[mes][cid] = {"archivo": str(ruta.relative_to(RAIZ)), "hoja": "Balance", "total_filas": len(filas), "filas": seleccion, "hojas": hojas}
     return vistas
 
 

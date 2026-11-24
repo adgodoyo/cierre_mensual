@@ -5,7 +5,7 @@ ING = "src/ingesta.py"
 SEDE = "REFERENCES sedes(sede_id)"
 CONC = "REFERENCES concesionarios(concesionario_id)"
 TRAZA = [
-    ("fuente", "TEXT", "NOT NULL", "De dónde salió la fila (archivo!celda o script)", "2026-10/AND/SUR_balance.xlsx!C12"),
+    ("fuente", "TEXT", "NOT NULL", "De dónde salió la fila (archivo!hoja!celda o script)", "2026-10/reporte_mensual_AND_2026-10.xlsx!Balance!E23"),
     ("cargado_en", "TEXT", "NOT NULL", "Fecha y hora de carga", "2026-11-05T07:00:00-05:00"),
 ]
 
@@ -104,7 +104,7 @@ TABLAS = {
         ("hallazgo", "TEXT", "NOT NULL", "Qué se encontró", "Activo no cuadra"),
         ("explicacion", "TEXT", "NOT NULL", "Explicación en una frase", "La cuenta 2205 aparece dos veces."),
         ("impacto_cop", "INTEGER", "", "Impacto estimado (COP)", "18400000"),
-        ("origen", "TEXT", "NOT NULL", "Archivo y celda", "2026-10/AND/SUR_balance.xlsx!A20")]},
+        ("origen", "TEXT", "NOT NULL", "Archivo, hoja y celda", "2026-10/reporte_mensual_AND_2026-10.xlsx!Balance!E23")]},
     "bitacora": {"descripcion": "Registro de cada paso ejecutado.", "script": "src/*.py", "columnas": [
         ("bitacora_id", "INTEGER", "PRIMARY KEY AUTOINCREMENT", "Identificador", "40"),
         ("fecha", "TEXT", "NOT NULL", "Fecha y hora", "2026-11-05T07:00:00-05:00"),
@@ -113,11 +113,11 @@ TABLAS = {
         ("resultado", "TEXT", "NOT NULL", "Resultado", "Correcto"),
         ("accion", "TEXT", "NOT NULL", "Qué hizo o qué falta", "Cargó 9 archivos"),
         ("responsable", "TEXT", "NOT NULL", "Agente o persona", "Agente de procesamiento")]},
-    "cargas": {"descripcion": "Una fila por archivo cargado cada mes.", "script": ING, "columnas": [
+    "cargas": {"descripcion": "Una fila por hoja cargada cada mes.", "script": ING, "columnas": [
         ("carga_id", "INTEGER", "PRIMARY KEY AUTOINCREMENT", "Identificador", "100"),
         ("periodo", "TEXT", "NOT NULL", "Mes cargado", "2026-10"),
         ("concesionario_id", "TEXT", f"NOT NULL {CONC}", "Concesionario", "AND"),
-        ("archivo", "TEXT", "NOT NULL", "Archivo", "2026-10/AND/SUR_balance.xlsx"),
+        ("archivo", "TEXT", "NOT NULL", "Libro y hoja", "2026-10/reporte_mensual_AND_2026-10.xlsx!Balance"),
         ("tabla", "TEXT", "NOT NULL", "Tabla destino", "saldos"),
         ("filas", "INTEGER", "NOT NULL", "Filas agregadas", "118"),
         ("estado", "TEXT", "NOT NULL", "Correcto o Revisar", "Correcto"),

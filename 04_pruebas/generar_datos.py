@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-"""Genera los archivos crudos SIMULADOS de 24 meses (nov-2024 a oct-2026).
+"""Genera el reporte mensual SIMULADO de cada concesionario, 24 meses (nov-2024 a oct-2026).
 
+Un solo libro de Excel por concesionario y mes: 01_insumos/AAAA-MM/reporte_mensual_<COD>_AAAA-MM.xlsx
 Datos simulados: ninguna cifra corresponde a una empresa real.
 Uso:  python 04_pruebas/generar_datos.py
 """
@@ -9,13 +10,16 @@ from __future__ import annotations
 import calendar
 import json
 import shutil
+from collections import Counter
 from datetime import date, timedelta
 from pathlib import Path
 
 import numpy as np
-import pandas as pd
 from openpyxl import Workbook
-from openpyxl.styles import Alignment, Font
+from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
+from openpyxl.utils import get_column_letter
+
+import pandas as pd
 
 RAIZ = Path(__file__).resolve().parents[1]
 INSUMOS = RAIZ / "01_insumos"
@@ -308,65 +312,255 @@ def sembrar_errores(datos, atascados):
     }
 
 
-def _libro():
-    wb = Workbook()
-    wb.properties.creator = "Datos simulados"
-    return wb, wb.active
+# ---------- Libro mensual: un archivo por concesionario y mes ----------
+AZUL, CREMA, TINTA = "1F4E79", "F3EDE2", "2A2A2A"
+FINO = Side(style="thin", color="D9CFBE")
+CONTENIDO = [
+    ("Portada", "Datos del concesionario, del periodo y contenido del libro."),
+    ("Balance", "Balance general por sede, con secciones y subtotales."),
+    ("Resultados <sede>", "Una hoja por sede: resultados por departamento."),
+    ("Ventas", "Una fila por vehículo vendido en el mes."),
+    ("Inventario", "Vehículos en patio al cierre (exportado sin encabezados)."),
+    ("Libro de gastos", "Pagos del mes a proveedores."),
+    ("Personal", "Personas y costo por rol y sede."),
+    ("F&I", "Créditos, pólizas y comisiones por sede."),
+    ("Obligaciones", "Cupos wholesale por entidad y sede."),
+    ("Validador", "Controles propios del concesionario (fórmulas)."),
+]
 
 
 def _nombre(codigo: str) -> str:
-    base, _, depto = codigo.partition("-")
-    return f"{NOMBRES_CUENTA.get(base, base)}{' - ' + DEPARTAMENTOS[depto] if depto else ''}"
+    return NOMBRES_CUENTA.get(codigo, codigo)
 
 
-def escribir_balance(carpeta: Path, sede: str, formato: int, filas, mes: str):
-    if formato == 0:  # Cuenta | Saldo
-        wb, ws = _libro()
-        ws.append(["Cuenta", "Saldo"])
-        for c, v in filas:
-            ws.append([c, v])
-        wb.save(carpeta / f"{sede}_balance.xlsx")
-    elif formato == 1:  # Títulos arriba, encabezado combinado, débito y crédito
-        wb, ws = _libro()
-        ws["A1"] = f"BALANCE DE PRUEBA - SEDE {sede}"
-        ws["A1"].font = Font(bold=True)
-        ws["A2"] = f"Periodo {mes} - Datos simulados"
-        ws["C4"] = "Movimiento"
-        ws.merge_cells("C4:D4")
-        ws["C4"].alignment = Alignment(horizontal="center")
-        for col, titulo in zip("ABCD", ["Cód.", "Descripción", "Débito", "Crédito"]):
-            ws[f"{col}5"] = titulo
-        for c, v in filas:
-            naturaleza_debito = c[0] in "156" or c.startswith("1")
-            deb, cre = (v, 0) if naturaleza_debito else (0, v)
-            if c == "1592":
-                deb, cre = 0, -v
-            ws.append([c, _nombre(c), deb, cre])
-        wb.save(carpeta / f"{sede}_balance.xlsx")
-    else:  # CSV con punto y coma y formato numérico colombiano
-        lineas = ["Cuenta;Nombre;Saldo"]
-        for c, v in filas:
-            texto = f"{abs(v):,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
-            lineas.append(f"{c};{_nombre(c)};{'-' if v < 0 else ''}{texto}")
-        (carpeta / f"{sede}_balance.csv").write_text("\n".join(lineas) + "\n", encoding="utf-8")
+def _titulo(ws, texto: str, sub: str) -> None:
+    ws["A1"] = texto
+    ws["A1"].font = Font(bold=True, size=14, color=AZUL)
+    ws["A2"] = sub
+    ws["A2"].font = Font(italic=True, size=9, color="7A7265")
 
 
-def escribir_mes(mes: str, datos_mes):
-    for cod, d in datos_mes.items():
-        carpeta = INSUMOS / mes / cod
-        carpeta.mkdir(parents=True, exist_ok=True)
-        orden = {"NOR": 0, "SUR": 1, "CEN": 2}
-        for i, (sede, filas) in enumerate(d["balances"].items()):
-            escribir_balance(carpeta, sede, orden.get(sede, i), filas, mes)
-        pd.DataFrame(d["ventas"]).sort_values(["fecha", "vin"]).to_csv(carpeta / f"ventas_vin_{mes}.csv", index=False)
-        wb, ws = _libro()
-        for f in d["inventario"]:
-            ws.append([f["vin"], f["sede"], f["linea"], f["modelo"], f["dias"], f["costo"], f["ingreso"]])
-        wb.save(carpeta / "inventario_dias.xlsx")
-        pd.DataFrame(d["gastos"]).sort_values(["fecha", "sede", "proveedor"]).to_csv(carpeta / f"gastos_{mes}.csv", index=False)
-        pd.DataFrame(d["personal"]).to_excel(carpeta / f"personal_{mes}.xlsx", index=False)
-        pd.DataFrame(d["fi"]).to_csv(carpeta / f"fi_{mes}.csv", index=False)
-        pd.DataFrame(d["obligaciones"]).to_csv(carpeta / f"obligaciones_{mes}.csv", index=False)
+def _encabezado(ws, fila: int, valores: list, inicio: int = 1) -> None:
+    for j, v in enumerate(valores, start=inicio):
+        c = ws.cell(fila, j, v)
+        c.font = Font(bold=True, color="FFFFFF")
+        c.fill = PatternFill("solid", fgColor=AZUL)
+        c.alignment = Alignment(horizontal="center", vertical="center", wrap_text=True)
+
+
+def _anchos(ws, anchos: dict) -> None:
+    for col, w in anchos.items():
+        ws.column_dimensions[col].width = w
+
+
+def _formato_numeros(ws, fila_ini: int, col_ini: int, col_fin: int) -> None:
+    for fila in ws.iter_rows(min_row=fila_ini, min_col=col_ini, max_col=col_fin):
+        for c in fila:
+            c.number_format = '#,##0;[Red]-#,##0'
+            c.border = Border(bottom=FINO)
+
+
+def _fila_total(ws, fila: int, ultima_col: int) -> None:
+    for j in range(1, ultima_col + 1):
+        c = ws.cell(fila, j)
+        c.font = Font(bold=True, color=AZUL)
+        c.fill = PatternFill("solid", fgColor="EDE5D7")
+
+
+def hoja_portada(wb, cid, mes, conf):
+    ws = wb.active
+    ws.title = "Portada"
+    _titulo(ws, "Reporte mensual de cierre", "Datos simulados para formación. No corresponden a ninguna empresa real.")
+    filas = [("Concesionario", conf["nombre"]), ("Código", cid), ("Periodo", mes), ("Moneda", "COP (pesos colombianos)"),
+             ("Sedes", ", ".join(n for n, _ in conf["sedes"].values())), ("Elaborado por", "Contabilidad del concesionario")]
+    for i, (k, v) in enumerate(filas, start=4):
+        ws.cell(i, 1, k).font = Font(bold=True)
+        ws.cell(i, 2, v)
+    ws.cell(11, 1, "Contenido del libro").font = Font(bold=True, size=12, color=AZUL)
+    _encabezado(ws, 12, ["Hoja", "Qué contiene"])
+    for i, (h, d) in enumerate(CONTENIDO, start=13):
+        ws.cell(i, 1, h)
+        ws.cell(i, 2, d)
+    _anchos(ws, {"A": 22, "B": 64})
+
+
+def hoja_balance(wb, mes, conf, balances):
+    ws = wb.create_sheet("Balance")
+    sedes = list(conf["sedes"])
+    nombres = [conf["sedes"][s][0] for s in sedes]
+    _titulo(ws, f"Balance general por sede · {mes}", "Cifras en pesos. Las filas sin código son títulos o subtotales.")
+    _encabezado(ws, 4, ["Código", "Cuenta", *nombres, "Total"])
+    valores, orden = {}, []
+    for s in sedes:
+        vistos = Counter()
+        for codigo, v in balances[s]:
+            if "-" in codigo:
+                continue
+            clave = (codigo, vistos[codigo])
+            vistos[codigo] += 1
+            if clave not in valores:
+                valores[clave] = {}
+                orden.append(clave)
+            valores[clave][s] = v
+    primera = {}
+    for i, (c, _) in enumerate(orden):
+        primera.setdefault(c, i)
+    orden.sort(key=lambda x: (primera[x[0]], x[1]))
+    ultima = 2 + len(sedes) + 1
+    letra = lambda j: get_column_letter(j)
+    totales = {}
+    for digito, seccion, total in [("1", "ACTIVO", "Total activo"), ("2", "PASIVO", "Total pasivo"), ("3", "PATRIMONIO", "Total patrimonio")]:
+        ws.append(["", seccion])
+        ws.cell(ws.max_row, 2).font = Font(bold=True, color=AZUL)
+        inicio = ws.max_row + 1
+        for clave in [k for k in orden if k[0][0] == digito]:
+            r = ws.max_row + 1
+            ws.append([clave[0], _nombre(clave[0]), *[valores[clave].get(s) for s in sedes], f"=SUM(C{r}:{letra(ultima - 1)}{r})"])
+        fin = ws.max_row
+        r = fin + 1
+        ws.append(["", total, *[f"=SUM({letra(j)}{inicio}:{letra(j)}{fin})" for j in range(3, ultima + 1)]])
+        _fila_total(ws, r, ultima)
+        totales[digito] = r
+        ws.append([])
+    _formato_numeros(ws, 5, 3, ultima)
+    _anchos(ws, {"A": 10, "B": 30, **{letra(j): 17 for j in range(3, ultima + 1)}})
+    ws.freeze_panes = "C5"
+    return totales
+
+
+def hoja_resultados(wb, mes, sede, nombre, filas):
+    ws = wb.create_sheet(f"Resultados {nombre}")
+    _titulo(ws, f"Estado de resultados por departamento · Sede {nombre} · {mes}", "Cifras en pesos. Gastos en positivo.")
+    deptos = list(DEPARTAMENTOS)
+    _encabezado(ws, 4, ["Código", "Concepto", *[DEPARTAMENTOS[d] for d in deptos], "Total"])
+    valores = {}
+    for codigo, v in filas:
+        base, _, d = codigo.partition("-")
+        if d:
+            valores.setdefault(base, {})[d] = v
+    ultima = 2 + len(deptos) + 1
+    letra = get_column_letter
+    fila = {}
+
+    def cuenta(c):
+        r = ws.max_row + 1
+        ws.append([c, _nombre(c), *[valores.get(c, {}).get(d) for d in deptos], f"=SUM(C{r}:{letra(ultima - 1)}{r})"])
+        fila[c] = r
+
+    def calculo(etiqueta, formula):
+        r = ws.max_row + 1
+        ws.append(["", etiqueta, *[formula(letra(j)) for j in range(3, ultima + 1)]])
+        _fila_total(ws, r, ultima)
+        return r
+
+    cuenta("4135")
+    cuenta("6135")
+    ub = calculo("Utilidad bruta", lambda c: f"={c}{fila['4135']}-{c}{fila['6135']}")
+    gastos = [c for c in ["5205", "5105", "5135", "5195", "5120", "5305"] if c in valores]
+    for c in gastos:
+        cuenta(c)
+    tg = calculo("Total gastos", lambda c: f"=SUM({c}{fila[gastos[0]]}:{c}{fila[gastos[-1]]})")
+    calculo("Utilidad operativa", lambda c: f"={c}{ub}-{c}{tg}")
+    _formato_numeros(ws, 5, 3, ultima)
+    _anchos(ws, {"A": 10, "B": 24, **{letra(j): 15 for j in range(3, ultima + 1)}})
+    ws.freeze_panes = "C5"
+
+
+def hoja_tabla(wb, titulo_hoja, titulo, sub, encabezado, filas, fila_encabezado=4, anchos=None):
+    ws = wb.create_sheet(titulo_hoja)
+    if titulo:
+        _titulo(ws, titulo, sub)
+    _encabezado(ws, fila_encabezado, encabezado)
+    for f in filas:
+        ws.append(f)
+    _anchos(ws, anchos or {})
+    ws.freeze_panes = ws.cell(fila_encabezado + 1, 1)
+    return ws
+
+
+def escribir_libro(mes: str, cid: str, d: dict) -> Path:
+    conf = CONCESIONARIOS[cid]
+    sedes = list(conf["sedes"])
+    nombre = {s: conf["sedes"][s][0] for s in sedes}
+    wb = Workbook()
+    wb.properties.creator = "Datos simulados"
+    wb.properties.title = f"Reporte mensual de cierre {cid} {mes}"
+    wb.calculation.fullCalcOnLoad = True  # Excel calcula subtotales y el Validador al abrir el libro.
+    hoja_portada(wb, cid, mes, conf)
+    totales = hoja_balance(wb, mes, conf, d["balances"])
+    for s in sedes:
+        hoja_resultados(wb, mes, s, nombre[s], d["balances"][s])
+    ventas = sorted(d["ventas"], key=lambda v: (v["fecha"], v["vin"]))
+    ws = hoja_tabla(wb, "Ventas", f"Ventas por vehículo · {mes}", "Una fila por vehículo facturado.",
+                    ["VIN", "Fecha", "Sede", "Línea", "Canal", "Modelo", "Precio lista", "Descuento", "Costo"],
+                    [[v["vin"], date.fromisoformat(v["fecha"]), nombre[v["sede"]], v["linea"], v["canal"], v["modelo"], v["precio"], v["descuento"], v["costo"]] for v in ventas],
+                    anchos={"A": 21, "B": 12, "C": 14, "D": 12, "E": 15, "F": 16, "G": 15, "H": 13, "I": 15})
+    for fila in ws.iter_rows(min_row=5):
+        fila[1].number_format = "DD/MM/YYYY"
+        for c in fila[6:9]:
+            c.number_format = "#,##0"
+    ws = wb.create_sheet("Inventario")  # Exportado del sistema de patio: sin encabezados.
+    for v in d["inventario"]:
+        ws.append([v["vin"], nombre[v["sede"]], v["linea"], v["modelo"], v["dias"], v["costo"], date.fromisoformat(v["ingreso"])])
+    for fila in ws.iter_rows():
+        fila[5].number_format = "#,##0"
+        fila[6].number_format = "DD/MM/YYYY"
+    _anchos(ws, {"A": 21, "B": 14, "C": 12, "D": 16, "E": 7, "F": 14, "G": 12})
+    gastos = sorted(d["gastos"], key=lambda g: (g["fecha"], g["sede"], g["proveedor"]))
+    ws = hoja_tabla(wb, "Libro de gastos", None, None, ["Fecha", "Sede", "Cuenta", "Proveedor", "Concepto", "Valor"],
+                    [[date.fromisoformat(g["fecha"]), nombre[g["sede"]], g["cuenta"], g["proveedor"], g["concepto"], g["valor"]] for g in gastos],
+                    fila_encabezado=1, anchos={"A": 12, "B": 14, "C": 9, "D": 24, "E": 30, "F": 15})
+    for fila in ws.iter_rows(min_row=2):
+        fila[0].number_format = "DD/MM/YYYY"
+        fila[5].number_format = "#,##0"
+    # Personal: encabezado de dos filas con la sede combinada sobre Personas y Costo.
+    ws = wb.create_sheet("Personal")
+    _titulo(ws, f"Personal por rol y sede · {mes}", "Costo mensual total en pesos.")
+    for i, s in enumerate(sedes):
+        col = 2 + i * 2
+        ws.merge_cells(start_row=4, start_column=col, end_row=4, end_column=col + 1)
+        _encabezado(ws, 4, [nombre[s]], inicio=col)
+        _encabezado(ws, 5, ["Personas", "Costo"], inicio=col)
+    _encabezado(ws, 5, ["Rol"])
+    por = {(p["sede"], p["rol"]): p for p in d["personal"]}
+    for rol, _ in ROLES:
+        fila = [rol]
+        for s in sedes:
+            fila += [por[(s, rol)]["personas"], por[(s, rol)]["costo"]]
+        ws.append(fila)
+    r = ws.max_row + 1
+    ws.append(["Total", *[f"=SUM({get_column_letter(j)}6:{get_column_letter(j)}{r - 1})" for j in range(2, 2 + 2 * len(sedes))]])
+    _fila_total(ws, r, 1 + 2 * len(sedes))
+    _formato_numeros(ws, 6, 2, 1 + 2 * len(sedes))
+    _anchos(ws, {"A": 18, **{get_column_letter(j): 14 for j in range(2, 2 + 2 * len(sedes))}})
+    # F&I: conceptos en filas y sedes en columnas.
+    fi = {f["sede"]: f for f in d["fi"]}
+    conceptos = [("Vehículos vendidos", "unidades"), ("Créditos colocados", "creditos"), ("Pólizas colocadas", "polizas"), ("Comisiones F&I", "comisiones")]
+    ws = hoja_tabla(wb, "F&I", f"Financiación y seguros · {mes}", "Comisiones en pesos.", ["Concepto", *[nombre[s] for s in sedes]],
+                    [[c, *[fi[s][k] for s in sedes]] for c, k in conceptos], anchos={"A": 22, **{get_column_letter(j): 16 for j in range(2, 2 + len(sedes))}})
+    _formato_numeros(ws, 5, 2, 1 + len(sedes))
+    # Obligaciones: la tasa llega escrita como texto.
+    ws = hoja_tabla(wb, "Obligaciones", f"Obligaciones financieras · {mes}", "Cupos de financiación de inventario (wholesale).",
+                    ["Entidad", "Sede", "Tipo", "Saldo", "Tasa mensual", "Interés del mes"],
+                    [[o["entidad"], nombre[o["sede"]], o["tipo"], o["saldo"], f"{o['tasa_mensual'] * 100:.3f} %".replace(".", ","), o["interes_mes"]] for o in d["obligaciones"]],
+                    anchos={"A": 22, "B": 14, "C": 12, "D": 16, "E": 13, "F": 15})
+    for fila in ws.iter_rows(min_row=5):
+        fila[3].number_format = fila[5].number_format = "#,##0"
+    # Validador propio del concesionario: Excel lo calcula al abrir el archivo.
+    ws = wb.create_sheet("Validador")
+    _titulo(ws, "Validador del concesionario", "Fórmulas que Excel calcula al abrir el libro.")
+    _encabezado(ws, 4, ["Sede", "Total activo", "Pasivo + patrimonio", "Diferencia", "Estado"])
+    for i, s in enumerate(sedes):
+        c, r = get_column_letter(3 + i), 5 + i
+        ws.append([nombre[s], f"=Balance!{c}{totales['1']}", f"=Balance!{c}{totales['2']}+Balance!{c}{totales['3']}", f"=B{r}-C{r}", f'=IF(ABS(D{r})<1,"Cuadra","Revisar")'])
+    _formato_numeros(ws, 5, 2, 4)
+    _anchos(ws, {"A": 16, "B": 18, "C": 20, "D": 15, "E": 12})
+    for ws in wb.worksheets:
+        ws.sheet_properties.tabColor = AZUL if ws.title in ("Portada", "Validador") else "B4532A" if ws.title == "Inventario" else "1D6B67"
+    ruta = INSUMOS / mes / f"reporte_mensual_{cid}_{mes}.xlsx"
+    ruta.parent.mkdir(parents=True, exist_ok=True)
+    wb.save(ruta)
+    return ruta
 
 
 def main():
@@ -378,12 +572,13 @@ def main():
     datos, atascados = construir()
     errores = sembrar_errores(datos, atascados)
     for mes in MESES:
-        escribir_mes(mes, datos[mes])
+        for cid, d in datos[mes].items():
+            escribir_libro(mes, cid, d)
     (RAIZ / "04_pruebas" / "errores_sembrados.json").write_text(json.dumps(errores, ensure_ascii=False, indent=2), encoding="utf-8")
     catalogo = {"concesionarios": {k: {"nombre": v["nombre"], "sedes": {s: n for s, (n, _) in v["sedes"].items()}} for k, v in CONCESIONARIOS.items()},
                 "departamentos": DEPARTAMENTOS, "cuentas": NOMBRES_CUENTA}
     (RAIZ / "04_pruebas" / "catalogo.json").write_text(json.dumps(catalogo, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"Listo: {len(MESES)} meses y {len(CONCESIONARIOS)} concesionarios en 01_insumos/ (datos simulados).")
+    print(f"Listo: {len(MESES)} meses × {len(CONCESIONARIOS)} concesionarios = {len(MESES) * len(CONCESIONARIOS)} libros en 01_insumos/ (datos simulados).")
 
 
 if __name__ == "__main__":

@@ -5,6 +5,7 @@ from pathlib import Path
 
 import pandas as pd
 import pytest
+from openpyxl import load_workbook
 
 import ingesta
 import motor
@@ -70,25 +71,48 @@ def test_error_5_anomalias_de_gasto(conn):
         assert tipo in textos
 
 
-def test_archivo_sin_encabezados_se_lee_por_contenido():
-    filas = ingesta.leer_inventario(RAIZ / "01_insumos" / MES / "AND" / "inventario_dias.xlsx", {"NOR", "CEN", "SUR"})
+LIBRO = RAIZ / "01_insumos" / MES / f"reporte_mensual_AND_{MES}.xlsx"
+
+
+def test_un_solo_libro_por_concesionario_y_mes():
+    for mes in sorted(p.name for p in (RAIZ / "01_insumos").iterdir() if p.is_dir()):
+        assert sorted(p.name for p in (RAIZ / "01_insumos" / mes).iterdir()) == [f"reporte_mensual_{c}_{mes}.xlsx" for c in ("AND", "CAR", "LLA", "VAL")]
+
+
+def test_hoja_sin_encabezados_se_lee_por_contenido():
+    ws = load_workbook(LIBRO, data_only=True)["Inventario"]
+    filas = ingesta.leer_inventario(ws, {"norte": "NOR", "centro": "CEN", "sur": "SUR"})
     assert len(filas) == 191 and all(f["costo"] > f["dias"] for f in filas)
 
 
-def test_archivo_irreconocible_se_reporta_y_no_rompe(tmp_path, monkeypatch):
-    insumos = tmp_path / "01_insumos"
-    shutil.copytree(RAIZ / "01_insumos" / MES / "AND", insumos / MES / "AND")
-    (insumos / MES / "AND" / "NOR_balance.xlsx").unlink()
-    (insumos / MES / "AND" / "NOR_balance.csv").write_text("hola;mundo\nsin;cuentas\n", encoding="utf-8")
+def test_subtotales_no_se_suman_dos_veces(conn):
+    activo = conn.execute("""SELECT SUM(saldo) FROM saldos WHERE periodo=? AND sede_id='NOR' AND cuenta_origen NOT LIKE '%-%' AND substr(cuenta_origen,1,1)='1'""", (MES,)).fetchone()[0]
+    ws = load_workbook(LIBRO, data_only=True)["Balance"]
+    con_codigo = sum(f[2].value or 0 for f in ws.iter_rows(min_row=5) if str(f[0].value or "").startswith("1"))
+    assert activo == con_codigo
+
+
+def test_hoja_irreconocible_se_reporta_y_no_rompe(tmp_path, monkeypatch):
+    insumos = tmp_path / "01_insumos" / MES
+    insumos.mkdir(parents=True)
+    wb = load_workbook(LIBRO)
+    ws = wb["Balance"]
+    for fila in ws.iter_rows():
+        for c in fila:
+            if type(c).__name__ != "MergedCell":
+                c.value = None
+    ws["A1"], ws["B2"] = "hola", "sin cuentas"
+    wb.save(insumos / LIBRO.name)
     base = tmp_path / "cierre.db"
     shutil.copy(RAIZ / "02_procesados" / "cierre.db", base)
-    monkeypatch.setattr(ingesta, "INSUMOS", insumos)
+    monkeypatch.setattr(ingesta, "INSUMOS", tmp_path / "01_insumos")
     c = ingesta.conectar(base)
     r = ingesta.cargar_mes(c, MES)
-    estado = c.execute("SELECT estado, filas FROM cargas WHERE periodo=? AND archivo LIKE '%NOR_balance%'", (MES,)).fetchone()
-    inventadas = c.execute("SELECT COUNT(*) FROM saldos WHERE periodo=? AND sede_id='NOR'", (MES,)).fetchone()[0]
+    estado = c.execute("SELECT estado, filas FROM cargas WHERE periodo=? AND archivo LIKE '%!Balance'", (MES,)).fetchone()
+    otras = c.execute("SELECT COUNT(*) FROM cargas WHERE periodo=? AND estado='Correcto'", (MES,)).fetchone()[0]
+    inventadas = c.execute("SELECT COUNT(*) FROM saldos WHERE periodo=? AND departamento IS NULL", (MES,)).fetchone()[0]
     c.close()
-    assert estado == ("Revisar", 0) and inventadas == 0 and len(r["revisar"]) == 1
+    assert estado == ("Revisar", 0) and inventadas == 0 and otras == 9 and len(r["revisar"]) == 1
 
 
 def test_pronostico_backtest_y_rango():

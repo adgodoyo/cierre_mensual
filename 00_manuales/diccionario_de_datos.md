@@ -12,7 +12,7 @@ Concesionarios de la red (ficticios).
 |---|---|---|---|
 | `concesionario_id` | Código del concesionario | TEXT | AND |
 | `nombre` | Nombre del concesionario | TEXT | Concesionario Andino |
-| `fuente` | De dónde salió la fila (archivo!celda o script) | TEXT | 2026-10/AND/SUR_balance.xlsx!C12 |
+| `fuente` | De dónde salió la fila (archivo!hoja!celda o script) | TEXT | 2026-10/reporte_mensual_AND_2026-10.xlsx!Balance!E23 |
 | `cargado_en` | Fecha y hora de carga | TEXT | 2026-11-05T07:00:00-05:00 |
 
 ## sedes
@@ -26,7 +26,7 @@ Sedes de cada concesionario.
 | `sede_id` | Código de la sede | TEXT | NOR |
 | `concesionario_id` | Concesionario al que pertenece | TEXT | AND |
 | `nombre` | Nombre de la sede | TEXT | Norte |
-| `fuente` | De dónde salió la fila (archivo!celda o script) | TEXT | 2026-10/AND/SUR_balance.xlsx!C12 |
+| `fuente` | De dónde salió la fila (archivo!hoja!celda o script) | TEXT | 2026-10/reporte_mensual_AND_2026-10.xlsx!Balance!E23 |
 | `cargado_en` | Fecha y hora de carga | TEXT | 2026-11-05T07:00:00-05:00 |
 
 ## cuentas
@@ -43,7 +43,7 @@ Homologación de cuentas PUC al formato mensual.
 | `grupo` | Grupo dentro del estado | TEXT | Pasivo |
 | `codigo_formato` | Código de la línea en el formato | TEXT | ESF.2.02 |
 | `linea_formato` | Línea del formato | TEXT | Proveedores |
-| `fuente` | De dónde salió la fila (archivo!celda o script) | TEXT | 2026-10/AND/SUR_balance.xlsx!C12 |
+| `fuente` | De dónde salió la fila (archivo!hoja!celda o script) | TEXT | 2026-10/reporte_mensual_AND_2026-10.xlsx!Balance!E23 |
 | `cargado_en` | Fecha y hora de carga | TEXT | 2026-11-05T07:00:00-05:00 |
 
 ## saldos
@@ -61,7 +61,7 @@ Saldo por mes, sede, cuenta y departamento.
 | `cuenta_codigo` | Cuenta homologada; vacía si no está en el mapeo | TEXT | 4135 |
 | `departamento` | Departamento del ERI; vacío en el ESF | TEXT | LIV |
 | `saldo` | Valor en pesos (COP) | INTEGER | 18400000 |
-| `fuente` | De dónde salió la fila (archivo!celda o script) | TEXT | 2026-10/AND/SUR_balance.xlsx!C12 |
+| `fuente` | De dónde salió la fila (archivo!hoja!celda o script) | TEXT | 2026-10/reporte_mensual_AND_2026-10.xlsx!Balance!E23 |
 | `cargado_en` | Fecha y hora de carga | TEXT | 2026-11-05T07:00:00-05:00 |
 
 ## ventas
@@ -84,7 +84,7 @@ Una fila por vehículo vendido.
 | `descuento` | Descuento (COP) | INTEGER | 2100000 |
 | `costo` | Costo (COP) | INTEGER | 66500000 |
 | `margen` | Margen (COP) | INTEGER | 7400000 |
-| `fuente` | De dónde salió la fila (archivo!celda o script) | TEXT | 2026-10/AND/SUR_balance.xlsx!C12 |
+| `fuente` | De dónde salió la fila (archivo!hoja!celda o script) | TEXT | 2026-10/reporte_mensual_AND_2026-10.xlsx!Balance!E23 |
 | `cargado_en` | Fecha y hora de carga | TEXT | 2026-11-05T07:00:00-05:00 |
 
 ## inventario
@@ -104,7 +104,7 @@ Una fila por vehículo en inventario al cierre.
 | `rango` | 0-30, 31-60 o >60 | TEXT | >60 |
 | `costo` | Costo (COP) | INTEGER | 118000000 |
 | `fecha_ingreso` | Fecha de ingreso | TEXT | 2026-08-18 |
-| `fuente` | De dónde salió la fila (archivo!celda o script) | TEXT | 2026-10/AND/SUR_balance.xlsx!C12 |
+| `fuente` | De dónde salió la fila (archivo!hoja!celda o script) | TEXT | 2026-10/reporte_mensual_AND_2026-10.xlsx!Balance!E23 |
 | `cargado_en` | Fecha y hora de carga | TEXT | 2026-11-05T07:00:00-05:00 |
 
 ## gastos
@@ -123,7 +123,7 @@ Libro de gastos: una fila por pago.
 | `proveedor` | Proveedor ficticio | TEXT | Conecta Datos |
 | `concepto` | Concepto | TEXT | Internet y software |
 | `valor` | Valor (COP) | INTEGER | 4850000 |
-| `fuente` | De dónde salió la fila (archivo!celda o script) | TEXT | 2026-10/AND/SUR_balance.xlsx!C12 |
+| `fuente` | De dónde salió la fila (archivo!hoja!celda o script) | TEXT | 2026-10/reporte_mensual_AND_2026-10.xlsx!Balance!E23 |
 | `cargado_en` | Fecha y hora de carga | TEXT | 2026-11-05T07:00:00-05:00 |
 
 ## personal
@@ -139,7 +139,7 @@ Personas y costo por sede y rol.
 | `rol` | Rol | TEXT | Vendedores |
 | `personas` | Número de personas | INTEGER | 12 |
 | `costo` | Costo mensual (COP) | INTEGER | 98000000 |
-| `fuente` | De dónde salió la fila (archivo!celda o script) | TEXT | 2026-10/AND/SUR_balance.xlsx!C12 |
+| `fuente` | De dónde salió la fila (archivo!hoja!celda o script) | TEXT | 2026-10/reporte_mensual_AND_2026-10.xlsx!Balance!E23 |
 | `cargado_en` | Fecha y hora de carga | TEXT | 2026-11-05T07:00:00-05:00 |
 
 ## fi
@@ -156,7 +156,7 @@ Financiación y seguros por sede.
 | `creditos` | Créditos colocados | INTEGER | 27 |
 | `polizas` | Pólizas colocadas | INTEGER | 22 |
 | `comisiones` | Comisiones (COP) | INTEGER | 82000000 |
-| `fuente` | De dónde salió la fila (archivo!celda o script) | TEXT | 2026-10/AND/SUR_balance.xlsx!C12 |
+| `fuente` | De dónde salió la fila (archivo!hoja!celda o script) | TEXT | 2026-10/reporte_mensual_AND_2026-10.xlsx!Balance!E23 |
 | `cargado_en` | Fecha y hora de carga | TEXT | 2026-11-05T07:00:00-05:00 |
 
 ## obligaciones
@@ -174,7 +174,7 @@ Cupos wholesale por sede y entidad.
 | `saldo` | Saldo (COP) | INTEGER | 2100000000 |
 | `tasa_mensual` | Tasa mensual | REAL | 0.012 |
 | `interes_mes` | Interés del mes (COP) | INTEGER | 25200000 |
-| `fuente` | De dónde salió la fila (archivo!celda o script) | TEXT | 2026-10/AND/SUR_balance.xlsx!C12 |
+| `fuente` | De dónde salió la fila (archivo!hoja!celda o script) | TEXT | 2026-10/reporte_mensual_AND_2026-10.xlsx!Balance!E23 |
 | `cargado_en` | Fecha y hora de carga | TEXT | 2026-11-05T07:00:00-05:00 |
 
 ## pronosticos
@@ -193,7 +193,7 @@ Proyecciones por escenario.
 | `modelo` | Drivers o ETS | TEXT | Drivers |
 | `metrica` | Variable proyectada | TEXT | ingresos |
 | `valor` | Valor proyectado (COP) | REAL | 15200000000 |
-| `fuente` | De dónde salió la fila (archivo!celda o script) | TEXT | 2026-10/AND/SUR_balance.xlsx!C12 |
+| `fuente` | De dónde salió la fila (archivo!hoja!celda o script) | TEXT | 2026-10/reporte_mensual_AND_2026-10.xlsx!Balance!E23 |
 | `cargado_en` | Fecha y hora de carga | TEXT | 2026-11-05T07:00:00-05:00 |
 
 ## alertas
@@ -213,8 +213,8 @@ Hallazgos del validador.
 | `hallazgo` | Qué se encontró | TEXT | Activo no cuadra |
 | `explicacion` | Explicación en una frase | TEXT | La cuenta 2205 aparece dos veces. |
 | `impacto_cop` | Impacto estimado (COP) | INTEGER | 18400000 |
-| `origen` | Archivo y celda | TEXT | 2026-10/AND/SUR_balance.xlsx!A20 |
-| `fuente` | De dónde salió la fila (archivo!celda o script) | TEXT | 2026-10/AND/SUR_balance.xlsx!C12 |
+| `origen` | Archivo, hoja y celda | TEXT | 2026-10/reporte_mensual_AND_2026-10.xlsx!Balance!E23 |
+| `fuente` | De dónde salió la fila (archivo!hoja!celda o script) | TEXT | 2026-10/reporte_mensual_AND_2026-10.xlsx!Balance!E23 |
 | `cargado_en` | Fecha y hora de carga | TEXT | 2026-11-05T07:00:00-05:00 |
 
 ## bitacora
@@ -232,12 +232,12 @@ Registro de cada paso ejecutado.
 | `resultado` | Resultado | TEXT | Correcto |
 | `accion` | Qué hizo o qué falta | TEXT | Cargó 9 archivos |
 | `responsable` | Agente o persona | TEXT | Agente de procesamiento |
-| `fuente` | De dónde salió la fila (archivo!celda o script) | TEXT | 2026-10/AND/SUR_balance.xlsx!C12 |
+| `fuente` | De dónde salió la fila (archivo!hoja!celda o script) | TEXT | 2026-10/reporte_mensual_AND_2026-10.xlsx!Balance!E23 |
 | `cargado_en` | Fecha y hora de carga | TEXT | 2026-11-05T07:00:00-05:00 |
 
 ## cargas
 
-Una fila por archivo cargado cada mes.
+Una fila por hoja cargada cada mes.
 
 **Lo escribe:** `src/ingesta.py`
 
@@ -246,11 +246,11 @@ Una fila por archivo cargado cada mes.
 | `carga_id` | Identificador | INTEGER | 100 |
 | `periodo` | Mes cargado | TEXT | 2026-10 |
 | `concesionario_id` | Concesionario | TEXT | AND |
-| `archivo` | Archivo | TEXT | 2026-10/AND/SUR_balance.xlsx |
+| `archivo` | Libro y hoja | TEXT | 2026-10/reporte_mensual_AND_2026-10.xlsx!Balance |
 | `tabla` | Tabla destino | TEXT | saldos |
 | `filas` | Filas agregadas | INTEGER | 118 |
 | `estado` | Correcto o Revisar | TEXT | Correcto |
 | `modo` | historico_simulado o rutina | TEXT | historico_simulado |
 | `commit_hash` | Versión del código que hizo la carga | TEXT | a1b2c3d |
-| `fuente` | De dónde salió la fila (archivo!celda o script) | TEXT | 2026-10/AND/SUR_balance.xlsx!C12 |
+| `fuente` | De dónde salió la fila (archivo!hoja!celda o script) | TEXT | 2026-10/reporte_mensual_AND_2026-10.xlsx!Balance!E23 |
 | `cargado_en` | Fecha y hora de carga | TEXT | 2026-11-05T07:00:00-05:00 |
