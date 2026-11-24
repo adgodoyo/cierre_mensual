@@ -30,9 +30,6 @@ jobs:
   cierre:
     if: github.event_name != 'issues' || startsWith(github.event.issue.title, 'Revisión requerida:')
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.publicar.outputs.page_url }}
     steps:
       - uses: actions/checkout@v7
 
@@ -109,5 +106,22 @@ jobs:
         with:
           path: docs
 
+  # Se publica en un trabajo aparte: así GitHub ya registró el paquete del tablero.
+  publicar:
+    needs: cierre
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.publicar.outputs.page_url || steps.reintento.outputs.page_url }}
+    steps:
       - id: publicar
+        uses: actions/deploy-pages@v5
+        continue-on-error: true
+
+      - name: Esperar y reintentar
+        if: steps.publicar.outcome == 'failure'
+        run: sleep 30
+
+      - id: reintento
+        if: steps.publicar.outcome == 'failure'
         uses: actions/deploy-pages@v5

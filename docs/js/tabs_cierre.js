@@ -11,7 +11,7 @@ async function gh(ruta, opciones = {}) {
 }
 function nombrePaso(s) {
   const fijos = { 'Set up job': 'Preparar la máquina', 'Complete job': 'Terminar', 'Instalar dependencias': 'Instalar las herramientas', 'Ejecutar el cierre': 'Ejecutar el cierre (los tres agentes)' };
-  return fijos[s] || (/checkout/.test(s) ? 'Descargar el repositorio' : /setup-python/.test(s) ? 'Instalar Python' : /configure-pages|upload-pages/.test(s) ? 'Empaquetar el tablero' : /deploy-pages/.test(s) ? 'Publicar el tablero' : s);
+  return fijos[s] || (/checkout/.test(s) ? 'Descargar el repositorio' : /setup-python/.test(s) ? 'Instalar Python' : /configure-pages/.test(s) ? 'Preparar la publicación' : /upload-pages/.test(s) ? 'Empaquetar el tablero' : /deploy-pages/.test(s) ? 'Publicar el tablero' : s);
 }
 function proximaEjecucion() {
   const h = new Date(), objetivo = new Date(Date.UTC(h.getUTCFullYear(), h.getUTCMonth(), 5, 12));
@@ -86,7 +86,9 @@ TABS.rutina = {
       RUTINA.inicio = new Date(run.created_at);
       while (true) {
         const [r, jobs] = await Promise.all([gh(`actions/runs/${run.id}`), gh(`actions/runs/${run.id}/jobs`)]);
-        RUTINA.ultima = { run: r, pasos: jobs.jobs[0]?.steps || [] };
+        const pasos = jobs.jobs.flatMap(j => (j.steps || []).filter(p => !(p.name === 'Complete job' || (j !== jobs.jobs[0] && p.name === 'Set up job'))));
+        if (r.status === 'completed') pasos.push({ name: 'Terminar', status: 'completed', conclusion: r.conclusion });
+        RUTINA.ultima = { run: r, pasos };
         this.pintarPasos(RUTINA.ultima);
         if (r.status === 'completed') break;
         await espera(4000);
