@@ -1,4 +1,23 @@
 /* Pestañas: Reportes, La rutina, Cómo funciona y Dónde está cada cosa. */
+const RUTINA = { clave: 'cierre_mensual_token_github', activa: false, ultima: null };
+const espera = ms => new Promise(r => setTimeout(r, ms));
+function leerToken() { try { return localStorage.getItem(RUTINA.clave) || ''; } catch { return ''; } }
+function guardarToken(t) { try { if (t) localStorage.setItem(RUTINA.clave, t); else localStorage.removeItem(RUTINA.clave); } catch { /* navegador sin almacenamiento */ } }
+async function gh(ruta, opciones = {}) {
+  const token = leerToken();
+  const r = await fetch(`https://api.github.com/repos/${APP.meta.repo}/${ruta}`, { ...opciones, cache: 'no-store', headers: { Accept: 'application/vnd.github+json', ...(token ? { Authorization: `Bearer ${token}` } : {}) } });
+  if (!r.ok) throw new Error(r.status === 401 ? 'el token no es válido o venció' : r.status === 403 || r.status === 404 ? 'el token no tiene permiso de Actions en este repositorio' : `GitHub respondió ${r.status}`);
+  return r.status === 204 ? null : r.json();
+}
+function nombrePaso(s) {
+  const fijos = { 'Set up job': 'Preparar la máquina', 'Complete job': 'Terminar', 'Instalar dependencias': 'Instalar las herramientas', 'Ejecutar el cierre': 'Ejecutar el cierre (los tres agentes)' };
+  return fijos[s] || (/checkout/.test(s) ? 'Descargar el repositorio' : /setup-python/.test(s) ? 'Instalar Python' : /configure-pages|upload-pages/.test(s) ? 'Empaquetar el tablero' : /deploy-pages/.test(s) ? 'Publicar el tablero' : s);
+}
+function proximaEjecucion() {
+  const h = new Date(), objetivo = new Date(Date.UTC(h.getUTCFullYear(), h.getUTCMonth(), 5, 12));
+  if (objetivo <= h) objetivo.setUTCMonth(objetivo.getUTCMonth() + 1);
+  return `${objetivo.getUTCDate()} de ${MESES_L[objetivo.getUTCMonth()]} de ${objetivo.getUTCFullYear()}`;
+}
 TABS.reportes = {
   titulo: 'Reportes',
   render(el) {
@@ -26,6 +45,7 @@ TABS.rutina = {
     const r = encabezado(el, 'El sistema trabaja solo; la persona decide', 'Cada mes, el día 5 a las 7:00 a. m. de Bogotá, la rutina ejecuta el cierre y pide aprobación si hay alertas altas.');
     const repo = APP.meta.repo;
     if (!repo) r.insertAdjacentHTML('beforebegin', '<p class="aviso">El repositorio aún no está publicado en GitHub. Las ejecuciones y aprobaciones reales aparecerán aquí al publicarlo; abajo se ve la bitácora con la historia simulada.</p>');
+    if (repo) tarjeta(r, { w: 12, t: 'Ejecutar la rutina ahora', s: `La rutina corre sola el día 5 de cada mes a las 7:00 a. m. (próxima: ${proximaEjecucion()}). Aquí puede lanzarla en vivo y ver cada paso.`, html: '<div id="rv"></div>', src: { script: '.github/workflows/cierre_mensual.yml', ruta: '.github/workflows/cierre_mensual.yml' } });
     tarjeta(r, { w: 7, t: 'Ejecuciones de GitHub Actions', s: repo ? 'Consultadas en vivo a GitHub.' : 'Disponible al publicar.', html: '<div id="runs"><p class="nota">Sin datos de GitHub todavía.</p></div>', src: { script: '.github/workflows/cierre_mensual.yml', ruta: '.github/workflows/cierre_mensual.yml' } });
     tarjeta(r, { w: 5, t: 'Aprobaciones (Issues)', s: 'Un Issue abierto detiene la versión final.', html: '<div id="issues"><p class="nota">Sin datos de GitHub todavía.</p></div>', src: { script: '.github/workflows/cierre_mensual.yml', ruta: '.github/workflows/cierre_mensual.yml' } });
     tarjeta(r, { id: 'g-bit', w: 12, h: 300, t: 'Línea de tiempo de los 24 cierres (alertas por mes)', s: 'Historia simulada de la rutina: cada punto es un cierre. Pase el cursor para ver su resultado.', src: { tabla: 'bitacora, alertas', script: 'src/procesamiento.py' } });
@@ -33,14 +53,65 @@ TABS.rutina = {
     tarjeta(r, { w: 5, t: 'Historial de versiones (commits)', s: 'Cada fase y cada cierre quedan versionados.', html: tablaHTML(APP.meta.commits.map(c => ({ commit: c.hash, fecha: c.fecha.slice(0, 10), mensaje: c.mensaje })), null, { alto: 390, envolver: ['mensaje'], fmt: { commit: v => repo ? `<a target="_blank" rel="noopener" href="https://github.com/${repo}/commit/${esc(v)}"><code>${esc(v)}</code></a>` : `<code>${esc(v)}</code>` } }), src: { script: 'run_cierre.py', ruta: 'run_cierre.py' } });
     const al = q(`SELECT b.periodo p, b.resultado res, (SELECT COUNT(*) FROM alertas a WHERE a.periodo=b.periodo) n, (SELECT COUNT(*) FROM alertas a WHERE a.periodo=b.periodo AND a.severidad='Alta') altas FROM bitacora b WHERE b.paso='aprobacion' ORDER BY 1`);
     plot('g-bit', [{ x: al.map(x => mesC(x.p)), y: al.map(x => x.n), customdata: al.map(x => [x.res, x.altas]), mode: 'lines+markers', line: { color: '#9FB3C4', width: 1.5 }, marker: { size: al.map(x => x.altas ? 15 : 9), symbol: al.map(x => x.res === 'Aprobado' ? 'circle' : 'diamond'), color: al.map(x => x.res === 'Aprobado' ? C.teal : C.terra), line: { color: C.papel, width: 2 } }, hovertemplate: '%{x}: %{y} alertas (%{customdata[1]} altas)<br>%{customdata[0]}<extra></extra>' }], { xaxis: { type: 'category', tickangle: -45 }, yaxis: { title: 'Alertas', rangemode: 'tozero' }, showlegend: false });
-    if (repo) this.github(repo);
+    if (repo) { this.github(repo); this.panel(); }
+  },
+  panel() {
+    const el = document.getElementById('rv'); if (!el) return;
+    const token = leerToken(), urlFlujo = `https://github.com/${APP.meta.repo}/actions/workflows/cierre_mensual.yml`;
+    el.innerHTML = `<div class="barra"><button type="button" id="rv-ejecutar" class="boton-principal"${RUTINA.activa ? ' disabled' : ''}>▶ Ejecutar la rutina ahora</button>
+      <label class="nota"><input type="checkbox" id="rv-aprobado"> Con aprobación humana (publica sin borrador)</label>
+      <a href="${urlFlujo}" target="_blank" rel="noopener">Ver la rutina en GitHub</a></div>
+      ${token ? `<p class="nota">Conectado a GitHub en este navegador. <button type="button" id="rv-salir">Desconectar</button></p>`
+      : `<details class="origen" open><summary>Conectar este navegador con GitHub (una sola vez)</summary><div><p class="nota">GitHub solo permite lanzar la rutina a personas autorizadas. Cree un <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">token de acceso</a> limitado a este repositorio, con permiso <b>Actions: lectura y escritura</b>, y péguelo aquí. Se guarda solo en este navegador. Sin token, el botón abre la página de GitHub para lanzarla desde allí.</p><div class="barra"><input class="campo" id="rv-token" type="password" placeholder="github_pat_…" aria-label="Token de GitHub" style="flex:1"><button type="button" id="rv-guardar">Conectar</button></div></div></details>`}
+      <div id="rv-estado" aria-live="polite"></div>`;
+    document.getElementById('rv-ejecutar').onclick = () => leerToken() ? this.ejecutar() : window.open(urlFlujo, '_blank', 'noopener');
+    const g = document.getElementById('rv-guardar'); if (g) g.onclick = () => { guardarToken(document.getElementById('rv-token').value.trim()); this.panel(); };
+    const s = document.getElementById('rv-salir'); if (s) s.onclick = () => { guardarToken(''); this.panel(); };
+    if (RUTINA.ultima) this.pintarPasos(RUTINA.ultima);
+  },
+  estado(html) { const e = document.getElementById('rv-estado'); if (e) e.innerHTML = html; },
+  async ejecutar() {
+    const aprobado = document.getElementById('rv-aprobado')?.checked || false, desde = Date.now() - 20000;
+    RUTINA.activa = true; RUTINA.ultima = null; this.panel();
+    try {
+      this.estado('<p class="nota">Enviando la orden a GitHub…</p>');
+      await gh('actions/workflows/cierre_mensual.yml/dispatches', { method: 'POST', body: JSON.stringify({ ref: APP.meta.rama || 'main', inputs: { mes: APP.meta.mes, aprobado: String(aprobado) } }) });
+      let run = null;
+      for (let i = 0; i < 30 && !run; i++) {
+        this.estado(`<p class="nota">GitHub recibió la orden. Asignando una máquina… (${i * 3} s)</p>`);
+        await espera(3000);
+        run = (await gh('actions/workflows/cierre_mensual.yml/runs?event=workflow_dispatch&per_page=5')).workflow_runs.find(x => new Date(x.created_at) >= desde);
+      }
+      if (!run) throw new Error('GitHub no mostró la ejecución a tiempo; revísela en GitHub');
+      RUTINA.inicio = new Date(run.created_at);
+      while (true) {
+        const [r, jobs] = await Promise.all([gh(`actions/runs/${run.id}`), gh(`actions/runs/${run.id}/jobs`)]);
+        RUTINA.ultima = { run: r, pasos: jobs.jobs[0]?.steps || [] };
+        this.pintarPasos(RUTINA.ultima);
+        if (r.status === 'completed') break;
+        await espera(4000);
+      }
+    } catch (e) { this.estado(`<p class="aviso">No se pudo lanzar la rutina: ${esc(e.message)}.</p>`); }
+    RUTINA.activa = false;
+    const b = document.getElementById('rv-ejecutar'); if (b) b.disabled = false;
+    if (APP.meta.repo) this.github(APP.meta.repo);
+  },
+  pintarPasos({ run, pasos }) {
+    const vis = pasos.filter(p => !p.name.startsWith('Post '));
+    const icono = p => p.status !== 'completed' ? (p.status === 'in_progress' ? '<span class="pp ahora">●</span>' : '<span class="pp">○</span>') : p.conclusion === 'success' ? '<span class="pp ok">✓</span>' : p.conclusion === 'skipped' ? '<span class="pp">–</span>' : '<span class="pp mal">✕</span>';
+    const dur = p => p.started_at ? `${n(((p.completed_at ? new Date(p.completed_at) : new Date()) - new Date(p.started_at)) / 1000, 0)} s` : '';
+    const total = n((Date.now() - new Date(run.run_started_at || run.created_at)) / 1000, 0);
+    const fin = run.status === 'completed'
+      ? (run.conclusion === 'success' ? `<p class="aviso" style="background:#D4E6E2;border-color:${C.teal}"><b>Rutina terminada.</b> GitHub tarda uno o dos minutos en servir la nueva versión del tablero. <button type="button" onclick="location.reload()">Recargar el tablero</button></p>` : `<p class="aviso">La rutina terminó con estado «${esc(run.conclusion)}». <a href="${run.html_url}" target="_blank" rel="noopener">Ver el detalle en GitHub</a>.</p>`)
+      : `<p class="nota">En curso: ${total} s. <a href="${run.html_url}" target="_blank" rel="noopener">Ver en GitHub</a></p>`;
+    this.estado(`<ol class="pasos">${vis.map(p => `<li class="${p.status}">${icono(p)}<span>${esc(nombrePaso(p.name))}</span><small>${dur(p)}</small></li>`).join('') || '<li><span class="pp ahora">●</span><span>Preparando la máquina</span></li>'}</ol>${fin}`);
   },
   async github(repo) {
     try {
-      const j = u => fetch(`https://api.github.com/repos/${repo}/${u}`, { headers: { Accept: 'application/vnd.github+json' } }).then(x => { if (!x.ok) throw new Error(x.status); return x.json(); });
-      const [runs, issues] = await Promise.all([j('actions/runs?per_page=12'), j('issues?state=all&per_page=12')]);
+      const [runs, issues] = await Promise.all([gh('actions/runs?per_page=12'), gh('issues?state=all&per_page=12')]);
       const cr = document.getElementById('runs'), ci = document.getElementById('issues'); if (!cr || !ci) return;
-      cr.innerHTML = tablaHTML(runs.workflow_runs.map(x => ({ fecha: x.created_at.slice(0, 16).replace('T', ' '), disparo: x.event, duración: `${n((new Date(x.updated_at) - new Date(x.run_started_at || x.created_at)) / 60000, 1)} min`, estado: x.conclusion || x.status, enlace: x.html_url })), ['fecha', 'disparo', 'duración', 'estado', 'enlace'], { fmt: { enlace: v => `<a target="_blank" rel="noopener" href="${esc(v)}">ver</a>` }, alto: 280 });
+      const disparo = { workflow_dispatch: 'Manual', schedule: 'Programada', issues: 'Aprobación' };
+      cr.innerHTML = tablaHTML(runs.workflow_runs.map(x => ({ fecha: x.created_at.slice(0, 16).replace('T', ' '), disparo: disparo[x.event] || x.event, duración: `${n((new Date(x.updated_at) - new Date(x.run_started_at || x.created_at)) / 60000, 1)} min`, estado: x.conclusion || x.status, enlace: x.html_url })), ['fecha', 'disparo', 'duración', 'estado', 'enlace'], { fmt: { enlace: v => `<a target="_blank" rel="noopener" href="${esc(v)}">ver</a>` }, alto: 280 });
       const lista = issues.filter(x => !x.pull_request);
       ci.innerHTML = tablaHTML(lista.map(x => ({ estado: x.state === 'open' ? 'Abierto' : 'Aprobado', título: x.title, enlace: x.html_url })), null, { fmt: { enlace: v => `<a target="_blank" rel="noopener" href="${esc(v)}">ver</a>` }, envolver: ['título'], alto: 280 });
     } catch (e) { const c = document.getElementById('runs'); if (c) c.innerHTML = `<p class="nota">No se pudo consultar GitHub (${esc(e.message)}).</p>`; }

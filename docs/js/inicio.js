@@ -26,8 +26,8 @@ async function iniciar() {
     if (location.protocol === 'file:') throw new Error('Abra el tablero con un servidor local: python -m http.server --directory docs 8000');
     const SQL = await initSqlJs({ locateFile: f => `https://cdn.jsdelivr.net/npm/sql.js@1.10.3/dist/${f}` });
     const [db, meta, pron, rep] = await Promise.all([
-      fetch('data/cierre.db').then(r => { if (!r.ok) throw new Error('No se encontró cierre.db'); return r.arrayBuffer(); }),
-      fetch('data/meta.json').then(r => r.json()), fetch('data/pronostico.json').then(r => r.json()), fetch('data/reportes.json').then(r => r.json()),
+      fetch('data/cierre.db', { cache: 'no-cache' }).then(r => { if (!r.ok) throw new Error('No se encontró cierre.db'); return r.arrayBuffer(); }),
+      ...['meta', 'pronostico', 'reportes'].map(f => fetch(`data/${f}.json`, { cache: 'no-cache' }).then(r => r.json())),
     ]);
     APP.db = new SQL.Database(new Uint8Array(db)); APP.meta = meta; APP.pron = pron; APP.rep = rep;
     APP.sedes = q('SELECT sede_id, concesionario_id, nombre FROM sedes ORDER BY concesionario_id, sede_id');
@@ -39,6 +39,7 @@ async function iniciar() {
     nav.addEventListener('click', e => { const b = e.target.closest('button'); if (b) { APP.tab = b.dataset.tab; history.replaceState(null, '', `#${APP.tab}`); dibujar(); scrollTo({ top: 0 }); } });
     const inicial = location.hash.slice(1); if (ORDEN.includes(inicial)) APP.tab = inicial;
     [['f-cid', 'cid'], ['f-sede', 'sede'], ['f-mes', 'mes'], ['f-canal', 'canal'], ['f-linea', 'linea']].forEach(([id, k]) => document.getElementById(id).addEventListener('change', e => fijarFiltro(k, e.target.value)));
+    document.getElementById('ir-rutina').addEventListener('click', () => { APP.tab = 'rutina'; history.replaceState(null, '', '#rutina'); dibujar(); setTimeout(() => document.getElementById('rv')?.scrollIntoView({ behavior: 'smooth', block: 'center' }), 150); });
     document.getElementById('f-limpiar').addEventListener('click', () => { Object.assign(S, { cid: 'AND', sede: '', mes: meta.mes, canal: '', linea: '' }); sincronizarFiltros(); dibujar(); });
     sincronizarFiltros(); dibujar();
     window.TABLERO_LISTO = true;
